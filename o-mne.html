@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O mně – Katka Hrouzková</title>
+  <meta name="description" content="Mgr. Katka Hrouzková — psycholožie, 17 let v globálním HR, certifikovaný kouč. Gallup, <em>PRISM</em>, Erickson.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .o-mne-hero{padding:140px 0 80px;background:#F8F9FB}
+    .cert-img-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-top:24px}
+    .cert-img-row img{height:52px;width:auto;object-fit:contain;opacity:.8;filter:grayscale(20%);transition:opacity .2s,filter .2s}
+    .cert-img-row img:hover{opacity:1;filter:none}
+
+    .cert-img-row img { cursor: zoom-in; }
+    .lightbox {
+      display: none; position: fixed; inset: 0; z-index: 1000;
+      background: rgba(0,0,0,.75); backdrop-filter: blur(4px);
+      align-items: center; justify-content: center;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 90vw; max-height: 85vh;
+      object-fit: contain; border-radius: 12px;
+      box-shadow: 0 32px 80px rgba(0,0,0,.4);
+      animation: lb-in .2s ease;
+    }
+    .lightbox__close {
+      position: absolute; top: 24px; right: 28px;
+      font-size: 32px; color: #fff; cursor: pointer;
+      background: none; border: none; line-height: 1;
+      opacity: .7; transition: opacity .2s;
+    }
+    .lightbox__close:hover { opacity: 1; }
+    @keyframes lb-in { from { transform: scale(.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  </style>
+
+<style>.nav{background:rgba(255,255,255,0.98)!important;box-shadow:0 1px 0 rgba(47,52,59,0.08)!important}</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation">
+  <div class="container"><div class="nav__inner">
+    <a href="index.html" class="nav__logo">Katka <span>Hrouzková</span></a>
+    <div class="nav__links">
+      <a href="index.html#sluzby">Služby</a>
+      <a href="o-mne.html">O mně</a>
+      <a href="reference.html">Reference</a>
+      <a href="index.html#faq">Otázky a odpovědi</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="blog/index.html">Blog</a>
+    </div>
+    <div class="nav__right">
+      <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener" class="btn btn--primary">Domluvit úvodní rozhovor</a>
+    </div>
+    <button class="nav__hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div></div>
+</nav>
+<div class="nav__mobile" role="dialog">
+  <a href="index.html#sluzby">Služby</a>
+  <a href="o-mne.html">O mně</a>
+  <a href="reference.html">Reference</a>
+  <a href="index.html#faq">Otázky a odpovědi</a>
+  <a href="kontakt.html">Kontakt</a>
+      <a href="blog/index.html">Blog</a>
+  <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener" style="color:var(--terra)">Domluvit úvodní rozhovor →</a>
+</div>
+
+<section class="o-mne-hero">
+  <div class="container">
+    <a href="index.html" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--terra);margin-bottom:28px;transition:gap .2s">← Zpět na hlavní stránku</a>
+    <p class="overline">O mně</p>
+    <h1>Mgr. Katka Hrouzková</h1>
+  </div>
+</section>
+
+<section class="about" style="padding:80px 0;background:#fff">
+  <div class="container">
+    <div class="about__grid">
+      <div class="about__image-wrap">
+        <div class="about__image-frame">
+          <img src="https://katkahrouzkova.github.io/katkahrouzkova/images/foto%20o%20mne.jpg"
+               alt="Mgr. Katka Hrouzková" loading="lazy">
+        </div>
+        <div class="cert-img-row">
+          <img src="https://katkahrouzkova.github.io/katkahrouzkova/images/cert-gallup.png" alt="Gallup Certified">
+          <img src="https://katkahrouzkova.github.io/katkahrouzkova/images/cert-prism.png" alt="<em>PRISM</em> Certified">
+          <img src="https://katkahrouzkova.github.io/katkahrouzkova/images/cert-erickson.png" alt="Erickson Coach">
+          <img src="https://katkahrouzkova.github.io/katkahrouzkova/images/cert-erickson%20team.png" alt="Erickson Team">
+          <img src="https://katkahrouzkova.github.io/katkahrouzkova/images/cert-facilitace.png" alt="Certified Facilitator">
+          <img src="images/cert-icf.png" alt="ICF Member">
+        </div>
+      </div>
+
+      <div class="about__content">
+        <p class="lead">Psychologie, FF Masarykova Univerzita, Brno &middot; 17+ let v globálním HR</p>
+
+        <div class="about__quote">
+          <p>Věřím, že dobře položená otázka posune člověka dál než deset dobře míněných rad. Nejsem terapeut ani motivační řečník. Jsem partner pro lidi, kteří chtějí změnu — a jsou ochotni na ní pracovat.</p>
+        </div>
+
+        <p>Mám psychologické vzdělání a 17 let v HR — od recruitmentu přes rozvoj lidí až po strategický partnering. Sama jsem si prošla momentem, kdy jsem málem vyhořela. Díky koučinku jsem si dovolila prostor soustředit se na to, co v životě chci a co mi dělá radost — a získala jsem odvahu změnit to, co nefungovalo.</p>
+
+        <p>Sama nemám ráda zbytečnou složitost ani řešení, která dobře vypadají na papíře, ale nefungují v praxi. Věřím v otevřenost, přímočarost a v to, že každý člověk funguje trochu jinak.</p>
+
+        <p>Do spolupráce přináším praktičnost, schopnost rychle vidět souvislosti a chuť věci posouvat dál.</p>
+
+        <div class="about__stats">
+          <div class="about__stat">
+            <span class="about__stat-num">17</span>
+            <span class="about__stat-label">let v globálním HR</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-num">5</span>
+            <span class="about__stat-label">certifikací</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-num">3</span>
+            <span class="about__stat-label">jazyky</span>
+          </div>
+        </div>
+
+        <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener" class="btn btn--primary">
+          Pojďme si zavolat
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container"><div class="cta-section__inner">
+    <p class="overline">Pojďme si zavolat</p>
+    <h2>Začneme krátkým <em>rozhovorem.</em></h2>
+    <p>Napište mi, zavolejte nebo si rovnou rezervujte termín. Úvodní konzultace je zdarma.</p>
+    <div class="cta-section__ctas">
+      <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener" class="btn btn--white">Domluvit úvodní rozhovor</a>
+      <a href="mailto:hrouzkova.katka@gmail.com" class="btn btn--outline-white">hrouzkova.katka@gmail.com</a>
+    </div>
+  </div></div>
+</section>
+
+<footer class="footer"><div class="container">
+  <div class="footer__top">
+    <div>
+      <div class="footer__brand-name">Katka Hrouzková</div>
+      <p class="footer__brand-desc">Talent Management a koučink<br>Brno &amp; online</p>
+      <a class="footer__contact-item" href="mailto:hrouzkova.katka@gmail.com">hrouzkova.katka@gmail.com</a>
+      <a class="footer__contact-item" href="tel:+420702204830">+420 702 204 830</a>
+    </div>
+    <div>
+      <div class="footer__col-title">Služby</div>
+      <div class="footer__col-links">
+        <a href="sluzby/individualni.html">Individuální spolupráce</a>
+        <a href="sluzby/tymova.html">Týmová spolupráce</a>
+        <a href="sluzby/gallup-mladi.html">Gallup pro mladé lidi 15+</a>
+        <a href="sluzby/hr-partnering.html">HR partnering</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer__col-title">Stránky</div>
+      <div class="footer__col-links">
+        <a href="o-mne.html">O mně</a>
+        <a href="reference.html">Reference</a>
+        <a href="index.html#faq">Otázky a odpovědi</a>
+        <a href="kontakt.html">Kontakt</a>
+      <a href="blog/index.html">Blog</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer__col-title">Kontakt</div>
+      <div class="footer__col-links">
+        <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener">Domluvit úvodní rozhovor</a>
+        <a href="mailto:hrouzkova.katka@gmail.com">Napsat email</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>&copy; 2026 Katka Hrouzková</span>
+  </div>
+</div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+
+<div class="lightbox" id="lightbox" onclick="closeLB()">
+  <button class="lightbox__close" onclick="closeLB()">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+  document.querySelectorAll('.cert-img-row img').forEach(img => {
+    img.addEventListener('click', () => {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox-img').alt = img.alt;
+      document.getElementById('lightbox').classList.add('open');
+    });
+  });
+  function closeLB() { document.getElementById('lightbox').classList.remove('open'); }
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLB(); });
+</script>
+</body>
+</html>
