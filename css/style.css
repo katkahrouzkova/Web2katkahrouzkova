@@ -165,9 +165,9 @@ section { position: relative; }
 }
 .nav__logo {
   font-family: var(--font-serif);
-  font-size: 20px;
-  font-weight: 500;
-  color: var(--charcoal);
+  font-size: 22px;
+  font-weight: 600;
+  color: #2F343B;
   flex-shrink: 0;
 }
 .nav__logo span { color: var(--terra); }
@@ -286,8 +286,7 @@ section { position: relative; }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 140px 64px 80px 0;
-  padding-left: 0;
+  padding: 140px 80px 80px 64px;
 }
 .hero__overline { margin-bottom: 20px; }
 .hero__title {
@@ -296,7 +295,7 @@ section { position: relative; }
   margin-bottom: 24px;
   letter-spacing: -0.01em;
 }
-.hero__title em { font-style: italic; color: var(--terra); }
+.hero__title em { color: var(--terra); }
 .hero__sub {
   font-size: clamp(16px, 1.8vw, 19px);
   color: var(--warm-gray);
@@ -435,7 +434,6 @@ section { position: relative; }
 .intro__statement p {
   font-family: var(--font-serif);
   font-size: 22px;
-  font-style: italic;
   line-height: 1.4;
   color: rgba(255,255,255,0.95);
 }
@@ -661,7 +659,6 @@ section { position: relative; }
 .about__quote p {
   font-family: var(--font-serif);
   font-size: 21px;
-  font-style: italic;
   color: var(--charcoal);
   line-height: 1.5;
   margin: 0;
@@ -725,7 +722,6 @@ section { position: relative; }
 .testimonial-card__quote {
   font-family: var(--font-serif);
   font-size: 19px;
-  font-style: italic;
   line-height: 1.55;
   color: var(--charcoal);
   flex: 1;
@@ -916,7 +912,7 @@ section { position: relative; }
   margin-left: auto;
   margin-right: auto;
 }
-.cta-section h2 em { color: rgba(255,255,255,0.6); font-style: italic; }
+.cta-section h2 em { color: rgba(255,255,255,0.6); }
 .cta-section p {
   color: rgba(255,255,255,0.65);
   font-size: 17px;
@@ -1675,7 +1671,6 @@ section[id] { scroll-margin-top: 80px; }
 }
 .quote-plain {
   font-size: 14px;
-  font-style: italic;
   color: var(--warm-gray);
   line-height: 1.6;
   margin: 0;
@@ -1728,7 +1723,6 @@ section[id] { scroll-margin-top: 80px; }
 }
 .svc-comes-list li {
   font-size: 15px;
-  font-style: italic;
   color: var(--warm-gray);
   line-height: 1.6;
   padding-left: 16px;
@@ -1817,4 +1811,187 @@ section[id] { scroll-margin-top: 80px; }
   .cert-img-row img { height: 40px; }
   .stat-item { padding: 32px 20px; }
   .stat-item__num { font-size: 48px; }
+}
+
+/* Svc who grid — dlaždice */
+.svc-who-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+.svc-who-card {
+  background: #F8F9FB;
+  border-radius: var(--radius-md);
+  padding: 24px 22px;
+  border: 1px solid rgba(37,89,100,0.08);
+}
+.svc-who-card strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+.svc-who-card p {
+  font-size: 13px;
+  color: var(--warm-gray);
+  line-height: 1.65;
+  margin: 0;
+}
+@media (max-width: 640px) {
+  .svc-who-grid { grid-template-columns: 1fr; }
+}
+
+/* Svc who grid — dlaždice */
+.svc-who-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+.svc-who-card {
+  background: #F8F9FB;
+  border-radius: var(--radius-md);
+  padding: 24px 22px;
+  border: 1px solid rgba(37,89,100,0.08);
+}
+.svc-who-card strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+.svc-who-card p {
+  font-size: 13px;
+  color: var(--warm-gray);
+  line-height: 1.65;
+  margin: 0;
+}
+@media (max-width: 640px) {
+  .svc-who-grid { grid-template-columns: 1fr; }
+}
+
+/* Odstup pred S čím vám může pomoci */
+.svc-who-grid {
+  margin-top: 48px;
+}
+p.svc-intro-label + .svc-who-grid {
+  margin-top: 20px;
+}
+
+/* Logos carousel */
+.logos__carousel {
+  overflow: hidden;
+  flex: 1;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+.logos__track {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  width: max-content;
+  animation: logos-scroll 20s linear infinite;
+}
+.logos__track:hover { animation-play-state: paused; }
+@keyframes logos-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Fix — sipky v malych kartach */
+.services__small-cards .svc-main-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--terra);
+  margin-top: 8px;
+}
+.services__small-cards .svc-main-card__link svg {
+  width: 14px !important;
+  height: 14px !important;
+  flex-shrink: 0;
+}
+.services__small-cards .svc-main-card {
+  padding: 24px 24px;
+}
+.services__small-cards .svc-main-card h3 {
+  font-size: 16px !important;
+}
+
+/* Fix sub-links layout */
+.services__sub-links {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  margin-top: 20px;
+}
+.services__sub-link {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 12px 16px !important;
+  background: #fff !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(37,89,100,0.08) !important;
+  text-decoration: none !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--charcoal) !important;
+  transition: background 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+.services__sub-link:hover {
+  background: rgba(37,89,100,0.05) !important;
+  transform: translateX(3px);
+}
+.services__sub-link svg {
+  width: 14px !important;
+  height: 14px !important;
+  flex-shrink: 0;
+  color: var(--terra);
+}
+/* Zmenši male karty */
+.services__small-cards .svc-main-card {
+  padding: 24px !important;
+}
+.services__small-cards .svc-main-card__icon {
+  width: 36px !important;
+  height: 36px !important;
+  margin-bottom: 12px !important;
+}
+.services__small-cards .svc-main-card h3 {
+  font-size: 16px !important;
+  margin-bottom: 6px !important;
+}
+.services__small-cards .svc-main-card p {
+  font-size: 13px !important;
+  margin-bottom: 12px !important;
+}
+
+/* Featured layout — velka karta vlavo + 3 male vpravo */
+.services__featured-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+.services__big-card {
+  background: #F8F9FB;
+  border-radius: var(--radius-md);
+  padding: 36px 32px;
+  border: 1px solid rgba(37,89,100,0.1);
+  height: 100%;
+}
+.services__small-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media (max-width: 1024px) {
+  .services__featured-layout { grid-template-columns: 1fr; }
 }

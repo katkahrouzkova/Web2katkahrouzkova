@@ -118,11 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .from('.hero__image',     { opacity: 0, scale: 1.04, duration: 1.2, ease: 'power2.out' }, 0.1);
 
       /* Hero parallax */
-      gsap.to('.hero__image img', {
-        yPercent: 12,
-        ease: 'none',
-        scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 }
-      });
+      /* hero parallax disabled */
 
       /* Logos strip */
       gsap.from('.logos__item', {

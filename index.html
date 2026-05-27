@@ -128,6 +128,23 @@
       .contact-teaser__grid { grid-template-columns: 1fr; gap: 48px; }
       .contact-teaser__img { aspect-ratio: 16/9; }
     }
+
+    .hero__typing {
+      min-height: 3.5em;
+      font-family: var(--font-serif);
+      font-size: clamp(18px, 2.2vw, 26px);
+      
+      color: var(--terra);
+      margin-bottom: 32px;
+      min-height: 2em;
+    }
+    .typing-cursor {
+      display: inline-block;
+      animation: blink .7s step-end infinite;
+      color: var(--terra);
+      font-weight: 300;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
   </style>
 </head>
 <body>
@@ -185,13 +202,10 @@
   <div class="hero__content container" style="max-width:580px;margin-left:auto;">
     <div class="hero__overline overline">Talent Management a koučink</div>
 
-    <h1 class="hero__title">
-      <span>Jsem partner,<br>ne motivační <em>řečník.</em></span>
+    <h1 class="hero__title" style="min-height:1.15em;display:block;">
+      <span id="typewriter"></span><span class="typing-cursor">|</span>
     </h1>
-
-    <p class="hero__sub">
-      <span>Pomáhám lidem postavit kariéru i život na tom, v čem jsou přirozeně dobří.</span>
-    </p>
+    <p class="hero__typing" id="hero-sub"></p>
 
     <div class="hero__tags">
       <span class="hero__tag">Psychologie</span>
@@ -212,7 +226,7 @@
       </a>
     
     <div style="display:flex;align-items:center;gap:10px;margin-top:24px;">
-      <img src="images/cert-icf.png" alt="ICF Member" style="height:52px;width:auto;opacity:.85;">
+      <img src="images/cert-icf.png" alt="ICF Member" style="height:72px;width:auto;opacity:.9;">
       <span style="font-size:12px;color:var(--warm-gray);line-height:1.4;">Certifikovaný člen<br>International Coaching Federation</span>
     </div>
     </div>
@@ -229,14 +243,23 @@
         <span>Pracuji s lidmi z</span>
       </span>
       <div class="logos__divider"></div>
-      <div class="logos__items">
-        <span class="logos__item">UNIQA</span>
-        <span class="logos__item">ThermoFisher Scientific</span>
-        <span class="logos__item">TRL Space Systems</span>
-        <span class="logos__item">SZPI</span>
-        <span class="logos__item">Intecs</span>
-        <span class="logos__item">Human Sense</span>
-        <span class="logos__item">Enantis</span>
+      <div class="logos__carousel">
+        <div class="logos__track">
+          <span class="logos__item">UNIQA</span>
+          <span class="logos__item">ThermoFisher Scientific</span>
+          <span class="logos__item">TRL Space Systems</span>
+          <span class="logos__item">SZPI</span>
+          <span class="logos__item">Intecs</span>
+          <span class="logos__item">Human Sense</span>
+          <span class="logos__item">Enantis</span>
+          <span class="logos__item">UNIQA</span>
+          <span class="logos__item">ThermoFisher Scientific</span>
+          <span class="logos__item">TRL Space Systems</span>
+          <span class="logos__item">SZPI</span>
+          <span class="logos__item">Intecs</span>
+          <span class="logos__item">Human Sense</span>
+          <span class="logos__item">Enantis</span>
+        </div>
       </div>
     </div>
   
@@ -258,12 +281,8 @@
       <div class="intro__content">
         <p class="intro__overline overline">Jak pracuji</p>
         <h2 class="intro__title">
-          <span>Pragmatický a lidský partner.</span>
+          <span>Pragmaticky a lidsky.</span>
         </h2>
-
-        <p class="intro__lead">
-          <span>Jsem pragmatický a lidský partner pro lidi, kteří chtějí lépe porozumět tomu, jak fungují v práci i v životě.</span>
-        </p>
 
         <div class="intro__statement">
           <p>"Základem mé práce je koučovací rozhovor. Opírám se o psychologické vzdělání, dlouholetou HR zkušenost a nástroje Gallup a <em>PRISM</em>. Neprodávám univerzální návody ani motivační fráze."</p>
@@ -272,11 +291,11 @@
         <ul class="intro__list">
           <li>Propojuji koučink, mentoring a konzultace podle situace</li>
 
-          <li>Psychologické vzdělání + 17 let praxe v globálním HR</li>
+          <li>Mám psychologické vzdělání a 17 let praxe v globálním HR</li>
 
           <li>Koučuji v češtině, slovenštině i angličtině</li>
 
-          <li>Brno osobně nebo online po celé ČR a SR</li>
+          <li>Setkejme se v Brně nebo online po celé ČR a SR</li>
         </ul>
       </div>
     </div>
@@ -296,133 +315,68 @@
       <p>Přizpůsobuji formu spolupráce vaší situaci — od jednorázové konzultace po dlouhodobější doprovázení.</p>
     </div>
 
-    <div class="services__new-layout">
-
-      <!-- LEFT -->
-      <div class="services__intro-col">
-        <p class="overline">
+    <div>
+      <!-- Intro text -->
+      <div style="max-width:680px;margin-bottom:48px;">
+        <p class="overline" style="margin-bottom:12px;">
           <span data-lang="cz">Služby</span>
-          <span data-lang="sk" hidden>Možnosti spolupráce</span>
+          <span data-lang="sk" hidden>Služby</span>
           <span data-lang="en" hidden>Services</span>
         </p>
         <h2>
           <span data-lang="cz">Služby, které posouvají lidi i organizace</span>
-          <span data-lang="sk" hidden>Ako vám pomáham rásť a dosahovať výsledky</span>
-          <span data-lang="en" hidden>How I help you grow and achieve results</span>
+          <span data-lang="sk" hidden>Služby, ktoré posúvajú ľudí aj organizácie</span>
+          <span data-lang="en" hidden>Services that move people and organisations forward</span>
         </h2>
-        <p data-lang="cz">Propojuji koučink, certifikované metodiky a HR expertizu, abychom vám pomohla růst, dělat lepší rozhodnutí a budovat zdravé vztahy i výkonné týmy.</p>
-        <p data-lang="sk" hidden>Prispôsobujem formu spolupráce vašej situácii — od jednorazovej konzultácie po dlhodobejšie sprevádzanie.</p>
-        <p data-lang="en" hidden>I adapt the format to your situation — from a one-off consultation to longer-term accompaniment.</p>
-        <a href="#kontakt" class="btn btn--white" style="margin-top:8px;">
-          <span data-lang="cz">Zjistit více</span>
-          <span data-lang="sk" hidden>Kontaktujte ma</span>
-          <span data-lang="en" hidden>Get in touch</span>
-        </a>
+        <p data-lang="cz" style="margin-top:16px;color:var(--warm-gray);font-size:16px;line-height:1.7;">Propojuji koučink, certifikované metodiky a HR expertizu, abychom vám pomohla růst, dělat lepší rozhodnutí a budovat zdravé vztahy i výkonné týmy.</p>
       </div>
 
-      <!-- RIGHT: 3x2 grid -->
-      <div class="services__cards-grid">
+      <!-- 4 karty cez celú šírku -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
 
-        <a href="sluzby/koucovani.html" class="svc-main-card">
+        <!-- Individuální spolupráce -->
+        <div class="svc-main-card" style="background:#F8F9FB;">
           <div class="svc-main-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="7" r="3"/><path d="M5.5 21v-2a5.5 5.5 0 0 1 11 0v2"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
           </div>
-          <h3 data-lang="cz">1:1 Koučování</h3>
-          <h3 data-lang="sk" hidden>1:1 Koučing</h3>
-          <h3 data-lang="en" hidden>1:1 Coaching</h3>
-          <p data-lang="cz">Podpořím Vás při důležitých rozhodnutích, kariérních změnách a osobním růstu.</p>
-          <p data-lang="sk" hidden>Podporím ťa pri dôležitých rozhodnutiach, kariérnych zmenách a osobnom raste.</p>
-          <p data-lang="en" hidden>I support you through important decisions, career changes and personal growth.</p>
-          <span class="svc-main-card__link">
-            <span data-lang="cz">Více informací</span>
-            <span data-lang="sk" hidden>Viac informácií</span>
-            <span data-lang="en" hidden>Learn more</span>
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-          </span>
+          <h3>Individuální spolupráce</h3>
+          <p>Od jednoho setkání po dlouhodobější doprovázení.</p>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-top:12px;">
+            <a href="sluzby/koucovani.html" style="font-size:12px;color:var(--terra);text-decoration:none;display:flex;align-items:center;gap:4px;">1:1 Koučování <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <a href="sluzby/gallup.html" style="font-size:12px;color:var(--terra);text-decoration:none;display:flex;align-items:center;gap:4px;">Gallup CliftonStrengths <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <a href="sluzby/prism.html" style="font-size:12px;color:var(--terra);text-decoration:none;display:flex;align-items:center;gap:4px;"><em>PRISM</em> Brain Mapping <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <a href="sluzby/program.html" style="font-size:12px;color:var(--terra);text-decoration:none;display:flex;align-items:center;gap:4px;">Program pro kariérní změnu <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Gallup pro mladé -->
+        <a href="sluzby/gallup-mladi.html" class="svc-main-card">
+          <div class="svc-main-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22V12M12 12C12 7 7 4 3 6M12 12C12 7 17 4 21 6"/></svg>
+          </div>
+          <h3>Gallup pro mladé 15+</h3>
+          <p>Talentové a kariérní poradenství při volbě školy, oboru a dalšího směru.</p>
+          <span class="svc-main-card__link">Více informací <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
         </a>
 
-        <a href="sluzby/gallup.html" class="svc-main-card">
-          <div class="svc-main-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="12" width="4" height="8"/><rect x="10" y="7" width="4" height="13"/><rect x="17" y="3" width="4" height="17"/></svg>
-          </div>
-          <h3>Gallup CliftonStrengths</h3>
-          <p data-lang="cz">Zjisti, v čem máš přirozené předpoklady — a vědomě na nich stav.</p>
-          <p data-lang="sk" hidden>Zisti, v čom máš prirodzené predpoklady — a vedome na nich stav.</p>
-          <p data-lang="en" hidden>Discover where your natural strengths lie — and build on them deliberately.</p>
-          <span class="svc-main-card__link">
-            <span data-lang="cz">Více informací</span>
-            <span data-lang="sk" hidden>Viac informácií</span>
-            <span data-lang="en" hidden>Learn more</span>
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-          </span>
-        </a>
-
-        <a href="sluzby/prism.html" class="svc-main-card">
-          <div class="svc-main-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15.5M12 4.5A2.5 2.5 0 0 1 14.5 2 4.5 4.5 0 0 1 19 6.5c0 1-.3 1.9-.8 2.6A4 4 0 0 1 20 12.5 4.5 4.5 0 0 1 15.5 17H12m0 0H8.5A4.5 4.5 0 0 1 4 12.5a4 4 0 0 1 1.8-3.4A4.4 4.4 0 0 1 5 6.5 4.5 4.5 0 0 1 9.5 2"/></svg>
-          </div>
-          <h3><em>PRISM</em> Brain Mapping</h3>
-          <p data-lang="cz">Pochop, jak přirozeně fungujete a v čem se v práci přizpůsobuješ.</p>
-          <p data-lang="sk" hidden>Pochop, ako prirodzene fungujete a kde sa v práci prispôsobuješ.</p>
-          <p data-lang="en" hidden>Understand how you naturally operate and where you adapt at work.</p>
-          <span class="svc-main-card__link">
-            <span data-lang="cz">Více informací</span>
-            <span data-lang="sk" hidden>Viac informácií</span>
-            <span data-lang="en" hidden>Learn more</span>
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-          </span>
-        </a>
-
-        <a href="sluzby/program.html" class="svc-main-card">
-          <div class="svc-main-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-          </div>
-          <h3 data-lang="cz">Program pro kariérní změnu</h3>
-          <h3 data-lang="sk" hidden>Program pre kariérnu zmenu</h3>
-          <h3 data-lang="en" hidden>Career Change Programme</h3>
-          <p data-lang="cz">Strukturovaný program, který vám pomůže najít nový směr, posílit sebevědomí a úspěšně změnit kariéru.</p>
-          <p data-lang="sk" hidden>Dlhodobejšie sprevádzanie pre toho, kto chce skutočnú zmenu v kariére aj živote.</p>
-          <p data-lang="en" hidden>Longer-term accompaniment for someone ready to make a real change in work and life.</p>
-          <span class="svc-main-card__link">
-            <span data-lang="cz">Více informací</span>
-            <span data-lang="sk" hidden>Viac informácií</span>
-            <span data-lang="en" hidden>Learn more</span>
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-          </span>
-        </a>
-
+        <!-- Týmová spolupráce -->
         <a href="sluzby/tymova.html" class="svc-main-card">
           <div class="svc-main-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="5" cy="7" r="2"/><path d="M1 19v-1a4 4 0 0 1 4-4h0a4 4 0 0 1 4 4v1"/><circle cx="12" cy="6" r="2"/><path d="M8 19v-2a4 4 0 0 1 4-4h0a4 4 0 0 1 4 4v2"/><circle cx="19" cy="7" r="2"/><path d="M15 19v-1a4 4 0 0 1 4-4h0a4 4 0 0 1 4 4v1"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="7" r="2.5"/><circle cx="16" cy="7" r="2.5"/><circle cx="12" cy="6" r="2.5"/><path d="M2 21v-1.5A4.5 4.5 0 0 1 6.5 15h3"/><path d="M22 21v-1.5A4.5 4.5 0 0 0 17.5 15h-3"/><path d="M8.5 15A4.5 4.5 0 0 1 12 13.5 4.5 4.5 0 0 1 15.5 15v.5a4.5 4.5 0 0 1-7 0V15z"/></svg>
           </div>
-          <h3 data-lang="cz">Týmová spolupráce</h3>
-          <h3 data-lang="sk" hidden>Tímová spolupráca</h3>
-          <h3 data-lang="en" hidden>Team workshops</h3>
-          <p data-lang="cz">Workshopy a programy pro týmy, které chtějí lépe spolupracovat.</p>
-          <p data-lang="sk" hidden>Workshopy a programy pre tímy, ktoré chcú lepšie spolupracovať.</p>
-          <p data-lang="en" hidden>Workshops and programmes for teams that want to collaborate better.</p>
-          <span class="svc-main-card__link">
-            <span data-lang="cz">Více informací</span>
-            <span data-lang="sk" hidden>Viac informácií</span>
-            <span data-lang="en" hidden>Learn more</span>
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-          </span>
+          <h3>Týmová spolupráce</h3>
+          <p>Workshopy a programy pro týmy, které chtějí lépe spolupracovat.</p>
+          <span class="svc-main-card__link">Více informací <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
         </a>
 
+        <!-- HR partnering -->
         <a href="sluzby/hr-partnering.html" class="svc-main-card">
           <div class="svc-main-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="10" width="18" height="11" rx="2"/><path d="M7 10V7a5 5 0 0110 0v3"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
           </div>
           <h3>HR partnering</h3>
-          <p data-lang="cz">Strategické HR poradenství v klíčových oblastech byznysu.</p>
-          <p data-lang="sk" hidden>Strategické HR poradenstvo v kľúčových oblastiach biznisu.</p>
-          <p data-lang="en" hidden>Strategic HR consulting in key areas of your business.</p>
-          <span class="svc-main-card__link">
-            <span data-lang="cz">Více informací</span>
-            <span data-lang="sk" hidden>Viac informácií</span>
-            <span data-lang="en" hidden>Learn more</span>
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-          </span>
+          <p>Strategické HR poradenství v klíčových oblastech byznysu.</p>
+          <span class="svc-main-card__link">Více informací <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
         </a>
 
       </div>
@@ -431,6 +385,7 @@
 </section>
 
 <!-- ================================================
+
      FAQ
      ================================================ -->
 
@@ -442,7 +397,7 @@
   <div class="container">
     <div class="cta-section__inner">
       <p class="overline">Pojďme si zavolat</p>
-      <h2>Začneme krátkým <em>rozhovorem.</em></h2>
+      <h2>Začneme krátkým rozhovorem.</h2>
       <p>Napište mi, zavolejte nebo si rovnou rezervujte termín. Úvodní konzultace je zdarma.</p>
 
       <div class="cta-section__ctas">
@@ -532,8 +487,31 @@
   </div>
 </footer>
 
+<script>
+  if(history.scrollRestoration) history.scrollRestoration = "manual";
+  window.addEventListener("load", function(){
+    if(window.location.hash){
+      var el=document.querySelector(window.location.hash);
+      if(el){ setTimeout(function(){ el.scrollIntoView({behavior:'smooth'}); },100); }
+    } else {
+      window.scrollTo(0,0);
+    }
+  });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="js/main.js"></script>
+
+<script>
+(function(){
+  var t1="Jsem váš partner.";
+  document.getElementById("hero-sub").textContent="Pomáhám lidem postavit kariéru i život na tom, v čem jsou přirozeně dobří.";
+  var el1=document.getElementById("typewriter");
+  if(el1){var i=0;var cur=document.querySelector(".typing-cursor");setTimeout(function run(){if(i<t1.length){el1.textContent+=t1[i++];setTimeout(run,90);}else if(cur){cur.style.display="none";}},1200);}
+  var t2="Pro lidi, kteří chtějí lépe porozumět tomu, jak fungují v práci i v životě.";
+  var el2=document.getElementById("typewriter2");
+  if(el2){var j=0;var obs=new IntersectionObserver(function(e){if(e[0].isIntersecting){obs.disconnect();setTimeout(function run2(){if(j<t2.length){el2.textContent+=t2[j++];setTimeout(run2,38);}},400);}});obs.observe(el2);}
+})();
+</script>
 </body>
 </html>
