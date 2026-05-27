@@ -108,6 +108,26 @@
       padding: 5px 14px;
     }
 
+    
+    .testimonials__track {
+      display: flex;
+      gap: 24px;
+      animation: scroll 25s linear infinite;
+    }
+    .testimonials__track:hover { animation-play-state: paused; }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .testimonials__track-wrap { cursor: pointer; }
+
+    .testimonials__track:hover { animation-play-state: paused; }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .testimonials__track-wrap { cursor: pointer; }
+
     /* ---- testimonial full quote (longer) ---- */
     .testimonial-card__quote { font-size: 17px; }
 
@@ -252,6 +272,7 @@
           <span class="logos__item">Intecs</span>
           <span class="logos__item">Human Sense</span>
           <span class="logos__item">Enantis</span>
+          <span class="logos__item">ČSOB</span>
           <span class="logos__item">UNIQA</span>
           <span class="logos__item">ThermoFisher Scientific</span>
           <span class="logos__item">TRL Space Systems</span>
@@ -259,6 +280,7 @@
           <span class="logos__item">Intecs</span>
           <span class="logos__item">Human Sense</span>
           <span class="logos__item">Enantis</span>
+          <span class="logos__item">ČSOB</span>
         </div>
       </div>
     </div>
@@ -389,9 +411,122 @@
      FAQ
      ================================================ -->
 
+<!-- ================================================
+     TESTIMONIALS
+     ================================================ -->
+<section class="testimonials" id="reference">
+  <div class="container">
+    <div class="testimonials__header">
+      <p class="overline">Co říkají klienti</p>
+      <h2>Reference</h2>
+    </div>
+  </div>
+  <div class="testimonials__track-wrap">
+    <div class="testimonials__track">
+    
+      <!-- Karta 1: Aleksandra -->
+      <div class="testimonial-card">
+        <p class="testimonial-card__quote">„Na Katce je vidět, že je profík. Má hluboké zkušenosti, ale přistupuje k vám s lidskostí a opravdovým zájmem.“</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar"><img src="images/ref-aleksandra-thomas.jpg" alt="Aleksandra Thomas" loading="lazy"></div>
+          <div>
+            <div class="testimonial-card__name">Aleksandra Thomas</div>
+            <div class="testimonial-card__company">UNIQA</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Karta 2: Jan -->
+      <div class="testimonial-card">
+        <p class="testimonial-card__quote">„Katka nejede podle šablony. Pomohla mi vnést řád do složitých témat a dojít ke konkrétním rozhodnutím.“</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar"><img src="images/ref-jan-neuzil.jpg" alt="Jan Neužil" loading="lazy"></div>
+          <div>
+            <div class="testimonial-card__name">Jan Neužil</div>
+            <div class="testimonial-card__company">Thermo Fisher Scientific</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Karta 3: Olga -->
+      <div class="testimonial-card">
+        <p class="testimonial-card__quote">„Propojuje sebereflexi s praktickým dopadem do reálného života i práce.“</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar"><img src="images/ref-olga-kominkova.jpg" alt="Olga Komínková" loading="lazy"></div>
+          <div>
+            <div class="testimonial-card__name">Olga Komínková</div>
+            <div class="testimonial-card__company">TRL Space Systems</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Karta 4: Tereza -->
+      <div class="testimonial-card">
+        <p class="testimonial-card__quote">„Oceňuji schopnost držet strukturu a zároveň klást přesné otázky, které mi ukazují nové úhly pohledu.“</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar"><img src="images/ref-tereza-spackova.jpg" alt="Tereza Špačková" loading="lazy"></div>
+          <div>
+            <div class="testimonial-card__name">Tereza Špačková</div>
+            <div class="testimonial-card__company">UNIQA</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Karta 5: Anežka -->
+      <div class="testimonial-card">
+        <p class="testimonial-card__quote">„Konkrétní techniky teď úspěšně využívám v práci i v soukromí. Katka je nesmírně empatická a klidná.“</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar"><img src="images/ref-anezka-dvorakova.jpg" alt="Anežka Dvořáková" loading="lazy"></div>
+          <div>
+            <div class="testimonial-card__name">Anežka Dvořáková</div>
+            <div class="testimonial-card__company">SZPI</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Karta 6: Naďa -->
+      <div class="testimonial-card">
+        <p class="testimonial-card__quote">„Nesklouzává k obecným frázím, ale umí nabídnout přesnou zpětnou vazbu, která člověka opravdu vede k zamyšlení.“</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar"><img src="images/foto-nada.jpeg" alt="Naďa Matějková" loading="lazy"></div>
+          <div>
+            <div class="testimonial-card__name">Naďa Matějková</div>
+            <div class="testimonial-card__company">Coach and Personal Leadership Partner</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  <div class="testimonials__nav">
+    <button class="testimonials__dot active" aria-label="1"></button>
+    <button class="testimonials__dot" aria-label="2"></button>
+    <button class="testimonials__dot" aria-label="3"></button>
+    <button class="testimonials__dot" aria-label="4"></button>
+    <button class="testimonials__dot" aria-label="5"></button>
+    <button class="testimonials__dot" aria-label="6"></button>
+  </div>
+  
+  <div style="text-align: center; margin-top: 48px;">
+    <a href="reference.html" class="btn btn--primary">CHCI SI PŘEČÍST VÍCE</a>
+  </div>
+</section>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const track = document.querySelector('.testimonials__track');
+  if (!track) return;
+  // Duplikácia obsahu pre nekonečnú slučku
+  track.innerHTML += track.innerHTML;
+});
+</script>
+
 
 <!-- ================================================
      FINAL CTA
+
      ================================================ -->
 <section class="cta-section" id="kontakt">
   <div class="container">
@@ -487,31 +622,29 @@
   </div>
 </footer>
 
+
 <script>
-  if(history.scrollRestoration) history.scrollRestoration = "manual";
-  window.addEventListener("load", function(){
-    if(window.location.hash){
-      var el=document.querySelector(window.location.hash);
-      if(el){ setTimeout(function(){ el.scrollIntoView({behavior:'smooth'}); },100); }
-    } else {
-      window.scrollTo(0,0);
-    }
-  });
+document.addEventListener("DOMContentLoaded", function() {
+  const track = document.querySelector('.testimonials__track');
+  if (!track) return;
+  // Duplikácia obsahu pre nekonečnú slučku
+  track.innerHTML += track.innerHTML;
+});
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="js/main.js"></script>
 
+
 <script>
-(function(){
-  var t1="Jsem váš partner.";
-  document.getElementById("hero-sub").textContent="Pomáhám lidem postavit kariéru i život na tom, v čem jsou přirozeně dobří.";
-  var el1=document.getElementById("typewriter");
-  if(el1){var i=0;var cur=document.querySelector(".typing-cursor");setTimeout(function run(){if(i<t1.length){el1.textContent+=t1[i++];setTimeout(run,90);}else if(cur){cur.style.display="none";}},1200);}
-  var t2="Pro lidi, kteří chtějí lépe porozumět tomu, jak fungují v práci i v životě.";
-  var el2=document.getElementById("typewriter2");
-  if(el2){var j=0;var obs=new IntersectionObserver(function(e){if(e[0].isIntersecting){obs.disconnect();setTimeout(function run2(){if(j<t2.length){el2.textContent+=t2[j++];setTimeout(run2,38);}},400);}});obs.observe(el2);}
-})();
+document.addEventListener("DOMContentLoaded", function() {
+  const track = document.querySelector('.testimonials__track');
+  if (!track) return;
+  // Duplikácia obsahu pre nekonečnú slučku
+  track.innerHTML += track.innerHTML;
+});
 </script>
+
 </body>
 </html>
