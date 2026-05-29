@@ -176,8 +176,28 @@
     }
     @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 </style>
-<style>img[src*='foto-homepage jakpracuji.jpg'] { object-position: top center !important; }</style>
+<style>img[src*='foto-homepage jakpracuji.png'] { object-position: top center !important; width: 100% !important; height: 100% !important; object-fit: cover !important; border-radius: 16px !important; display: block !important; }</style>
+
+<style>
+#jak-pracuji .intro__image-wrap { 
+    padding: 0 !important; 
+    border-radius: 16px !important; 
+    overflow: hidden !important; 
+    background: transparent !important;
+    border: none !important;
+}
+#jak-pracuji .intro__image-wrap img { 
+    width: 100% !important; 
+    height: 100% !important; 
+    min-height: 450px !important; 
+    object-fit: cover !important; 
+    object-position: center !important; 
+    margin: 0 !important;
+    display: block !important;
+}
+</style>
 </head>
+
 <body>
 
 <!-- ================================================
@@ -225,7 +245,7 @@
      ================================================ -->
 <section class="hero" id="uvod">
   <div class="hero__image">
-    <img src="images/foto-hero.jpg"
+    <img src="images/foto-hero.png"
          alt="Mgr. Katka Hrouzková – certifikovaný kouč" fetchpriority="high">
     <div class="hero__image-overlay"></div>
   </div>
@@ -304,10 +324,7 @@
 <section class="intro" id="jak-pracuji">
   <div class="container">
     <div class="intro__grid">
-      <div class="intro__image-wrap">
-        <img style="object-position: top !important;" src="images/foto-homepage jakpracuji.jpg"
-             alt="Katka Hrouzková – jak pracuji" loading="lazy">
-      </div>
+      <div style="border-radius: 24px; overflow: hidden; line-height: 0; font-size: 0; padding: 0; margin: 0; background: none; border: none;"><img src="images/foto-homepage jakpracuji.png" alt="Jak pracuji" style="width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover; object-position: center; display: block; border-radius: 24px; margin: 0; padding: 0; box-shadow: none;"></div>
 
       <div class="intro__content">
         <p class="intro__overline overline">Jak pracuji</p>
