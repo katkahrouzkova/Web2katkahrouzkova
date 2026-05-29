@@ -1995,3 +1995,9 @@ p.svc-intro-label + .svc-who-grid {
 @media (max-width: 1024px) {
   .services__featured-layout { grid-template-columns: 1fr; }
 }
+
+/* === SAFETY NET: hero obsah vždy viditeľný (aj keď GSAP zlyhá) === */
+.hero__overline,
+.hero__title,
+.hero__sub,
+.hero__ctas { opacity: 1 !important; transform: none !important; }

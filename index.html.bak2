@@ -8,9 +8,9 @@
   <meta name="author" content="Mgr. Katka Hrouzková">
   <link rel="canonical" href="https://katkahrouzkova.github.io/katkahrouzkova/">
   <meta property="og:title" content="Katka Hrouzková – Talent Management a koučink">
-  <meta property="og:description" content="Certifikovaný kouč se 17 lety HR praxe. Gallup, <em>PRISM</em>, Erickson. Brno & online.">
+  <meta property="og:description" content="Certifikovaný kouč s 17 lety HR praxe. Gallup, <em>PRISM</em>, Erickson. Brno & online.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://katkahrouzkova.github.io/katkahrouzkova/images/foto-hero.jpg">
+  <meta property="og:image" content="https://katkahrouzkova.github.io/katkahrouzkova/images/Hero%20pic.jpg">
 
   <script type="application/ld+json">
   {
@@ -19,7 +19,7 @@
     "name": "Mgr. Katka Hrouzková",
     "jobTitle": "Certifikovaný kouč & Talent Manager",
     "url": "https://katkahrouzkova.github.io/katkahrouzkova/",
-    "image": "https://katkahrouzkova.github.io/katkahrouzkova/images/foto-hero.jpg",
+    "image": "https://katkahrouzkova.github.io/katkahrouzkova/images/Hero%20pic.jpg",
     "email": "hrouzkova.katka@gmail.com",
     "telephone": "+420702204830",
     "address": { "@type": "PostalAddress", "addressLocality": "Brno", "addressCountry": "CZ" },
@@ -108,26 +108,6 @@
       padding: 5px 14px;
     }
 
-    
-    .testimonials__track {
-      display: flex;
-      gap: 24px;
-      animation: scroll 25s linear infinite;
-    }
-    .testimonials__track:hover { animation-play-state: paused; }
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .testimonials__track-wrap { cursor: pointer; }
-
-    .testimonials__track:hover { animation-play-state: paused; }
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .testimonials__track-wrap { cursor: pointer; }
-
     /* ---- testimonial full quote (longer) ---- */
     .testimonial-card__quote { font-size: 17px; }
 
@@ -165,18 +145,7 @@
       font-weight: 300;
     }
     @keyframes blink { 50% { opacity: 0; } }
-  
-    /* ---- Typewriter efekt ---- */
-    .typewriter-cursor {
-      display: inline-block;
-      color: var(--terra);
-      font-weight: 300;
-      margin-left: 2px;
-      animation: blink 1s step-end infinite;
-    }
-    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-</style>
-<style>img[src*='foto-homepage jakpracuji.jpg'] { object-position: top center !important; }</style>
+  </style>
 </head>
 <body>
 
@@ -225,7 +194,7 @@
      ================================================ -->
 <section class="hero" id="uvod">
   <div class="hero__image">
-    <img src="images/foto-hero.jpg"
+    <img src="https://katkahrouzkova.github.io/katkahrouzkova/images/Hero%20pic.jpg"
          alt="Mgr. Katka Hrouzková – certifikovaný kouč" fetchpriority="high">
     <div class="hero__image-overlay"></div>
   </div>
@@ -233,8 +202,10 @@
   <div class="hero__content container" style="max-width:580px;margin-left:auto;">
     <div class="hero__overline overline">Talent Management a koučink</div>
 
-    <h1 class="hero__title" style="min-height:1.15em;display:block;"><span style="white-space: nowrap;"><span id="typewriter"></span><span class="typewriter-cursor">|</span></span></h1>
-    <p class="hero__typing" id="hero-sub">Pomáhám lidem postavit kariéru i život na tom, v čem jsou přirozeně dobří.</p>
+    <h1 class="hero__title" style="min-height:1.15em;display:block;">
+      <span id="typewriter"></span><span class="typing-cursor">|</span>
+    </h1>
+    <p class="hero__typing" id="hero-sub"></p>
 
     <div class="hero__tags">
       <span class="hero__tag">Psychologie</span>
@@ -305,7 +276,7 @@
   <div class="container">
     <div class="intro__grid">
       <div class="intro__image-wrap">
-        <img style="object-position: top !important;" src="images/foto-homepage jakpracuji.jpg"
+        <img src="https://katkahrouzkova.github.io/katkahrouzkova/images/foto-homepage%20jakpracuji.jpg"
              alt="Katka Hrouzková – jak pracuji" loading="lazy">
       </div>
 
@@ -359,7 +330,7 @@
           <span data-lang="sk" hidden>Služby, ktoré posúvajú ľudí aj organizácie</span>
           <span data-lang="en" hidden>Services that move people and organisations forward</span>
         </h2>
-        <p data-lang="cz" style="margin-top:16px;color:var(--warm-gray);font-size:16px;line-height:1.7;">Propojuji koučink, certifikované metodiky a HR expertizu, abych vám pomohla růst, dělat lepší rozhodnutí a budovat zdravé vztahy i výkonné týmy.</p>
+        <p data-lang="cz" style="margin-top:16px;color:var(--warm-gray);font-size:16px;line-height:1.7;">Propojuji koučink, certifikované metodiky a HR expertizu, abychom vám pomohla růst, dělat lepší rozhodnutí a budovat zdravé vztahy i výkonné týmy.</p>
       </div>
 
       <!-- 4 karty cez celú šírku -->
@@ -420,6 +391,7 @@
      FAQ
      ================================================ -->
 
+
 <!-- ================================================
      TESTIMONIALS
      ================================================ -->
@@ -432,92 +404,30 @@
   </div>
   <div class="testimonials__track-wrap">
     <div class="testimonials__track">
-    
-      <!-- Karta 1: Aleksandra -->
+      <!-- Karta 1: Naďa Matějková -->
       <div class="testimonial-card">
-        <p class="testimonial-card__quote">„Na Katce je vidět, že je profík. Má hluboké zkušenosti, ale přistupuje k vám s lidskostí a opravdovým zájmem.“</p>
+        <p class="testimonial-card__quote">Na spolupráci s Katkou oceňuji především schopnost rychle vystihnout podstatné věci a vést interpretaci velmi prakticky a zároveň lidsky. Nesklouzává k obecným frázím, ale nabízí přesnou zpětnou vazbu, která vede k zamyšlení.</p>
         <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar"><img src="images/ref-aleksandra-thomas.jpg" alt="Aleksandra Thomas" loading="lazy"></div>
-          <div>
-            <div class="testimonial-card__name">Aleksandra Thomas</div>
-            <div class="testimonial-card__company">UNIQA</div>
+          <div class="testimonial-card__avatar">
+            <img src="images/foto-nada.jpeg" alt="Naďa Matějková" loading="lazy">
           </div>
-        </div>
-      </div>
-
-      <!-- Karta 2: Jan -->
-      <div class="testimonial-card">
-        <p class="testimonial-card__quote">„Katka nejede podle šablony. Pomohla mi vnést řád do složitých témat a dojít ke konkrétním rozhodnutím.“</p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar"><img src="images/ref-jan-neuzil.jpg" alt="Jan Neužil" loading="lazy"></div>
-          <div>
-            <div class="testimonial-card__name">Jan Neužil</div>
-            <div class="testimonial-card__company">Thermo Fisher Scientific</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Karta 3: Olga -->
-      <div class="testimonial-card">
-        <p class="testimonial-card__quote">„Propojuje sebereflexi s praktickým dopadem do reálného života i práce.“</p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar"><img src="images/ref-olga-kominkova.jpg" alt="Olga Komínková" loading="lazy"></div>
-          <div>
-            <div class="testimonial-card__name">Olga Komínková</div>
-            <div class="testimonial-card__company">TRL Space Systems</div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Karta 4: Tereza -->
-      <div class="testimonial-card">
-        <p class="testimonial-card__quote">„Oceňuji schopnost držet strukturu a zároveň klást přesné otázky, které mi ukazují nové úhly pohledu.“</p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar"><img src="images/ref-tereza-spackova.jpg" alt="Tereza Špačková" loading="lazy"></div>
-          <div>
-            <div class="testimonial-card__name">Tereza Špačková</div>
-            <div class="testimonial-card__company">UNIQA</div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Karta 5: Anežka -->
-      <div class="testimonial-card">
-        <p class="testimonial-card__quote">„Konkrétní techniky teď úspěšně využívám v práci i v soukromí. Katka je nesmírně empatická a klidná.“</p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar"><img src="images/ref-anezka-dvorakova.jpg" alt="Anežka Dvořáková" loading="lazy"></div>
-          <div>
-            <div class="testimonial-card__name">Anežka Dvořáková</div>
-            <div class="testimonial-card__company">SZPI</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Karta 6: Naďa -->
-      <div class="testimonial-card">
-        <p class="testimonial-card__quote">„Nesklouzává k obecným frázím, ale umí nabídnout přesnou zpětnou vazbu, která člověka opravdu vede k zamyšlení.“</p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar"><img src="images/foto-nada.jpeg" alt="Naďa Matějková" loading="lazy"></div>
           <div>
             <div class="testimonial-card__name">Naďa Matějková</div>
             <div class="testimonial-card__company">Coach and Personal Leadership Partner</div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
-  
-  
-  
-  <div style="text-align: center; margin-top: 48px;">
-    <a href="reference.html" class="btn btn--primary">CHCI SI PŘEČÍST VÍCE</a>
+  <div class="testimonials__nav">
+    <button class="testimonials__dot active" aria-label="1"></button>
+    <button class="testimonials__dot" aria-label="2"></button>
+    <button class="testimonials__dot" aria-label="3"></button>
+    <button class="testimonials__dot" aria-label="4"></button>
+    <button class="testimonials__dot" aria-label="5"></button>
+    <button class="testimonials__dot" aria-label="6"></button>
   </div>
 </section>
-
-
-
-
 
 <!-- ================================================
      FINAL CTA
@@ -617,46 +527,31 @@
   </div>
 </footer>
 
-
-
-
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const track = document.querySelector('.testimonials__track');
-  if (!track) return;
-  // Duplikácia obsahu pre nekonečnú slučku
-  track.innerHTML += track.innerHTML;
-});
+  if(history.scrollRestoration) history.scrollRestoration = "manual";
+  window.addEventListener("load", function(){
+    if(window.location.hash){
+      var el=document.querySelector(window.location.hash);
+      if(el){ setTimeout(function(){ el.scrollIntoView({behavior:'smooth'}); },100); }
+    } else {
+      window.scrollTo(0,0);
+    }
+  });
 </script>
-
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="js/main.js"></script>
 
-
-
-
-
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const text = "Jsem váš partner.";
-    const target = document.getElementById("typewriter");
-    const cursor = document.querySelector(".typewriter-cursor");
-    if(target) {
-      let i = 0;
-      function typeWriter() {
-        if (i < text.length) {
-          target.innerHTML += text.charAt(i);
-          i++;
-          setTimeout(typeWriter, 80);
-        } else {
-          // Keď dopíše, kurzor zmizne
-          if(cursor) cursor.style.display = "none";
-        }
-      }
-      setTimeout(typeWriter, 500);
-    }
-  });
+(function(){
+  var t1="Jsem váš partner.";
+  document.getElementById("hero-sub").textContent="Pomáhám lidem postavit kariéru i život na tom, v čem jsou přirozeně dobří.";
+  var el1=document.getElementById("typewriter");
+  if(el1){var i=0;var cur=document.querySelector(".typing-cursor");setTimeout(function run(){if(i<t1.length){el1.textContent+=t1[i++];setTimeout(run,90);}else if(cur){cur.style.display="none";}},1200);}
+  var t2="Pro lidi, kteří chtějí lépe porozumět tomu, jak fungují v práci i v životě.";
+  var el2=document.getElementById("typewriter2");
+  if(el2){var j=0;var obs=new IntersectionObserver(function(e){if(e[0].isIntersecting){obs.disconnect();setTimeout(function run2(){if(j<t2.length){el2.textContent+=t2[j++];setTimeout(run2,38);}},400);}});obs.observe(el2);}
+})();
 </script>
 </body>
 </html>

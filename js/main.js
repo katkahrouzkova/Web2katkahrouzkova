@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* -------- LANGUAGE TOGGLE -------- */
   const langBtns = document.querySelectorAll('.nav__lang button');
-  const langContent = document.querySelectorAll('[data-lang]');
+  const langContent = document.querySelectorAll('[data-lang]:not(.nav__lang button)');
 
   function setLang(lang) {
     langBtns.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
@@ -42,7 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   langBtns.forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
-  const savedLang = localStorage.getItem('katka-lang') || 'cz';
+  const validLangs = ['cz', 'sk', 'en'];
+  let savedLang = localStorage.getItem('katka-lang');
+  if (!validLangs.includes(savedLang)) savedLang = 'cz';
   setLang(savedLang);
 
   /* -------- TESTIMONIALS CAROUSEL -------- */

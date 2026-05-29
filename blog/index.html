@@ -61,6 +61,15 @@
   </div>
 </footer>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const track = document.querySelector('.testimonials__track');
+  if (!track) return;
+  // Duplikácia obsahu pre nekonečnú slučku
+  track.innerHTML += track.innerHTML;
+});
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="../js/main.js"></script>
 </body>

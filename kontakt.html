@@ -11,7 +11,19 @@
     .nav{background:rgba(255,255,255,0.98)!important;box-shadow:0 1px 0 rgba(35,38,43,0.08)}
     body{background:#3D4E56}
     .kontakt-wrap{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:120px 0 80px}
-  </style>
+  
+    .kontakt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; width: 100%; }
+    .kontakt-img { border-radius: 24px; overflow: hidden; aspect-ratio: 4/5; }
+    .kontakt-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .kontakt-text { text-align: left; }
+    .kontakt-text h2, .kontakt-text p { margin-left: 0 !important; margin-right: 0 !important; max-width: 100% !important; }
+    .kontakt-text .cta-section__ctas, .kontakt-text .cta-section__contact { justify-content: flex-start !important; }
+    @media (max-width: 768px) {
+      .kontakt-grid { grid-template-columns: 1fr; gap: 40px; }
+      .kontakt-text { text-align: center; }
+      .kontakt-text .cta-section__ctas, .kontakt-text .cta-section__contact { justify-content: center !important; }
+    }
+</style>
 </head>
 <body>
 
@@ -38,7 +50,11 @@
 <div class="kontakt-wrap">
   <div class="cta-section" style="padding:0;background:transparent;width:100%">
     <div class="container">
-      <div class="cta-section__inner">
+      <div class="kontakt-grid">
+        <div class="kontakt-img">
+          <img src="images/foto-pojdmesizavolatnew.jpg" alt="Katka Hrouzková - Kontakt" loading="lazy">
+        </div>
+        <div class="cta-section__inner kontakt-text">
         <p class="overline">Pojďme si zavolat</p>
         <h2>Začneme krátkým rozhovorem.</h2>
         <p>Napište mi, zavolejte nebo si rovnou rezervujte termín. Úvodní konzultace je zdarma.</p>
@@ -64,6 +80,7 @@
           <span style="color:rgba(255,255,255,.35);">·</span>
           <span style="color:rgba(255,255,255,.6);font-size:15px;">Brno &amp; online · CZ / SK / EN</span>
         </div>
+      </div>
       </div>
     </div>
   </div>

@@ -45,71 +45,134 @@
   </div>
 </section>
 
-<section style="padding:64px 0 100px;background:#fff">
-  <div class="container container--narrow">
+<section style="padding:64px 0 100px; background: var(--paper, #F8F9FB);">
+  <div class="container">
+    <style>
+      .masonry-grid {
+        column-count: 2;
+        column-gap: 24px;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      .ref-card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 40px;
+        border: 1px solid rgba(37,89,100,0.1);
+        margin-bottom: 24px;
+        break-inside: avoid; /* Zabráni prelomeniu karty medzi stĺpcami */
+        display: inline-block;
+        width: 100%;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.02);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .ref-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+      }
+      .ref-card__text {
+        font-family: var(--font-serif);
+        font-size: 19px;
+        line-height: 1.65;
+        color: var(--charcoal);
+        margin-bottom: 32px;
+      }
+      .ref-card__author {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(37,89,100,0.08);
+      }
+      .ref-card__avatar {
+        width: 48px; height: 48px; border-radius: 50%; object-fit: cover; flex-shrink: 0;
+      }
+      .ref-card__link {
+        font-size: 12px; color: var(--terra); display: inline-flex; align-items: center; gap: 4px; margin-top: 6px; text-decoration: none;
+      }
+      .ref-card__link:hover { text-decoration: underline; }
+      @media (max-width: 768px) {
+        .masonry-grid { column-count: 1; }
+        .ref-card { padding: 32px 24px; }
+      }
+    </style>
+    
+    <div class="masonry-grid">
+      <!-- Karta 1 -->
+      <div class="ref-card">
+        <p class="ref-card__text">„Spolupráce s Katkou pro mě byla důležitá. Vytvořila prostor, kde jsem mohla bez obav říct i věci, které jsem nikdy předtím nevyslovila nahlas. Všechno šlo přirozeně, bez tlaku nebo nějakého hodnocení. Katka mi pomohla se znovu najít. Funguje jako zrcadlo – člověk díky ní uvidí, kým skutečně je. Pomohla mi získat odstup a ukázala mi souvislosti, které jsem měla přímo před nosem, ale doteď jsem je neviděla. Na Katce je vidět, že je profík. Má hluboké zkušenosti, ale přistupuje k vám s lidskostí a opravdovým zájmem. Doporučuji ji každému, kdo se cítí zaseknutý nebo přetížený a hledá klid a jistotu v práci i v sobě.“</p>
+        <div class="ref-card__author">
+          <img src="images/ref-aleksandra-thomas.jpg" alt="Aleksandra Thomas" class="ref-card__avatar">
+          <div>
+            <div style="font-size:14px;font-weight:500">Aleksandra Thomas</div>
+            <div style="font-size:12px;color:var(--warm-gray)">Expert Learning Experience & New Way of Working, UNIQA</div>
+            <a href="https://www.linkedin.com/in/katarinahrouzkova/details/recommendations/" target="_blank" rel="noopener" class="ref-card__link">Originální reference na LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
 
-<div style="background:#fff;border-radius:16px;padding:40px 40px 32px;border:1px solid rgba(37,89,100,0.1);margin-bottom:24px">
-  <p style="font-family:var(--font-serif);font-size:19px;font-style:italic;line-height:1.65;color:var(--charcoal);margin-bottom:32px">„Katku jsem oslovila původně proto, že vedle práce s PRISM Brain Mapping má zkušenosti také s CliftonStrengths. Jako konzultantku PRISM mě osobně zajímalo zasadit si oba přístupy do širšího kontextu a sama si na vlastní kůži vyzkoušet, co který nástroj člověku přináší a jaká témata otevírá. Na spolupráci s Katkou oceňuji především pečlivou přípravu, schopnost rychle vystihnout podstatné věci a vést interpretaci velmi prakticky a zároveň lidsky. Nesklouzává k obecným frázím ani ‚harmonii za každou cenu‘, ale umí nabídnout přesnou a užitečnou zpětnou vazbu, která člověka opravdu vede k zamyšlení. Z interpretace jsem si odnesla několik nových aha momentů, jiný pohled na vlastní talenty i způsob fungování. Velmi cenné pro mě bylo také to, že Katka uměla citlivě otevírat otázky tam, kde vnímala možné slepé místo nebo automatický vzorec v mém uvažování. Pokud hledáte někoho, kdo umí spojit práci s talenty, koučovací přístup a zároveň neztrácí schopnost říkat věci jasně a konkrétně, spolupráci s Katkou určitě doporučuji.“</p>
-  <div style="display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid rgba(37,89,100,0.08)">
-    <img src="images/foto-nada.jpeg" alt="Naďa Matějková" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0">
-    <div>
-      <div style="font-size:14px;font-weight:500">Naďa Matějková</div>
-      <div style="font-size:12px;color:var(--warm-gray)">Coach and Personal Leadership Partner</div>
+      <!-- Karta 2 -->
+      <div class="ref-card">
+        <p class="ref-card__text">„S Katkou jsem absolvoval deset sezení, která mi fakt změnila pohled na mě i na to, co dál. Cítil jsem se u ní bezpečně a mluvil i o věcech, které si normálně nechávám pro sebe. Je vřelá a dobře se s ní povídá, ale zároveň mě nenechala v komfortní zóně – v dobrém slova smyslu. Moc jsem ocenil, že Katka nejede podle šablony. Svůj styl přizpůsobila mně. Pomohla mi vnést řád do složitých témat a došel jsem ke konkrétním rozhodnutím. Probrali jsme i moje silné stránky podle Gallupu. Pomohlo mi to pochopit, v čem jsem přirozeně dobrý a kde v týmu hledat lidi, kteří mě svými dary doplní. Tahle spolupráce mi dodala vnitřní klid a sebevědomí. Víc si teď věřím při rozhodování.“</p>
+        <div class="ref-card__author">
+          <img src="images/ref-jan-neuzil.jpg" alt="Jan Neužil" class="ref-card__avatar">
+          <div>
+            <div style="font-size:14px;font-weight:500">Jan Neužil</div>
+            <div style="font-size:12px;color:var(--warm-gray)">R&D Manager, Thermo Fisher Scientific</div>
+            <a href="https://www.linkedin.com/in/katarinahrouzkova/details/recommendations/" target="_blank" rel="noopener" class="ref-card__link">Originální reference na LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Karta 3 -->
+      <div class="ref-card">
+        <p class="ref-card__text">„Konzultace mi přinesly hlavně větší jasno v tom, jak přemýšlím sama o sobě, o své kariéře i o své roli v týmu. Katka mi pomohla pojmenovat věci, které jsem dříve neuměla přesně uchopit. Dařilo se nám převádět témata do konkrétních kroků, které jsem pak mohla využít v praxi. Nejlepší pro mě byla kombinace bezpečné atmosféry a zároveň velmi přesných otázek, které mě nutily více přemýšlet. Díky Katce jsem si nastavila jasnější směr ve svém pracovním i soukromém životě. Doporučila bych je lidem, kteří stojí na profesní nebo osobní křižovatce a chtějí se v sobě lépe zorientovat.“</p>
+        <div class="ref-card__author">
+          <img src="images/ref-olga-kominkova.jpg" alt="Olga Komínková" class="ref-card__avatar">
+          <div>
+            <div style="font-size:14px;font-weight:500">Olga Komínková</div>
+            <div style="font-size:12px;color:var(--warm-gray)">Brand & Product Marketing Manager, TRL Space Systems</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Karta 4 -->
+      <div class="ref-card">
+        <p class="ref-card__text">„Spolupráce s Katkou má pro mě dlouhodobý přínos především v tom, že mi pomáhá průběžně si ujasňovat směr a vracet se tam, kde chci být. Díky jejímu vedení se v řešených tématech kontinuálně posouvám a daří se mi naplňovat mé vize. Na Katce oceňuji především její schopnost držet strukturu a zároveň klást velmi přesné otázky, které mi přirozeně ukazují nové úhly pohledu. Její služby bych doporučila všem, kteří chtějí mít v životě větší jasno a systematicky se posouvat dál.“</p>
+        <div class="ref-card__author">
+          <img src="images/ref-tereza-spackova.jpg" alt="Tereza Špačková" class="ref-card__avatar">
+          <div>
+            <div style="font-size:14px;font-weight:500">Tereza Špačková</div>
+            <div style="font-size:12px;color:var(--warm-gray)">Senior Compliance Specialist, UNIQA</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Karta 5 -->
+      <div class="ref-card">
+        <p class="ref-card__text">„Po šesti letech na mateřské jsem měla pocit, že všechno, co jsem dřív uměla, je nenávratně pryč. Čekal mě návrat na pozici inspektorky vína v SZPI a já zoufale potřebovala získat zpět ztracenou jistotu a sebevědomí. Celá spolupráce byla naprosto profesionální. Z každé hodiny jsem odcházela s pocitem, že situace není zdaleka tak černá, jak se mi zdálo. Konkrétní techniky, které jsme probraly, teď úspěšně využívám v práci i v soukromí. Katka je nesmírně empatická a klidná.“</p>
+        <div class="ref-card__author">
+          <img src="images/ref-anezka-dvorakova.jpg" alt="Anežka Dvořáková" class="ref-card__avatar">
+          <div>
+            <div style="font-size:14px;font-weight:500">Anežka Dvořáková</div>
+            <div style="font-size:12px;color:var(--warm-gray)">Inspektorka vína, SZPI</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Karta 6 -->
+      <div class="ref-card">
+        <p class="ref-card__text">„Katku jsem oslovila původně proto, že vedle práce s <em>PRISM</em> Brain Mapping má zkušenosti také s CliftonStrengths. Jako konzultantku <em>PRISM</em> mě osobně zajímalo zasadit si oba přístupy do širšího kontextu a sama si na vlastní kůži vyzkoušet, co který nástroj člověku přináší a jaká témata otevírá. Na spolupráci s Katkou oceňuji především pečlivou přípravu, schopnost rychle vystihnout podstatné věci a vést interpretaci velmi prakticky a zároveň lidsky. Nesklouzává k obecným frázím ani ‚harmonii za každou cenu‘, ale umí nabídnout přesnou a užitečnou zpětnou vazbu, která člověka opravdu vede k zamyšlení. Z interpretace jsem si odnesla několik nových aha momentů, jiný pohled na vlastní talenty i způsob fungování. Velmi cenné pro mě bylo také to, že Katka uměla citlivě otevírat otázky tam, kde vnímala možné slepé místo nebo automatický vzorec v mém uvažování. Pokud hledáte někoho, kdo umí spojit práci s talenty, koučovací přístup a zároveň neztrácí schopnost říkat věci jasně a konkrétně, spolupráci s Katkou určitě doporučuji.“</p>
+        <div class="ref-card__author">
+          <img src="images/foto-nada.jpeg" alt="Naďa Matějková" class="ref-card__avatar">
+          <div>
+            <div style="font-size:14px;font-weight:500">Naďa Matějková</div>
+            <div style="font-size:12px;color:var(--warm-gray)">Coach and Personal Leadership Partner</div>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
-</div>
-<div style="background:#fff;border-radius:16px;padding:40px 40px 32px;border:1px solid rgba(37,89,100,0.1);margin-bottom:24px">
-  <p style="font-family:var(--font-serif);font-size:19px;font-style:italic;line-height:1.65;color:var(--charcoal);margin-bottom:32px">„Spolupráce s Katkou pro mě byla důležitá. Vytvořila prostor, kde jsem mohla bez obav říct i věci, které jsem nikdy předtím nevyslovila nahlas. Všechno šlo přirozeně, bez tlaku nebo nějakého hodnocení. Katka mi pomohla se znovu najít. Funguje jako zrcadlo – člověk díky ní uvidí, kým skutečně je. Pomohla mi získat odstup a ukázala mi souvislosti, které jsem měla přímo před nosem, ale doteď jsem je neviděla. Na Katce je vidět, že je profík. Má hluboké zkušenosti, ale přistupuje k vám s lidskostí a opravdovým zájmem. Doporučuji ji každému, kdo se cítí zaseknnutý nebo přetížený a hledá klid a jistotu v práci i v sobě.“</p>
-  <div style="display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid rgba(37,89,100,0.08)">
-    <img src="images/ref-aleksandra-thomas.jpg" alt="Aleksandra Thomas" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0">
-    <div>
-      <div style="font-size:14px;font-weight:500">Aleksandra Thomas</div>
-      <div style="font-size:12px;color:var(--warm-gray)">Expert Learning Experience & New Way of Working, UNIQA</div>
-          <a href="https://www.linkedin.com/in/katarinahrouzkova/details/recommendations/" target="_blank" rel="noopener" style="font-size:12px;color:var(--terra);display:inline-flex;align-items:center;gap:4px;margin-top:6px">Originální reference na LinkedIn ↗</a>
-    </div>
-  </div>
-</div>
-<div style="background:#fff;border-radius:16px;padding:40px 40px 32px;border:1px solid rgba(37,89,100,0.1);margin-bottom:24px">
-  <p style="font-family:var(--font-serif);font-size:19px;font-style:italic;line-height:1.65;color:var(--charcoal);margin-bottom:32px">„S Katkou jsem absolvoval deset sezéní, která mi fakt změnila pohled na mě i na to, co dál. Cítil jsem se u ní bezpečně a mluvil i o věcech, které si normálně nechávám pro sebe. Je vřelá a dobře se s ní povídá, ale zároveň mě nenechala v komfortní zóně – v dobrém slova smyslu. Moc jsem ocenil, že Katka nejede podle šablony. Svůj styl přizpůsobila mně. Pomohla mi vnést řád do složitých témat a došel jsem ke konkrétním rozhodnutím. Probrali jsme i moje silné stránky podle Gallupu. Pomohlo mi to pochopit, v čem jsem přirozeně dobrý a kde v týmu hledat lidi, kteří mě svými dary doplíní. Tahle spolupráce mi dodala vnitřní klid a sebevědomí. Víc si teď věřím při rozhodování.“</p>
-  <div style="display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid rgba(37,89,100,0.08)">
-    <img src="images/ref-jan-neuzil.jpg" alt="Jan Neužil" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0">
-    <div>
-      <div style="font-size:14px;font-weight:500">Jan Neužil</div>
-      <div style="font-size:12px;color:var(--warm-gray)">R&D Manager, Thermo Fisher Scientific</div>
-          <a href="https://www.linkedin.com/in/katarinahrouzkova/details/recommendations/" target="_blank" rel="noopener" style="font-size:12px;color:var(--terra);display:inline-flex;align-items:center;gap:4px;margin-top:6px">Originální reference na LinkedIn ↗</a>
-    </div>
-  </div>
-</div>
-<div style="background:#fff;border-radius:16px;padding:40px 40px 32px;border:1px solid rgba(37,89,100,0.1);margin-bottom:24px">
-  <p style="font-family:var(--font-serif);font-size:19px;font-style:italic;line-height:1.65;color:var(--charcoal);margin-bottom:32px">„Konzultace mi přinesly hlavně větší jasno v tom, jak přemýšlím sama o sobě, o své kariéře i o své roli v týmu. Katka mi pomohla pojmenovat věci, které jsem dříve neumila přesně uchopit. Dařilo se nám převádět témata do konkrétních kroků, které jsem pak mohla využít v praxi. Nejlepší pro mě byla kombinace bezpečné atmosféry a zároveň velmi přesných otázek, které mě nutily více přemýšlet. Díky Katce jsem si nastavila jasnější směr ve svém pracovním i soukromém životě. Doporučila bych je lidem, kteří stojí na profesní nebo osobní křižovatce a chtějí se v sobě lépe zorientovat.“</p>
-  <div style="display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid rgba(37,89,100,0.08)">
-    <img src="images/ref-olga-kominkova.jpg" alt="Olga Komínková" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0">
-    <div>
-      <div style="font-size:14px;font-weight:500">Olga Komínková</div>
-      <div style="font-size:12px;color:var(--warm-gray)">Brand & Product Marketing Manager, TRL Space Systems</div>
-    </div>
-  </div>
-</div>
-<div style="background:#fff;border-radius:16px;padding:40px 40px 32px;border:1px solid rgba(37,89,100,0.1);margin-bottom:24px">
-  <p style="font-family:var(--font-serif);font-size:19px;font-style:italic;line-height:1.65;color:var(--charcoal);margin-bottom:32px">„Spolupráce s Katkou má pro mě dlouhodobý přínos především v tom, že mi pomáhá průběžně si ujasňovat směr a vracet se tam, kde chci být. Díky jejímu vedení se v řešených tématech kontinuálně posouvam a daří se mi naplňovat mé vize. Na Katce oceňuji především její schopnost držet strukturu a zároveň klást velmi přesné otázky, které mi přirozeně ukazují nové úhly pohledu. Její služby bych doporučila všem, kteří chtějí mít v životě větší jasno a systematicky se posouvat dál.“</p>
-  <div style="display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid rgba(37,89,100,0.08)">
-    <img src="images/ref-tereza-spackova.jpg" alt="Tereza Špačková" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0">
-    <div>
-      <div style="font-size:14px;font-weight:500">Tereza Špačková</div>
-      <div style="font-size:12px;color:var(--warm-gray)">Senior Compliance Specialist, UNIQA</div>
-    </div>
-  </div>
-</div>
-<div style="background:#fff;border-radius:16px;padding:40px 40px 32px;border:1px solid rgba(37,89,100,0.1);margin-bottom:24px">
-  <p style="font-family:var(--font-serif);font-size:19px;font-style:italic;line-height:1.65;color:var(--charcoal);margin-bottom:32px">„Po šesti letech na mateřské jsem měla pocit, že všechno, co jsem dřív uměla, je nenavrateně pryč. Čekal mě návrat na pozici inspektorky vína v SZPI a já zoufale potřebovala získat zpět ztraceňou jistotu a sebevědomí. Celá spolupráce byla naprosto profesionální. Z každé hodiny jsem odcházela s pocitem, že situace není zdalěka tak černá, jak se mi zdálo. Konkrétní techniky, které jsme probraly, teď úspěšně využívám v práci i v soukromí. Katka je nesmírně empatická a klidná.“</p>
-  <div style="display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid rgba(37,89,100,0.08)">
-    <img src="images/ref-anezka-dvorakova.jpg" alt="Anežka Dvořáková" style="width:48px;height:48px;border-radius:50%;object-fit:cover;flex-shrink:0">
-    <div>
-      <div style="font-size:14px;font-weight:500">Anežka Dvořáková</div>
-      <div style="font-size:12px;color:var(--warm-gray)">Inspektorka vína, SZPI</div>
-    </div>
-  </div>
-</div>
   </div>
 </section>
 
