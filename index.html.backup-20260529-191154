@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katka Hrouzková – Talent Management a koučink | Brno</title>
+  <meta name="description" content="Certifikovaný kouč a talent manager v Brně. Gallup CliftonStrengths, <em>PRISM</em> Brain Mapping, Erickson koučink. Kariérní změna, leadership, HR partnering. Česky, slovensky, anglicky.">
+  <meta name="author" content="Mgr. Katka Hrouzková">
+  <link rel="canonical" href="https://katkahrouzkova.github.io/katkahrouzkova/">
+  <meta property="og:title" content="Katka Hrouzková – Talent Management a koučink">
+  <meta property="og:description" content="Certifikovaný kouč s 17 lety HR praxe. Gallup, <em>PRISM</em>, Erickson. Brno & online.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://katkahrouzkova.github.io/katkahrouzkova/images/foto-hero.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mgr. Katka Hrouzková",
+    "jobTitle": "Certifikovaný kouč & Talent Manager",
+    "url": "https://katkahrouzkova.github.io/katkahrouzkova/",
+    "image": "https://katkahrouzkova.github.io/katkahrouzkova/images/foto-hero.png",
+    "email": "hrouzkova.katka@gmail.com",
+    "telephone": "+420702204830",
+    "address": { "@type": "PostalAddress", "addressLocality": "Brno", "addressCountry": "CZ" },
+    "knowsLanguage": ["cs", "sk", "en"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif'>K</text></svg>">
+
+  <style>
+    /* ---- icon in service card ---- */
+    .service-card__icon {
+      width: 44px; height: 44px;
+      background: var(--white);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 24px;
+      transition: background .3s;
+    }
+    .service-card__icon svg { width: 22px; height: 22px; stroke: #2F343B; fill: none; stroke-width: 1.6; }
+    .service-card:hover .service-card__icon { background: rgba(37,89,100,.1); }
+    .service-card:hover .service-card__icon svg { stroke: var(--terra); }
+
+    /* ---- foto-contact section ---- */
+    .contact-teaser {
+      background: #2F343B;
+      padding: 100px 0;
+      overflow: hidden;
+    }
+    .contact-teaser__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .contact-teaser__img {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+    }
+    .contact-teaser__img img { width: 100%; height: 100%; object-fit: cover; }
+    .contact-teaser__content .overline { color: rgba(255,255,255,.45); margin-bottom: 16px; }
+    .contact-teaser__content h2 { color: #fff; margin-bottom: 20px; }
+    .contact-teaser__content p { color: rgba(255,255,255,.7); font-size: 16px; line-height: 1.75; margin-bottom: 32px; }
+    .contact-teaser__content .btn--white:hover { box-shadow: var(--shadow-lg); }
+
+    /* ---- details/faq ---- */
+    details summary::-webkit-details-marker { display: none; }
+    details[open] summary .faq-plus { transform: rotate(45deg); }
+    .faq-plus { transition: transform .25s; display: inline-block; }
+
+    /* ---- cert images ---- */
+    .cert-img-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 24px;
+    }
+    .cert-img-row img {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+      opacity: .8;
+      filter: grayscale(20%);
+      transition: opacity .2s, filter .2s;
+    }
+    .cert-img-row img:hover { opacity: 1; filter: none; }
+
+    /* ---- tags / descriptors ---- */
+    .hero__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 36px;
+    }
+    .hero__tag {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--warm-gray);
+      background: var(--white);
+      border-radius: var(--radius-pill);
+      padding: 5px 14px;
+    }
+
+    
+    .testimonials__track {
+      display: flex;
+      gap: 24px;
+      animation: scroll 25s linear infinite;
+    }
+    .testimonials__track:hover { animation-play-state: paused; }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .testimonials__track-wrap { cursor: pointer; }
+
+    .testimonials__track:hover { animation-play-state: paused; }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .testimonials__track-wrap { cursor: pointer; }
+
+    /* ---- testimonial full quote (longer) ---- */
+    .testimonial-card__quote { font-size: 17px; }
+
+    /* ---- linkedin ref link ---- */
+    .ref-link {
+      font-size: 12px;
+      color: var(--terra);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 8px;
+      transition: opacity .2s;
+    }
+    .ref-link:hover { opacity: .7; }
+
+    /* responsive for new section */
+    @media (max-width: 1024px) {
+      .contact-teaser__grid { grid-template-columns: 1fr; gap: 48px; }
+      .contact-teaser__img { aspect-ratio: 16/9; }
+    }
+
+    .hero__typing {
+      min-height: 3.5em;
+      font-family: var(--font-serif);
+      font-size: clamp(18px, 2.2vw, 26px);
+      
+      color: var(--terra);
+      margin-bottom: 32px;
+      min-height: 2em;
+    }
+    .typing-cursor {
+      display: inline-block;
+      animation: blink .7s step-end infinite;
+      color: var(--terra);
+      font-weight: 300;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+  
+    /* ---- Typewriter efekt ---- */
+    .typewriter-cursor {
+      display: inline-block;
+      color: var(--terra);
+      font-weight: 300;
+      margin-left: 2px;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+</style>
+<style>img[src*='foto-jakpracujinew.png'] { object-position: top center !important; }</style>
+</head>
+<body>
+
+<!-- ================================================
+     NAV
+     ================================================ -->
+<nav class="nav" role="navigation" aria-label="Hlavní navigace">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">Katka <span>Hrouzková</span></a>
+
+      <div class="nav__links">
+        <a href="#sluzby">Služby</a>
+        <a href="o-mne.html">O mně</a>
+        <a href="reference.html">Reference</a>
+        <a href="faq.html">Otázky a odpovědi</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="blog/index.html">Blog</a>
+      </div>
+
+      <div class="nav__right">
+        <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener" class="btn btn--primary">
+          Domluvit úvodní rozhovor
+        </a>
+      </div>
+
+      <button class="nav__hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="nav__mobile" role="dialog" aria-label="Mobilní navigace">
+  <a href="#sluzby">Služby</a>
+  <a href="o-mne.html">O mně</a>
+  <a href="reference.html">Reference</a>
+  <a href="faq.html">Otázky a odpovědi</a>
+  <a href="kontakt.html">Kontakt</a>
+        <a href="blog/index.html">Blog</a>
+  <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener" style="color:var(--terra);border-color:var(--terra);">Domluvit úvodní rozhovor →</a>
+</div>
+
+<!-- ================================================
+     HERO
+     ================================================ -->
+<section class="hero" id="uvod">
+  <div class="hero__image">
+    <img src="images/foto-hero.png"
+         alt="Mgr. Katka Hrouzková – certifikovaný kouč" fetchpriority="high">
+    <div class="hero__image-overlay"></div>
+  </div>
+
+  <div class="hero__content container" style="max-width:580px;margin-left:auto;">
+    <div class="hero__overline overline">Talent Management a koučink</div>
+
+    <h1 class="hero__title" style="min-height:1.15em;display:block;"><span style="white-space: nowrap;"><span id="typewriter"></span><span class="typewriter-cursor">|</span></span></h1>
+    <p class="hero__typing" id="hero-sub">Pomáhám lidem postavit kariéru i život na tom, v čem jsou přirozeně dobří.</p>
+
+    <div class="hero__tags">
+      <span class="hero__tag">Psychologie</span>
+      <span class="hero__tag">Koučink</span>
+      <span class="hero__tag">17+ let praxe</span>
+      <span class="hero__tag">HR a rozvoj lidí</span>
+      <span class="hero__tag">Gallup®</span>
+      <span class="hero__tag"><em>PRISM</em>®</span>
+      <span class="hero__tag">Brno & online</span>
+    </div>
+
+    <div class="hero__ctas">
+      <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener" class="btn btn--primary">
+        <span>Domluvit úvodní rozhovor</span>
+      </a>
+      <a href="#sluzby" class="btn btn--ghost">
+        <span>Možnosti spolupráce</span>
+      </a>
+    
+    <div style="display:flex;align-items:center;gap:10px;margin-top:24px;">
+      <img src="images/cert-icf.png" alt="ICF Member" style="height:72px;width:auto;opacity:.9;">
+      <span style="font-size:12px;color:var(--warm-gray);line-height:1.4;">Certifikovaný člen<br>International Coaching Federation</span>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================
+     LOGOS STRIP
+     ================================================ -->
+<div class="logos">
+  <div class="container">
+    <div class="logos__inner">
+      <span class="logos__label">
+        <span>Pracuji s lidmi z</span>
+      </span>
+      <div class="logos__divider"></div>
+      <div class="logos__carousel">
+        <div class="logos__track">
+          <span class="logos__item">UNIQA</span>
+          <span class="logos__item">ThermoFisher Scientific</span>
+          <span class="logos__item">TRL Space Systems</span>
+          <span class="logos__item">SZPI</span>
+          <span class="logos__item">Intecs</span>
+          <span class="logos__item">Human Sense</span>
+          <span class="logos__item">Enantis</span>
+          <span class="logos__item">ČSOB</span>
+          <span class="logos__item">UNIQA</span>
+          <span class="logos__item">ThermoFisher Scientific</span>
+          <span class="logos__item">TRL Space Systems</span>
+          <span class="logos__item">SZPI</span>
+          <span class="logos__item">Intecs</span>
+          <span class="logos__item">Human Sense</span>
+          <span class="logos__item">Enantis</span>
+          <span class="logos__item">ČSOB</span>
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+</div>
+
+<!-- ================================================
+     JAK PRACUJI
+     ================================================ -->
+<section class="intro" id="jak-pracuji">
+  <div class="container">
+    <div class="intro__grid">
+      <div class="intro__image-wrap">
+        <img style="object-position: top !important;" src="images/foto-jakpracujinew.png"
+             alt="Katka Hrouzková – jak pracuji" loading="lazy">
+      </div>
+
+      <div class="intro__content">
+        <p class="intro__overline overline">Jak pracuji</p>
+        <h2 class="intro__title">
+          <span>Pragmaticky a lidsky.</span>
+        </h2>
+
+        <div class="intro__statement">
+          <p>"Základem mé práce je koučovací rozhovor. Opírám se o psychologické vzdělání, dlouholetou HR zkušenost a nástroje Gallup a <em>PRISM</em>. Neprodávám univerzální návody ani motivační fráze."</p>
+        </div>
+
+        <ul class="intro__list">
+          <li>Propojuji koučink, mentoring a konzultace podle situace</li>
+
+          <li>Mám psychologické vzdělání a 17 let praxe v globálním HR</li>
+
+          <li>Koučuji v češtině, slovenštině i angličtině</li>
+
+          <li>Setkejme se v Brně nebo online po celé ČR a SR</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================
+     SERVICES — MOŽNOSTI SPOLUPRÁCE
+     ================================================ -->
+<section class="services" id="sluzby">
+  <div class="container">
+    <div class="services__header">
+      <div>
+        <p class="overline">Možnosti spolupráce</p>
+        <h2>Vyberte si oblast spolupráce</h2>
+      </div>
+      <p>Přizpůsobuji formu spolupráce vaší situaci — od jednorázové konzultace po dlouhodobější doprovázení.</p>
+    </div>
+
+    <div>
+      <!-- Intro text -->
+      <div style="max-width:680px;margin-bottom:48px;">
+        <p class="overline" style="margin-bottom:12px;">
+          <span data-lang="cz">Služby</span>
+          <span data-lang="sk" hidden>Služby</span>
+          <span data-lang="en" hidden>Services</span>
+        </p>
+        <h2>
+          <span data-lang="cz">Služby, které posouvají lidi i organizace</span>
+          <span data-lang="sk" hidden>Služby, ktoré posúvajú ľudí aj organizácie</span>
+          <span data-lang="en" hidden>Services that move people and organisations forward</span>
+        </h2>
+        <p data-lang="cz" style="margin-top:16px;color:var(--warm-gray);font-size:16px;line-height:1.7;">Propojuji koučink, certifikované metodiky a HR expertizu, abychom vám pomohla růst, dělat lepší rozhodnutí a budovat zdravé vztahy i výkonné týmy.</p>
+      </div>
+
+      <!-- 4 karty cez celú šírku -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+
+        <!-- Individuální spolupráce -->
+        <div class="svc-main-card" style="background:#F8F9FB;">
+          <div class="svc-main-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          </div>
+          <h3>Individuální spolupráce</h3>
+          <p>Od jednoho setkání po dlouhodobější doprovázení.</p>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-top:12px;">
+            <a href="sluzby/koucovani.html" style="font-size:12px;color:var(--terra);text-decoration:none;display:flex;align-items:center;gap:4px;">1:1 Koučování <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <a href="sluzby/gallup.html" style="font-size:12px;color:var(--terra);text-decoration:none;display:flex;align-items:center;gap:4px;">Gallup CliftonStrengths <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <a href="sluzby/prism.html" style="font-size:12px;color:var(--terra);text-decoration:none;display:flex;align-items:center;gap:4px;"><em>PRISM</em> Brain Mapping <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <a href="sluzby/program.html" style="font-size:12px;color:var(--terra);text-decoration:none;display:flex;align-items:center;gap:4px;">Program pro kariérní změnu <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Gallup pro mladé -->
+        <a href="sluzby/gallup-mladi.html" class="svc-main-card">
+          <div class="svc-main-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22V12M12 12C12 7 7 4 3 6M12 12C12 7 17 4 21 6"/></svg>
+          </div>
+          <h3>Gallup pro mladé 15+</h3>
+          <p>Talentové a kariérní poradenství při volbě školy, oboru a dalšího směru.</p>
+          <span class="svc-main-card__link">Více informací <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+        </a>
+
+        <!-- Týmová spolupráce -->
+        <a href="sluzby/tymova.html" class="svc-main-card">
+          <div class="svc-main-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="7" r="2.5"/><circle cx="16" cy="7" r="2.5"/><circle cx="12" cy="6" r="2.5"/><path d="M2 21v-1.5A4.5 4.5 0 0 1 6.5 15h3"/><path d="M22 21v-1.5A4.5 4.5 0 0 0 17.5 15h-3"/><path d="M8.5 15A4.5 4.5 0 0 1 12 13.5 4.5 4.5 0 0 1 15.5 15v.5a4.5 4.5 0 0 1-7 0V15z"/></svg>
+          </div>
+          <h3>Týmová spolupráce</h3>
+          <p>Workshopy a programy pro týmy, které chtějí lépe spolupracovat.</p>
+          <span class="svc-main-card__link">Více informací <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+        </a>
+
+        <!-- HR partnering -->
+        <a href="sluzby/hr-partnering.html" class="svc-main-card">
+          <div class="svc-main-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+          </div>
+          <h3>HR partnering</h3>
+          <p>Strategické HR poradenství v klíčových oblastech byznysu.</p>
+          <span class="svc-main-card__link">Více informací <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================
+
+     FAQ
+     ================================================ -->
+
+<!-- ================================================
+     TESTIMONIALS
+     ================================================ -->
+<section class="testimonials" id="reference">
+  <div class="container">
+    <div class="testimonials__header">
+      <p class="overline">Co říkají klienti</p>
+      <h2>Reference</h2>
+    </div>
+  </div>
+  <div class="testimonials__track-wrap">
+    <div class="testimonials__track">
+    
+      <!-- Karta 1: Aleksandra -->
+      <div class="testimonial-card">
+        <p class="testimonial-card__quote">„Na Katce je vidět, že je profík. Má hluboké zkušenosti, ale přistupuje k vám s lidskostí a opravdovým zájmem.“</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar"><img src="images/ref-aleksandra-thomas.jpg" alt="Aleksandra Thomas" loading="lazy"></div>
+          <div>
+            <div class="testimonial-card__name">Aleksandra Thomas</div>
+            <div class="testimonial-card__company">UNIQA</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Karta 2: Jan -->
+      <div class="testimonial-card">
+        <p class="testimonial-card__quote">„Katka nejede podle šablony. Pomohla mi vnést řád do složitých témat a dojít ke konkrétním rozhodnutím.“</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar"><img src="images/ref-jan-neuzil.jpg" alt="Jan Neužil" loading="lazy"></div>
+          <div>
+            <div class="testimonial-card__name">Jan Neužil</div>
+            <div class="testimonial-card__company">Thermo Fisher Scientific</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Karta 3: Olga -->
+      <div class="testimonial-card">
+        <p class="testimonial-card__quote">„Propojuje sebereflexi s praktickým dopadem do reálného života i práce.“</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar"><img src="images/ref-olga-kominkova.jpg" alt="Olga Komínková" loading="lazy"></div>
+          <div>
+            <div class="testimonial-card__name">Olga Komínková</div>
+            <div class="testimonial-card__company">TRL Space Systems</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Karta 4: Tereza -->
+      <div class="testimonial-card">
+        <p class="testimonial-card__quote">„Oceňuji schopnost držet strukturu a zároveň klást přesné otázky, které mi ukazují nové úhly pohledu.“</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar"><img src="images/ref-tereza-spackova.jpg" alt="Tereza Špačková" loading="lazy"></div>
+          <div>
+            <div class="testimonial-card__name">Tereza Špačková</div>
+            <div class="testimonial-card__company">UNIQA</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Karta 5: Anežka -->
+      <div class="testimonial-card">
+        <p class="testimonial-card__quote">„Konkrétní techniky teď úspěšně využívám v práci i v soukromí. Katka je nesmírně empatická a klidná.“</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar"><img src="images/ref-anezka-dvorakova.jpg" alt="Anežka Dvořáková" loading="lazy"></div>
+          <div>
+            <div class="testimonial-card__name">Anežka Dvořáková</div>
+            <div class="testimonial-card__company">SZPI</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Karta 6: Naďa -->
+      <div class="testimonial-card">
+        <p class="testimonial-card__quote">„Nesklouzává k obecným frázím, ale umí nabídnout přesnou zpětnou vazbu, která člověka opravdu vede k zamyšlení.“</p>
+        <div class="testimonial-card__author">
+          <div class="testimonial-card__avatar"><img src="images/foto-nada.jpeg" alt="Naďa Matějková" loading="lazy"></div>
+          <div>
+            <div class="testimonial-card__name">Naďa Matějková</div>
+            <div class="testimonial-card__company">Coach and Personal Leadership Partner</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  
+  
+  <div style="text-align: center; margin-top: 48px;">
+    <a href="reference.html" class="btn btn--primary">CHCI SI PŘEČÍST VÍCE</a>
+  </div>
+</section>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const track = document.querySelector('.testimonials__track');
+  if (!track) return;
+  // Duplikácia obsahu pre nekonečnú slučku
+  track.innerHTML += track.innerHTML;
+});
+</script>
+
+
+<!-- ================================================
+     FINAL CTA
+
+     ================================================ -->
+<section class="cta-section" id="kontakt">
+  <div class="container">
+    <div class="cta-section__inner">
+      <p class="overline">Pojďme si zavolat</p>
+      <h2>Začneme krátkým rozhovorem.</h2>
+      <p>Napište mi, zavolejte nebo si rovnou rezervujte termín. Úvodní konzultace je zdarma.</p>
+
+      <div class="cta-section__ctas">
+        <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener" class="btn btn--white">
+          <svg style="width:18px;height:18px;" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="14" height="13" rx="2"/><path d="M7 2v4M13 2v4M3 9h14"/></svg>
+          Domluvit úvodní rozhovor
+        </a>
+        <a href="https://wa.me/420702204830" target="_blank" rel="noopener" class="btn btn--outline-white">
+          <svg style="width:18px;height:18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          WhatsApp
+        </a>
+        <a href="mailto:hrouzkova.katka@gmail.com" class="btn btn--outline-white">
+          <svg style="width:18px;height:18px;" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5h14l-7 7-7-7zM3 5v10h14V5"/></svg>
+          hrouzkova.katka@gmail.com
+        </a>
+      </div>
+
+      <div class="cta-section__contact">
+        <a href="tel:+420702204830">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h4l1.5 3-1.5 1.5c.8 1.6 2.4 3.2 4 4L13.5 11l3 1.5v4C12 17.5 2.5 8 4 4z"/></svg>
+          +420 702 204 830
+        </a>
+        <span style="color:rgba(255,255,255,.35);">·</span>
+        <span style="color:rgba(255,255,255,.6);font-size:15px;">Brno &amp; online · CZ / SK / EN</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================
+     FOOTER
+     ================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <div class="footer__brand-name">Katka Hrouzková</div>
+        <p class="footer__brand-desc">Talent Management a koučink<br>Brno & online · CZ · SK · EN</p>
+        <a class="footer__contact-item" href="mailto:hrouzkova.katka@gmail.com">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5h14l-7 7-7-7zM3 5v10h14V5"/></svg>
+          hrouzkova.katka@gmail.com
+        </a>
+        <a class="footer__contact-item" href="tel:+420702204830">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h4l1.5 3-1.5 1.5c.8 1.6 2.4 3.2 4 4L13.5 11l3 1.5v4C12 17.5 2.5 8 4 4z"/></svg>
+          +420 702 204 830
+        </a>
+      </div>
+
+      <div>
+        <div class="footer__col-title">Služby</div>
+        <div class="footer__col-links">
+          <a href="#sluzby">Individuální spolupráce</a>
+          <a href="#sluzby">Týmová spolupráce</a>
+          <a href="#sluzby">Gallup pro mladé lidi 15+</a>
+          <a href="#sluzby">HR partnering</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer__col-title">Stránky</div>
+        <div class="footer__col-links">
+          <a href="o-mne.html">O mně</a>
+          <a href="reference.html">Reference</a>
+          <a href="faq.html">Otázky a odpovědi</a>
+          <a href="kontakt.html">Kontakt</a>
+        <a href="blog/index.html">Blog</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer__col-title">Kontakt</div>
+        <div class="footer__col-links">
+          <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener">Domluvit úvodní rozhovor</a>
+          <a href="mailto:hrouzkova.katka@gmail.com">Napsat email</a>
+          <span style="color:rgba(255,255,255,.35);font-size:13px;">Brno &amp; online</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© 2026 Katka Hrouzková · Talent Management a koučink</span>
+      <div class="footer__legal">
+        <a href="obchodni-podminky.html">Obchodní podmínky</a>
+        <a href="gdpr.html">Podmínky ochrany osobních údajů</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const track = document.querySelector('.testimonials__track');
+  if (!track) return;
+  // Duplikácia obsahu pre nekonečnú slučku
+  track.innerHTML += track.innerHTML;
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const track = document.querySelector('.testimonials__track');
+  if (!track) return;
+  // Duplikácia obsahu pre nekonečnú slučku
+  track.innerHTML += track.innerHTML;
+});
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const text = "Jsem váš partner.";
+    const target = document.getElementById("typewriter");
+    const cursor = document.querySelector(".typewriter-cursor");
+    if(target) {
+      let i = 0;
+      function typeWriter() {
+        if (i < text.length) {
+          target.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 80);
+        } else {
+          // Keď dopíše, kurzor zmizne
+          if(cursor) cursor.style.display = "none";
+        }
+      }
+      setTimeout(typeWriter, 500);
+    }
+  });
+</script>
+</body>
+</html>

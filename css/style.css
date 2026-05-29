@@ -2001,3 +2001,76 @@ p.svc-intro-label + .svc-who-grid {
 .hero__title,
 .hero__sub,
 .hero__ctas { opacity: 1 !important; transform: none !important; }
+
+/* === FIX: foto v sekcii Jak pracuji vyplni cely ram === */
+.intro__image-wrap img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block;
+}
+
+
+
+/* === HERO: zmensenie fotky na desktope === */
+@media (min-width: 1025px) {
+  .hero {
+    min-height: 80vh !important;
+    max-height: 800px;
+    grid-template-columns: 5fr 7fr !important;
+  }
+}
+
+/* === HERO: zachovat celu postavu, len uzsi stlpec === */
+@media (min-width: 1025px) {
+  .hero {
+    min-height: 100svh !important;
+    max-height: none !important;
+    grid-template-columns: 5fr 7fr !important;
+  }
+  .hero__image img {
+    object-position: center top !important;
+  }
+}
+
+/* === HERO: kompaktna verzia + cela postava === */
+@media (min-width: 1025px) {
+  .hero {
+    min-height: 720px !important;
+    max-height: 820px !important;
+    grid-template-columns: 4fr 8fr !important;
+  }
+  .hero__image {
+    background: var(--paper, #F8F9FB);
+  }
+  .hero__image img {
+    object-fit: contain !important;
+    object-position: bottom center !important;
+  }
+}
+
+/* === HERO: este mensia === */
+@media (min-width: 1025px) {
+  .hero {
+    min-height: 580px !important;
+    max-height: 640px !important;
+    grid-template-columns: 3fr 9fr !important;
+  }
+}
+
+/* === HERO FINAL: cover + kompaktna === */
+@media (min-width: 1025px) {
+  .hero {
+    min-height: 640px !important;
+    max-height: 720px !important;
+    grid-template-columns: 4fr 8fr !important;
+  }
+  .hero__image {
+    background: transparent !important;
+  }
+  .hero__image img {
+    object-fit: cover !important;
+    object-position: center 20% !important;
+  }
+}
