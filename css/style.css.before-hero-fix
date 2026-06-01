@@ -275,10 +275,12 @@ section { position: relative; }
    HERO
    ============================================= */
 .hero {
-  min-height: auto;
-  display: block;
-  overflow: visible;
-  padding: 180px 0 120px;
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  overflow: hidden;
+  padding-top: 0;
 }
 .hero__content {
   display: flex;
@@ -1076,6 +1078,11 @@ section { position: relative; }
   font-weight: 600 !important;
 }
 
+/* --- hero tagy — jemný petroleum border --- */
+.hero__tag {
+  border: 1px solid rgba(37,89,100,0.2);
+}
+
 /* --- ghost button border fix --- */
 .btn--ghost {
   border: 1.5px solid rgba(37,89,100,0.25) !important;
@@ -1145,6 +1152,34 @@ section { position: relative; }
   position: absolute;
   inset: 0;
 }
+
+/* --- hero certifikaty --- */
+.hero__certs {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(47,52,59,0.1);
+}
+.hero__certs-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  margin-right: 4px;
+}
+.hero__certs img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.75;
+  filter: grayscale(20%);
+  transition: opacity .2s, filter .2s;
+}
+.hero__certs img:hover { opacity: 1; filter: none; }
 
 /* --- certs strip --- */
 .certs-strip {
@@ -1961,6 +1996,12 @@ p.svc-intro-label + .svc-who-grid {
   .services__featured-layout { grid-template-columns: 1fr; }
 }
 
+/* === SAFETY NET: hero obsah vždy viditeľný (aj keď GSAP zlyhá) === */
+.hero__overline,
+.hero__title,
+.hero__sub,
+.hero__ctas { opacity: 1 !important; transform: none !important; }
+
 /* === FIX: foto v sekcii Jak pracuji vyplni cely ram === */
 .intro__image-wrap img {
   width: 100% !important;
@@ -1972,10 +2013,67 @@ p.svc-intro-label + .svc-who-grid {
 
 
 
+/* === HERO: zmensenie fotky na desktope === */
+@media (min-width: 1025px) {
+  .hero {
+    min-height: 80vh !important;
+    max-height: 800px;
+    grid-template-columns: 5fr 7fr !important;
+  }
+}
 
+/* === HERO: zachovat celu postavu, len uzsi stlpec === */
+@media (min-width: 1025px) {
+  .hero {
+    min-height: 100svh !important;
+    max-height: none !important;
+    grid-template-columns: 5fr 7fr !important;
+  }
+  .hero__image img {
+    object-position: center top !important;
+  }
+}
 
+/* === HERO: kompaktna verzia + cela postava === */
+@media (min-width: 1025px) {
+  .hero {
+    min-height: 720px !important;
+    max-height: 820px !important;
+    grid-template-columns: 4fr 8fr !important;
+  }
+  .hero__image {
+    background: var(--paper, #F8F9FB);
+  }
+  .hero__image img {
+    object-fit: contain !important;
+    object-position: bottom center !important;
+  }
+}
 
+/* === HERO: este mensia === */
+@media (min-width: 1025px) {
+  .hero {
+    min-height: 580px !important;
+    max-height: 640px !important;
+    grid-template-columns: 3fr 9fr !important;
+  }
+}
 
+/* === HERO FINAL: cover + kompaktna === */
+@media (min-width: 1025px) {
+  .hero {
+    min-height: 640px !important;
+    max-height: 720px !important;
+    grid-template-columns: 4fr 8fr !important;
+  }
+  .hero__image {
+    background: transparent !important;
+  }
+  .hero__image img {
+    object-fit: cover !important;
+    object-position: center 20% !important;
+  }
+}
 
 /* === TESTIMONIALS: oprava seamless loop === */
 .testimonials__track {
@@ -2004,6 +2102,18 @@ p.svc-intro-label + .svc-who-grid {
   from { transform: translateX(0); }
   to { transform: translateX(calc(-100% - 24px)); }
 }
+
+
+/* === PRISM hero: 3 vylepsenia (CTA, sirka paragrafu, trust strip) === */
+.prism-hero__title { max-width: 920px; margin-bottom: 32px; }
+.prism-hero__lead { max-width: 720px; margin-bottom: 40px; }
+.prism-hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 36px; }
+.prism-hero__trust {
+  display: flex; flex-wrap: wrap; gap: 14px;
+  align-items: center;
+  font-size: 13px; color: var(--warm-gray);
+}
+.prism-hero__sep { color: rgba(35,38,43,0.25); }
 
 
 /* === PRISM case study / pribeh === */
@@ -2154,43 +2264,15 @@ p.svc-intro-label + .svc-who-grid {
 }
 
 
-/* === GSAP opacity safety === */
-.hero__image, .hero__overline, .hero__title,
-.hero__typing, .hero__sub, .hero__ctas, .hero__meta, .hero__tags {
-  opacity: 1 !important;
-  transform: none !important;
+/* === Typewriter cursor pre service hero === */
+.typewriter-cursor {
+  display: inline-block;
+  color: var(--terra, #255964);
+  font-weight: 300;
+  margin-left: 2px;
+  animation: typewriter-blink 1s step-end infinite;
 }
-
-/* hero gsap */
-.hero__overline,.hero__title,.hero__typing,.hero__sub,.hero__tags,.hero__ctas,.hero__image{opacity:1!important;transform:none!important;}
-
-
-/* === Service page hero spacing === */
-.prism-hero__title {
-  font-size: clamp(36px, 5vw, 64px);
-  line-height: 1.08;
-  margin-bottom: 28px;
-  max-width: 900px;
+@keyframes typewriter-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
-.prism-hero__lead {
-  font-size: clamp(16px, 1.8vw, 19px);
-  line-height: 1.75;
-  color: var(--warm-gray);
-  max-width: 680px;
-  margin-bottom: 40px;
-}
-.prism-hero__ctas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-bottom: 40px;
-}
-.prism-hero__trust {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 13px;
-  color: var(--warm-gray);
-  flex-wrap: wrap;
-}
-.prism-hero__sep { opacity: 0.4; }

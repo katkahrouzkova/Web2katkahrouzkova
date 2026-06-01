@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let scrollStart = 0;
 
     function goTo(index) {
-      current = Math.max(0, Math.min(index, cards.length - 1));
+      if(index < 0) current = cards.length - 1; else if(index >= cards.length) current = 0; else current = index;
       const card = cards[current];
       const offset = card.offsetLeft - parseInt(getComputedStyle(track).paddingLeft);
       track.style.transform = `translateX(-${offset}px)`;
@@ -109,15 +109,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     mm.add("(prefers-reduced-motion: no-preference)", () => {
 
-      /* Hero entry */
-      const heroTl = gsap.timeline({ delay: 0.2 });
-      heroTl
+      /* Hero entry — disabled */
+      /* const heroTl = gsap.timeline({ delay: 0.2 }); //
+      /* heroTl
         .from('.hero__overline',  { opacity: 0, y: 20, duration: 0.7, ease: 'power3.out' })
         .from('.hero__title',     { opacity: 0, y: 30, duration: 0.9, ease: 'power3.out' }, '-=0.4')
         .from('.hero__sub',       { opacity: 0, y: 20, duration: 0.7, ease: 'power3.out' }, '-=0.5')
         .from('.hero__ctas',      { opacity: 0, y: 16, duration: 0.6, ease: 'power3.out' }, '-=0.4')
         .from('.hero__meta',      { opacity: 0, y: 12, duration: 0.5, ease: 'power3.out' }, '-=0.3')
-        .from('.hero__image',     { opacity: 0, scale: 1.04, duration: 1.2, ease: 'power2.out' }, 0.1);
+        .from('.hero__image',     { opacity: 0, scale: 1.04, duration: 1.2, ease: 'power2.out' }, 0.1); */
 
       /* Hero parallax */
       /* hero parallax disabled */
