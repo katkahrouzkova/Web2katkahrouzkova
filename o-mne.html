@@ -94,6 +94,21 @@
       </div>
 
       <div class="about__content">
+
+        <div class="about__stats" style="margin-bottom:36px;">
+          <div class="about__stat">
+            <span class="about__stat-num count-up" data-target="17">0</span>
+            <span class="about__stat-label">let v globálním HR</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-num count-up" data-target="5">0</span>
+            <span class="about__stat-label">certifikací</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-num count-up" data-target="3">0</span>
+            <span class="about__stat-label">jazyky</span>
+          </div>
+        </div>
         <p class="lead">Psychologie, FF Masarykova Univerzita, Brno &middot; 17+ let v globálním HR</p>
 
         <div class="about__quote">
@@ -116,24 +131,9 @@
           </div>
         </div>
 
-        <div class="about__stats">
-          <div class="about__stat">
-            <span class="about__stat-num">17</span>
-            <span class="about__stat-label">let v globálním HR</span>
-          </div>
-          <div class="about__stat">
-            <span class="about__stat-num">5</span>
-            <span class="about__stat-label">certifikací</span>
-          </div>
-          <div class="about__stat">
-            <span class="about__stat-num">3</span>
-            <span class="about__stat-label">jazyky</span>
-          </div>
-        </div>
+        <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener" class="btn btn--primary" style="margin-top:8px;">Pojďme si zavolat</a>
 
-        <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener" class="btn btn--primary">
-          Pojďme si zavolat
-        </a>
+        </div>
       </div>
     </div>
   </div>
@@ -214,6 +214,27 @@
   });
   function closeLB() { document.getElementById('lightbox').classList.remove('open'); }
   document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLB(); });
+</script>
+<script>
+(function(){
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var el = e.target;
+      var target = parseInt(el.dataset.target);
+      var duration = 600;
+      var interval = Math.floor(duration / target);
+      var cur = 0;
+      var t = setInterval(function(){
+        cur++;
+        el.textContent = cur;
+        if(cur >= target) clearInterval(t);
+      }, interval);
+      obs.unobserve(el);
+    });
+  }, {threshold: 0.6});
+  document.querySelectorAll('.count-up').forEach(function(el){ obs.observe(el); });
+})();
 </script>
 </body>
 </html>
