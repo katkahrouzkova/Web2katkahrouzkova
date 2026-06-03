@@ -17,7 +17,7 @@
 .subnav a{flex-shrink:0;padding:16px 20px;font-size:13px;font-weight:500;color:var(--warm-gray);border-bottom:2px solid transparent;text-decoration:none;transition:color .2s,border-color .2s}
 .subnav a:hover{color:var(--terra);border-bottom-color:var(--terra)}
 .svc-section{padding:80px 0;border-top:1px solid rgba(37,89,100,0.07)}
-.svc-section--gray{background:#F8F9FB}
+.svc-section--gray{background:#EEF2F3}
 .svc-overline{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--terra);margin-bottom:12px}
 .svc-title{font-family:var(--font-serif);font-size:clamp(26px,4vw,42px);font-weight:400;line-height:1.15;margin-bottom:20px}
 .svc-lead{font-size:16px;color:var(--warm-gray);line-height:1.75;max-width:680px;margin-bottom:32px}
@@ -33,11 +33,11 @@
 .svc-col--no li::before{background:var(--warm-gray);opacity:.4}
 .how-steps{background:#3D4E56;padding:64px 0}
 .how-steps h2{color:#fff;text-align:center;margin-bottom:48px;font-size:clamp(22px,3vw,30px)}
-.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
-.step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:28px 24px}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:32px 28px}
 .step__num{font-family:var(--font-serif);font-size:44px;font-weight:300;color:var(--terra);line-height:1;margin-bottom:10px}
 .step__title{font-size:15px;font-weight:500;color:#fff;margin-bottom:8px}
-.step__desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.65}
+.step__desc{font-size:16px;color:rgba(255,255,255,.7);line-height:1.7}
 @media(max-width:768px){.svc-cols{grid-template-columns:1fr}.steps-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.steps-grid{grid-template-columns:1fr}}
 </style>
@@ -98,12 +98,12 @@
         <a href="../blog/index.html">Blog</a>
   <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener" style="color:var(--terra)">Domluvit úvodní rozhovor →</a>
 </div>
-<section style="padding:140px 0 72px;background:#F8F9FB"><div class="container"><a href="../index.html#sluzby" class="back-link"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M9 2L4 7l5 5"/></svg> Zpět na služby</a><p class="overline">Program pro kariérní změnu</p><h1 style="margin:12px 0 0;max-width:1000px;">Jste jiný člověk než před deseti lety.<br><em style="color:var(--terra)"><span id="typewriter"></span><span class="typing-cursor">|</span></em></h1><p style="font-size:17px;color:var(--warm-gray);line-height:1.75;max-width:800px;margin-top:16px;">Program propojuje práci s talenty, zkušenosti z HR a koučovací přístup. Pomáhá ve chvíli, kdy dosavadní směr přestává dávat smysl — i když navenek může všechno vypadat v pořádku.</p>
-        <div style="display:flex;gap:16px;margin-top:40px;flex-wrap:wrap;">
+<section style="padding:100px 0 80px;background:#F8F9FB;overflow:hidden;"><div style="max-width:1120px;margin:0 auto;padding:0 48px;"><div style="display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:center;"><div style="padding-right:48px;"><a href="../index.html#sluzby" class="back-link"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M9 2L4 7l5 5"/></svg> Zpět na služby</a><p class="overline">Program pro kariérní změnu</p><h1 style="margin:12px 0 0;font-size:clamp(28px,3.5vw,48px);line-height:1.15;"><span style="display:block;">Jste jiný člověk než před deseti lety.</span><span style="display:block;white-space:nowrap;color:var(--terra);font-style:italic;"><span id="typewriter"></span><span class="typing-cursor">|</span></span></h1><p style="font-size:17px;color:var(--warm-gray);line-height:1.75;max-width:800px;margin-top:16px;">Program propojuje práci s talenty, zkušenosti z HR a koučovací přístup. Pomáhá ve chvíli, kdy dosavadní směr přestává dávat smysl — i když navenek může všechno vypadat v pořádku.</p>
+        <div style="display:flex;gap:16px;margin-top:40px;flex-wrap:nowrap;">
           <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener" class="btn btn--primary">Domluvit úvodní rozhovor</a>
           <a href="#proc-nezaciname" class="btn btn--ghost">Fáze programu</a>
         </div>
-        <div style="margin-top:40px;display:flex;gap:16px;font-size:13px;color:var(--warm-gray);flex-wrap:wrap;align-items:center;">
+        <div style="margin-top:40px;display:flex;gap:16px;font-size:15px;color:var(--warm-gray);flex-wrap:nowrap;white-space:nowrap;align-items:center;">
           <span>Strukturovaný kariérní program</span>
           <span style="opacity:0.4">·</span>
           <span>17+ let praxe v HR</span>
@@ -111,47 +111,52 @@
           <span>CZ · SK · EN</span>
         </div>
         
-</div></section>
+</div><div style="display:flex;align-items:center;justify-content:flex-end;"><img src="../images/foto program hero new.png" alt="" aria-hidden="true" style="width:100%;max-width:480px;max-height:560px;height:auto;object-fit:contain;opacity:0.55;mix-blend-mode:multiply;"></div></div></div></section>
 
 <section class="svc-section svc-section--gray" id="program"><div class="container">
-<div style="max-width:560px;">
-  <p class="svc-intro-label">S ČÍM KE MNĚ LIDÉ PŘICHÁZEJÍ</p>
-    <ul class="svc-comes-list">
-      <li>„Po dvaceti letech v oboru už necítím, že mi to něco dává.“</li>
-      <li>„Vracíme se po mateřské a mám úplně jiné priority.“</li>
-      <li>„Moje práce se mění a nevím, co bude dál.“</li>
-      <li>„Chci změnu, ale vůbec nevím jakou.“</li>
-    </ul>
-</div><div style="margin-top:56px;"></div><p class="svc-intro-label" style="margin-bottom:20px;">S čím vám program může pomoci</p>
-      <div class="svc-who-grid">
-        <div class="svc-who-card">
-          <strong>Kariérní změna:</strong>
-          <p>Současná práce už neodpovídá tomu, kým dnes jste.</p>
-        </div>
-        <div class="svc-who-card">
-          <strong>Ztráta směru:</strong>
-          <p>Víte, že potřebujete změnu, ale zatím nevidíte, kudy dál.</p>
-        </div>
-        <div class="svc-who-card">
-          <strong>Nová životní etapa:</strong>
-          <p>Návrat po mateřské, změna životní situace nebo jiné priority než dřív.</p>
-        </div>
-        <div class="svc-who-card">
-          <strong>Nejistota:</strong>
-          <p>Potřebujete se při rozhodování víc opřít o sebe než o očekávání okolí.</p>
-        </div>
-        <div class="svc-who-card">
-          <strong>Udržitelné fungování:</strong>
-          <p>Nastavení práce a života tak, aby dávaly smysl i dlouhodobě.</p>
-        </div>
-      </div></div></section>
-<section id="proc-nezaciname" style="padding:64px 0;background:#fff;border-top:1px solid rgba(37,89,100,0.07);">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+  <p class="svc-intro-label" style="margin-bottom:40px;">Kdy má tato spolupráce největší smysl</p>
+  <div style="margin-top:24px;">
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:16px 28px;border:1px solid rgba(37,89,100,0.1);border-radius:12px;margin-bottom:12px;align-items:center;background:#fff;">
+      <p style="font-family:var(--font-serif);font-size:20px;color:var(--forest);line-height:1.35;margin:0;font-weight:500;">&#8222;Po dvaceti letech v oboru už necítím, že mi to něco dává.&#8220;</p>
       <div>
-        <img src="../images/foto-kariernizmena.png" alt="Program pro kariérní změnu" style="width:100%;border-radius:16px;display:block;object-fit:contain;">
+        <p style="font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);margin:0 0 8px;">Kariérní změna a udržitelné fungování</p>
+        <p style="font-size:15px;color:var(--warm-gray);line-height:1.75;margin:0;">Současná práce už neodpovídá tomu, kým dnes jste. Společně hledáme, jak nastavit práci a život tak, aby dávaly smysl i dlouhodobě.</p>
       </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:16px 28px;border:1px solid rgba(37,89,100,0.1);border-radius:12px;margin-bottom:12px;align-items:center;background:#fff;">
+      <p style="font-family:var(--font-serif);font-size:20px;color:var(--forest);line-height:1.35;margin:0;font-weight:500;">&#8222;Vracím se po mateřské a mám úplně jiné priority.&#8220;</p>
       <div>
+        <p style="font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);margin:0 0 8px;">Nová životní etapa</p>
+        <p style="font-size:15px;color:var(--warm-gray);line-height:1.75;margin:0;">Návrat po mateřské, změna životní situace nebo jiné priority než dřív často otevírají otázku, co má v práci smysl právě teď – ne jen podle toho, jak to bylo dřív.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:16px 28px;border:1px solid rgba(37,89,100,0.1);border-radius:12px;margin-bottom:12px;align-items:center;background:#fff;">
+      <p style="font-family:var(--font-serif);font-size:20px;color:var(--forest);line-height:1.35;margin:0;font-weight:500;">&#8222;Moje práce se mění a nevím, co bude dál.&#8220;</p>
+      <div>
+        <p style="font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);margin:0 0 8px;">Nejistota a změna směru</p>
+        <p style="font-size:15px;color:var(--warm-gray);line-height:1.75;margin:0;">Mění se role, tým nebo celé prostředí a vy si nejste jistí, čeho se držet. Tato spolupráce pomáhá při rozhodování víc se opřít o sebe než o očekávání okolí.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:16px 28px;border:1px solid rgba(37,89,100,0.1);border-radius:12px;align-items:center;background:#fff;">
+      <p style="font-family:var(--font-serif);font-size:20px;color:var(--forest);line-height:1.35;margin:0;font-weight:500;">&#8222;Chci změnu, ale vůbec nevím jakou.&#8220;</p>
+      <div>
+        <p style="font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);margin:0 0 8px;">Ztráta směru</p>
+        <p style="font-size:15px;color:var(--warm-gray);line-height:1.75;margin:0;">Víte, že potřebujete změnu, ale zatím nevidíte, kudy dál. Neskládáme &#8222;ideální plán kariéry&#8220;, hledáme další krok, který dává smysl ve vašem současném životě.</p>
+      </div>
+    </div>
+
+  </div>
+</div></section>
+<section id="proc-nezaciname" style="padding:0;background:#fff;border-top:1px solid rgba(37,89,100,0.07);overflow:hidden;">
+  <div style="max-width:100%;padding:0;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;">
+      <div style="min-height:560px;background-image:url('../images/foto-kariernizmena.png');background-size:cover;background-position:bottom center;">
+      </div>
+      <div style="padding:64px 48px;display:flex;flex-direction:column;justify-content:center;">
         <p class="svc-intro-label" style="margin-bottom:20px;">Proč nezačínáme životopisem</p>
         <ul class="svc-comes-list">
           <li>Mnoho kariérních konzultací začíná úpravou CV nebo hledáním vhodných pozic. To má smysl ve chvíli, kdy víte, kam chcete směřovat.</li>
@@ -163,7 +168,7 @@
     </div>
   </div>
 </section>
-<section class="how-steps"><div class="container"><h2>Jak to probíhá</h2><p style="color:rgba(255,255,255,0.65);font-size:15px;line-height:1.75;max-width:620px;margin:0 auto 40px;text-align:center;">Program obvykle probíhá v sérii 5–7 setkání. Tempo přizpůsobujeme tomu, jestli potřebujete nejdřív porozumět své situaci, nebo už ověřovat konkrétní možnosti.</p><div class="steps-grid"><div class="step"><div class="step__num">01</div><div class="step__title">Zmapování talentů</div><div class="step__desc">Výchozí bod — talenty, zkušenosti, hodnoty a způsob fungování.</div></div><div class="step"><div class="step__num">02</div><div class="step__title">Hledání směrů</div><div class="step__desc">Možnosti, které dávají smysl vaší situaci, energii i realitě trhu.</div></div><div class="step"><div class="step__num">03</div><div class="step__title">Konkrétní kroky</div><div class="step__desc">První ověřitelné kroky do práce i běžného života.</div></div><div class="step"><div class="step__num">04</div><div class="step__title">Nastavení změn</div><div class="step__desc">Tak, aby změna nestála jen na počáteční motivaci, ale fungovala dlouhodobě.</div></div></div><div style="text-align:center;margin-top:40px"><a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener" class="btn btn--white">Chci najít směr, který mi dnes sedí</a></div></div></section>
+<section class="how-steps"><div class="container"><h2>Jak to probíhá</h2><p style="color:rgba(255,255,255,0.65);font-size:17px;line-height:1.75;max-width:620px;margin:0 auto 40px;text-align:center;">Program obvykle probíhá v sérii 5–7 setkání. Tempo přizpůsobujeme tomu, jestli potřebujete nejdřív porozumět své situaci, nebo už ověřovat konkrétní možnosti.</p><div class="steps-grid"><div class="step"><div class="step__num">01</div><div class="step__title">Zmapování talentů</div><div class="step__desc">Výchozí bod — talenty, zkušenosti, hodnoty a způsob fungování.</div></div><div class="step"><div class="step__num">02</div><div class="step__title">Hledání směrů</div><div class="step__desc">Možnosti, které dávají smysl vaší situaci, energii i realitě trhu.</div></div><div class="step"><div class="step__num">03</div><div class="step__title">Konkrétní kroky</div><div class="step__desc">První ověřitelné kroky do práce i běžného života.</div></div><div class="step"><div class="step__num">04</div><div class="step__title">Nastavení změn</div><div class="step__desc">Tak, aby změna nestála jen na počáteční motivaci, ale fungovala dlouhodobě.</div></div></div><div style="text-align:center;margin-top:40px"><a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener" class="btn btn--white">Chci najít směr, který mi dnes sedí</a></div></div></section>
 <section class="cta-section"><div class="container"><div class="cta-section__inner">
   <p class="overline">Pojďme si zavolat</p>
   <h2>Začneme krátkým rozhovorem.</h2>

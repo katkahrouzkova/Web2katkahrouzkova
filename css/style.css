@@ -178,12 +178,13 @@ section { position: relative; }
   gap: 32px;
 }
 .nav__links a {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   color: var(--charcoal);
   opacity: 0.8;
   transition: opacity 0.2s;
   position: relative;
+  white-space: nowrap;
 }
 .nav__links a::after {
   content: '';
@@ -1107,10 +1108,7 @@ section { position: relative; }
 
 /* Testimonials — fade nahor */
 .testimonials {
-  background: linear-gradient(180deg, 
-    #ffffff 0%, 
-    #ffffff 100%
-  );
+  background: #F4F6F7;
   padding-top: 60px;
 }
 
@@ -1133,9 +1131,9 @@ section { position: relative; }
 
 /* --- Jemné oddelenie sekcií striedaním pozadia --- */
 .intro        { background: #F8F9FB; }
-.services     { background: #F8F9FB; }
+.services     { background: #D8DCE0; }
 .about        { background: #F8F9FB; }
-.testimonials { background: #F8F9FB; }
+.testimonials { background: #F4F6F7; }
 .stats        { background: #F8F9FB; }
 
 /* --- celá service karta klikacia --- */
@@ -1674,7 +1672,7 @@ section[id] { scroll-margin-top: 80px; }
   margin: 0;
 }
 .svc-intro-label {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -1685,12 +1683,12 @@ section[id] { scroll-margin-top: 80px; }
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 18px;
 }
 .svc-comes-list li {
-  font-size: 16px;
+  font-size: 17px;
   color: var(--warm-gray);
-  line-height: 1.6;
+  line-height: 1.7;
   padding-left: 16px;
   border-left: 2px solid rgba(37,89,100,0.2);
 }
@@ -1782,7 +1780,7 @@ section[id] { scroll-margin-top: 80px; }
 /* Svc who grid — dlaždice */
 .svc-who-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   margin-top: 8px;
 }
@@ -1812,7 +1810,7 @@ section[id] { scroll-margin-top: 80px; }
 /* Svc who grid — dlaždice */
 .svc-who-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   margin-top: 8px;
 }
@@ -2182,7 +2180,7 @@ p.svc-intro-label + .svc-who-grid {
 }
 .prism-hero__ctas {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 14px;
   margin-bottom: 40px;
 }
@@ -2192,7 +2190,8 @@ p.svc-intro-label + .svc-who-grid {
   gap: 12px;
   font-size: 16px;
   color: var(--warm-gray);
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 .prism-hero__sep { opacity: 0.4; }
 
@@ -2217,4 +2216,71 @@ p.svc-intro-label + .svc-who-grid {
 }
 .card-border-green {
   border-top: 5px solid #255964 !important;
+}
+
+/* =============================================
+   MOBILE — komplexné opravy pre podstránky
+   ============================================= */
+@media (max-width: 768px) {
+
+  /* Hero sekcie na podstránkach */
+  .container { padding: 0 20px; }
+
+  /* Všetky inline gridy 1fr 1fr → 1 stĺpec */
+  [style*="grid-template-columns:1fr 1fr"],
+  [style*="grid-template-columns: 1fr 1fr"],
+  [style*="grid-template-columns:3fr 2fr"],
+  [style*="grid-template-columns:2fr 3fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Hero obrázky na podstránkach — skryť na mobile */
+  [style*="mix-blend-mode:multiply"] {
+    display: none !important;
+  }
+
+  /* Padding na hero obsahu */
+  [style*="padding-right:48px"] {
+    padding-right: 0 !important;
+  }
+
+  /* Sekcie s background-image — zmenšiť výšku */
+  [style*="background-image"][style*="min-height:520px"],
+  [style*="background-image"][style*="min-height:560px"] {
+    min-height: 280px !important;
+  }
+
+  /* Pravý stĺpec s padding 64px 48px */
+  [style*="padding:64px 48px"] {
+    padding: 36px 24px !important;
+  }
+
+  /* CTA buttony na mobile — pod sebou */
+  [style*="flex-wrap:nowrap"] {
+    flex-wrap: wrap !important;
+  }
+
+  /* Carousel karty */
+  .testimonial-card { min-width: 280px !important; max-width: 280px !important; }
+
+  /* Koučink/PRISM carousel grid */
+  .prism-c-slide [style*="grid-template-columns:1fr 1fr"],
+  .kouc-c-slide [style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Nadpisy na mobile */
+  h1 { font-size: clamp(28px, 7vw, 40px) !important; }
+  h2 { font-size: clamp(24px, 6vw, 34px) !important; }
+
+  /* Hero padding na podstránkach */
+  [style*="padding:100px 0 80px"] {
+    padding: 80px 0 40px !important;
+  }
+
+  /* Meta/trust riadok — zalamovanie */
+  [style*="white-space:nowrap"] {
+    white-space: normal !important;
+    flex-wrap: wrap !important;
+  }
 }

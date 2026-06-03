@@ -16,7 +16,7 @@
 .subnav__inner{display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .subnav a{flex-shrink:0;padding:16px 20px;font-size:13px;font-weight:500;color:var(--warm-gray);border-bottom:2px solid transparent;text-decoration:none;transition:color .2s,border-color .2s}
 .subnav a:hover{color:var(--terra);border-bottom-color:var(--terra)}
-.svc-section{padding:80px 0;border-top:1px solid rgba(37,89,100,0.07)}
+.svc-section{padding:80px 0;border-top:1px solid rgba(37,89,100,0.07);background:#EDF0F5}
 .svc-section--gray{background:#F8F9FB}
 .svc-overline{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--terra);margin-bottom:12px}
 .svc-title{font-family:var(--font-serif);font-size:clamp(26px,4vw,42px);font-weight:400;line-height:1.15;margin-bottom:20px}
@@ -37,7 +37,7 @@
 .step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:28px 24px}
 .step__num{font-family:var(--font-serif);font-size:44px;font-weight:300;color:var(--terra);line-height:1;margin-bottom:10px}
 .step__title{font-size:15px;font-weight:500;color:#fff;margin-bottom:8px}
-.step__desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.65}
+.step__desc{font-size:16px;color:rgba(255,255,255,.7);line-height:1.7}
 @media(max-width:768px){.svc-cols{grid-template-columns:1fr}.steps-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.steps-grid{grid-template-columns:1fr}}
 </style>
@@ -71,12 +71,12 @@
         <a href="../blog/index.html">Blog</a>
   <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener" style="color:var(--terra)">Domluvit úvodní rozhovor →</a>
 </div>
-<section style="padding:140px 0 72px;background:#F8F9FB"><div class="container"><a href="../index.html#sluzby" class="back-link"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M9 2L4 7l5 5"/></svg> Zpět na služby</a><h1 style="margin:12px 0 0;max-width:1000px;"><span id="typewriter"></span><span class="typing-cursor">|</span></h1><p style="font-size:17px;color:var(--warm-gray);line-height:1.75;max-width:800px;margin-top:16px;">Díky 17 letům v globálním HR rozumím kontextu, ve kterém firmy fungují. Nejsem konzultant, který přijde s hotovým řešením — jsem partner, který pomáhá zorientovat se a nastavit věci tak, aby skutečně fungovaly.</p>
-        <div style="display:flex;gap:16px;margin-top:40px;flex-wrap:wrap;">
+<section style="padding:100px 0 80px;background:#F8F9FB;overflow:hidden;"><div style="max-width:1120px;margin:0 auto;padding:0 48px;"><div style="display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:center;"><div style="padding-right:48px;"><a href="../index.html#sluzby" class="back-link"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M9 2L4 7l5 5"/></svg> Zpět na služby</a><h1 style="font-size:clamp(28px,3.5vw,48px);margin:12px 0 0;max-width:1000px;"><span id="typewriter"></span><span class="typing-cursor">|</span></h1><p style="font-size:17px;color:var(--warm-gray);line-height:1.75;max-width:800px;margin-top:16px;">Díky 17 letům v globálním HR rozumím kontextu, ve kterém firmy fungují. Nejsem konzultant, který přijde s hotovým řešením — jsem partner, který pomáhá zorientovat se a nastavit věci tak, aby skutečně fungovaly.</p>
+        <div style="display:flex;gap:16px;margin-top:40px;flex-wrap:nowrap;">
           <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener" class="btn btn--primary">Domluvit úvodní rozhovor</a>
           <a href="#interni-pohled-nestaci" class="btn btn--ghost">S čím vám pomohu</a>
         </div>
-        <div style="margin-top:40px;display:flex;gap:16px;font-size:13px;color:var(--warm-gray);flex-wrap:wrap;align-items:center;">
+        <div style="margin-top:40px;display:flex;gap:16px;font-size:15px;color:var(--warm-gray);flex-wrap:nowrap;white-space:nowrap;align-items:center;">
           <span>Strategické HR poradenství</span>
           <span style="opacity:0.4">·</span>
           <span>17+ let praxe v HR</span>
@@ -84,43 +84,51 @@
           <span>CZ · SK · EN</span>
         </div>
         
-</div></section>
+</div><div style="display:flex;align-items:center;justify-content:flex-end;"><img src="../images/foto HR partnering hero.png" alt="" aria-hidden="true" style="width:100%;max-width:480px;max-height:560px;height:auto;object-fit:contain;opacity:0.55;mix-blend-mode:multiply;"></div></div></div></section>
 <section class="svc-section">
 <div class="container">
-<div style="max-width:560px;">
-  <p class="svc-intro-label" style="margin-bottom:20px;">S čím firmy přicházejí</p>
-  <ul class="svc-comes-list">
-    <li>„Chceme rozvíjat lidi, ale nevíme jak na to systematicky."</li>
-    <li>„HR u nás řeší hlavně administrativu. Chceme z něj udělat strategického partnera."</li>
-    <li>„Rosteme rychle a potřebujeme nastavit procesy."</li>
-    <li>„Hledáme podporu pro interní HR — ne poradenskou firmu."</li>
-  </ul>
+  <p class="svc-intro-label" style="margin-bottom:40px;">Kdy m&#225; tato spolupr&#225;ce nejv&#283;t&#353;&#237; smysl</p>
+  <div style="margin-top:24px;">
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:16px 28px;border:1px solid rgba(37,89,100,0.1);border-radius:12px;margin-bottom:12px;align-items:center;background:#fff;">
+      <p style="font-family:var(--font-serif);font-size:20px;color:var(--forest);line-height:1.35;margin:0;font-weight:500;">&#8222;Chceme rozv&#237;jet lidi, ale nev&#237;me, jak na to systematicky.&#8220;</p>
+      <div>
+        <p style="font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);margin:0 0 8px;">Syst&#233;m rozvoje a L&amp;D</p>
+        <p style="font-size:15px;color:var(--warm-gray);line-height:1.75;margin:0;">Firma chce lidem nab&#237;dnout v&#237;c ne&#382; jednor&#225;zov&#225; &#353;kolen&#237;. Spole&#269;n&#283; hled&#225;me, co m&#225; smysl rozv&#237;jet a jak to nastavit udr&#382;iteln&#283;.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:16px 28px;border:1px solid rgba(37,89,100,0.1);border-radius:12px;margin-bottom:12px;align-items:center;background:#fff;">
+      <p style="font-family:var(--font-serif);font-size:20px;color:var(--forest);line-height:1.35;margin:0;font-weight:500;">&#8222;HR u n&#225;s &#345;e&#353;&#237; hlavn&#283; administrativu. Chceme z n&#283;j ud&#283;lat strategick&#233;ho partnera.&#8220;</p>
+      <div>
+        <p style="font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);margin:0 0 8px;">Posun role HR</p>
+        <p style="font-size:15px;color:var(--warm-gray);line-height:1.75;margin:0;">HR je zahlcen&#233; operativou a nem&#225; prostor pro d&#367;le&#382;it&#283;j&#353;&#237; t&#233;mata. Hled&#225;me cestu, jak p&#345;enastavit priority a zapojit HR v&#237;c do pr&#225;ce s lidmi a t&#253;my.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:16px 28px;border:1px solid rgba(37,89,100,0.1);border-radius:12px;margin-bottom:12px;align-items:center;background:#fff;">
+      <p style="font-family:var(--font-serif);font-size:20px;color:var(--forest);line-height:1.35;margin:0;font-weight:500;">&#8222;Rosteme rychle a pot&#345;ebujeme nastavit procesy.&#8220;</p>
+      <div>
+        <p style="font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);margin:0 0 8px;">R&#367;st firmy a procesy</p>
+        <p style="font-size:15px;color:var(--warm-gray);line-height:1.75;margin:0;">Firma roste, p&#345;ib&#253;vaj&#237; lid&#233; i role a p&#367;vodn&#237; zp&#367;sob fungov&#225;n&#237; p&#345;est&#225;v&#225; sta&#269;it. &#344;e&#353;&#237;me, jak nastavit HR procesy tak, aby r&#367;st podporovaly.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:16px 28px;border:1px solid rgba(37,89,100,0.1);border-radius:12px;align-items:center;background:#fff;">
+      <p style="font-family:var(--font-serif);font-size:20px;color:var(--forest);line-height:1.35;margin:0;font-weight:500;">&#8222;Hled&#225;me podporu pro intern&#237; HR &#8212; ne poradensk&#233;ho firmu.&#8220;</p>
+      <div>
+        <p style="font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);margin:0 0 8px;">Partner pro HR z praxe</p>
+        <p style="font-size:15px;color:var(--warm-gray);line-height:1.75;margin:0;">Intern&#237; HR nebo HR business partner pot&#345;ebuje n&#283;koho pro pr&#367;b&#283;&#382;n&#233; konzultace nad konkr&#233;tn&#237;mi situacemi a rozhodnut&#237;mi. Nejde o velk&#253; projekt, ale o praktickou oporu v ka&#382;dodenn&#237; pr&#225;ci.</p>
+      </div>
+    </div>
+
+  </div>
 </div>
-<p class="svc-lead" style="max-width:680px;margin-bottom:32px"></p>
-<section style="padding:48px 0;background:#F8F9FB;border-top:1px solid rgba(37,89,100,0.07);"><div class="container"><p style="font-family:var(--font-serif);font-size:clamp(20px,2.5vw,28px);color:var(--charcoal);line-height:1.5;">Nejčastěji řešíme nastavení HR procesů, rozvoj manažerů, L&D programy, mentoring, práci s talenty a situace, kdy firma roste rychleji než její způsob práce s lidmi.</p></div></section>
-<p class="svc-intro-label" style="margin-bottom:20px;">Kdy má spolupráce smysl</p>
-<div class="svc-who-grid">
-  <div class="svc-who-card">
-    <strong>Firmy bez interního HR</strong>
-    <p>Nebo s omezenou kapacitou, které potřebují zkušenější pohled zvenčí.</p>
-  </div>
-  <div class="svc-who-card">
-    <strong>Revize HR a L&amp;D procesů</strong>
-    <p>Firmy, které chtějí zjistit, co skutečně funguje a co jen vypadá dobře na papíře.</p>
-  </div>
-  <div class="svc-who-card">
-    <strong>HR manažeři a business partneři</strong>
-    <p>Hledají partnera pro konzultace z praxe — ne poradenskou firmu.</p>
-  </div>
-  <div class="svc-who-card">
-    <strong>Nastavení mentoringu</strong>
-    <p>Mentoringové a rozvojové programy postavené na konkrétních lidech, rolích a situaci firmy.</p>
-  </div>
-</div>
+</section>
 </div>
 </section>
 
-<section id="interni-pohled-nestaci" style="padding:64px 0;background:#fff;border-top:1px solid rgba(37,89,100,0.07);"><div class="container"><div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;"><img src="../images/foto-hrpartneringnew.png" alt="HR partnering" style="width:100%;border-radius:16px;display:block;object-fit:cover;max-height:600px;"><div><p class="svc-intro-label" style="margin-bottom:20px;">KDYŽ INTERNÍ POHLED NESTAČÍ</p><ul class="svc-comes-list"><li>Ve většině firem nechybí zkušenosti ani snaha věci posouvat.</li><li>S růstem firmy přibývají nové procesy, role a očekávání. Některé postupy přestaneme zpochybňovat.</li><li>To, co fungovalo při deseti lidech, nemusí fungovat při padesáti.</li><li>Právě v takových situacích bývá užitečný pohled člověka, který není součástí každodenního fungování firmy.</li><li>Externí partner přináší odstup, zkušenosti z jiných prostředí a otázky, které si uvnitř firmy často nikdo nepoloží.</li></ul></div></div></div></section><section class="how-steps">
+<section id="interni-pohled-nestaci" style="padding:0;background:#fff;border-top:1px solid rgba(37,89,100,0.07);overflow:hidden;"><div class="container" style="padding:0;max-width:100%;"><div style="display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;"><div style="min-height:520px;background-image:url('../images/foto-hrpartneringnew.png');background-size:cover;background-position:center;"></div><div style="padding:64px 48px;display:flex;flex-direction:column;justify-content:center;"><p class="svc-intro-label" style="margin-bottom:20px;">KDYŽ INTERNÍ POHLED NESTAČÍ</p><ul class="svc-comes-list"><li>Ve většině firem nechybí zkušenosti ani snaha věci posouvat.</li><li>S růstem firmy přibývají nové procesy, role a očekávání. Některé postupy přestaneme zpochybňovat.</li><li>To, co fungovalo při deseti lidech, nemusí fungovat při padesáti.</li><li>Právě v takových situacích bývá užitečný pohled člověka, který není součástí každodenního fungování firmy.</li><li>Externí partner přináší odstup, zkušenosti z jiných prostředí a otázky, které si uvnitř firmy často nikdo nepoloží.</li></ul></div></div></div></section><section class="how-steps">
 <div class="container">
 <h2>Jak to probíhá</h2>
 <div class="steps-grid">

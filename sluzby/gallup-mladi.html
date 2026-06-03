@@ -16,7 +16,7 @@
 .subnav__inner{display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch}
 .subnav a{flex-shrink:0;padding:16px 20px;font-size:13px;font-weight:500;color:var(--warm-gray);border-bottom:2px solid transparent;text-decoration:none;transition:color .2s,border-color .2s}
 .subnav a:hover{color:var(--terra);border-bottom-color:var(--terra)}
-.svc-section{padding:80px 0;border-top:1px solid rgba(37,89,100,0.07)}
+.svc-section{padding:80px 0;border-top:1px solid rgba(37,89,100,0.07);background:#EDEAE4}
 .svc-section--gray{background:#F8F9FB}
 .svc-overline{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--terra);margin-bottom:12px}
 .svc-title{font-family:var(--font-serif);font-size:clamp(26px,4vw,42px);font-weight:400;line-height:1.15;margin-bottom:20px}
@@ -37,7 +37,7 @@
 .step{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:28px 24px}
 .step__num{font-family:var(--font-serif);font-size:44px;font-weight:300;color:var(--terra);line-height:1;margin-bottom:10px}
 .step__title{font-size:15px;font-weight:500;color:#fff;margin-bottom:8px}
-.step__desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.65}
+.step__desc{font-size:16px;color:rgba(255,255,255,.7);line-height:1.7}
 @media(max-width:768px){.svc-cols{grid-template-columns:1fr}.steps-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.steps-grid{grid-template-columns:1fr}}
 </style>
@@ -71,12 +71,12 @@
         <a href="../blog/index.html">Blog</a>
   <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener" style="color:var(--terra)">Domluvit úvodní rozhovor →</a>
 </div>
-<section style="padding:140px 0 72px;background:#F8F9FB"><div class="container"><a href="../index.html#sluzby" class="back-link"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M9 2L4 7l5 5"/></svg> Zpět na služby</a><h1 style="margin:12px 0 0;max-width:1000px;"><span id="typewriter-mladi"></span><span style="color: var(--terra); font-weight: 300; animation: blink .7s step-end infinite;">|</span></h1><p style="font-size:17px;color:var(--warm-gray);line-height:1.75;max-width:800px;margin-top:16px;">Důležitá kariérní rozhodnutí často děláme ve chvíli, kdy sami sebe ještě moc neznáme. Gallup CliftonStrengths je sebepoznávací nástroj dostupný od 15 let. Pomáhá pojmenovat, v čem jste přirozeně dobří a jak na základě toho přemýšlet o škole, oboru nebo prvních pracovních zkušenostech.</p>
-        <div style="display:flex;gap:16px;margin-top:40px;flex-wrap:wrap;">
+<section style="padding:100px 0 80px;background:#F8F9FB;overflow:hidden;"><div style="max-width:1120px;margin:0 auto;padding:0 48px;"><div style="display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:center;"><div style="padding-right:48px;"><a href="../index.html#sluzby" class="back-link"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M9 2L4 7l5 5"/></svg> Zpět na služby</a><h1 style="margin:12px 0 0;font-size:clamp(28px,3.5vw,48px);"><span id="typewriter-mladi"></span><span style="color: var(--terra); font-weight: 300; animation: blink .7s step-end infinite;">|</span></h1><p style="font-size:17px;color:var(--warm-gray);line-height:1.75;max-width:800px;margin-top:16px;">Důležitá rozhodnutí o škole a kariéře děláme často dřív, než sami sebe dobře známe. Gallup CliftonStrengths je dostupný od 15 let — pomáhá studentům pojmenovat přirozené talenty a podle nich přemýšlet o škole, oboru i prvních pracovních krocích.</p>
+        <div style="display:flex;gap:16px;margin-top:40px;flex-wrap:nowrap;">
           <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener" class="btn btn--primary">Domluvit úvodní rozhovor</a>
           <a href="#nejde-o-to" class="btn btn--ghost">Co program obnáší</a>
         </div>
-        <div style="margin-top:40px;display:flex;gap:16px;font-size:13px;color:var(--warm-gray);flex-wrap:wrap;align-items:center;">
+        <div style="margin-top:40px;display:flex;gap:16px;font-size:15px;color:var(--warm-gray);flex-wrap:nowrap;white-space:nowrap;align-items:center;">
           <span>Talentové poradenství pro studenty</span>
           <span style="opacity:0.4">·</span>
           <span>17+ let praxe v HR</span>
@@ -84,47 +84,56 @@
           <span>CZ · SK · EN</span>
         </div>
         
-</div></section>
+</div><div style="display:flex;align-items:center;justify-content:flex-end;"><img src="../images/foto gallup mlade hero new.png" alt="" aria-hidden="true" style="width:100%;max-width:480px;max-height:560px;height:auto;object-fit:contain;opacity:0.55;mix-blend-mode:multiply;"></div></div></div></section>
 <section class="svc-section"><div class="container">
-<div style="max-width:560px;">
-  <p class="svc-intro-label">S čím studenti přicházejí</p>
-    <ul class="svc-comes-list">
-      <li>„Všichni mi radí, v čem jsem dobrý, ale já sám si tím nejsem jistý.“</li>
-      <li>„Vím, co mě nebaví, ale nedokážu pojmenovat, na co mám talent.“</li>
-      <li>„Snažím se zlepšovat ve všem, ale v ničem pořádně nevynikám.“</li>
-      <li>„Mam spoustu zájmů, ale nevím, jak je propojit s budoucí kariérou.“</li>
-    </ul>
-</div><div style="margin-top:56px;"></div><p class="svc-intro-label" style="margin-bottom:20px;">S čím vám to může pomoci</p>
-      <div class="svc-who-grid">
-<div class="svc-who-card">
-          <strong>Výběr školy nebo oboru:</strong>
-          <p>Jaké prostředí, témata a typ práce mohou sedět vašemu přirozenému nastavení.</p>
-        </div>
-        <div class="svc-who-card">
-          <strong>Silné stránky:</strong>
-          <p>Pojmenování toho, co vám jde přirozeně a o co se můžete opřít při dalším rozhodování.</p>
-        </div>
-        <div class="svc-who-card">
-          <strong>Sebedůvěra v rozhodování:</strong>
-          <p>Větší opora při volbě školy, oboru nebo prvních pracovních zkušeností.</p>
-        </div>
-        <div class="svc-who-card">
-          <strong>První pracovní zkušenosti:</strong>
-          <p>Jak přemýšlet o brigádách, praxi nebo první práci podle toho, co vám přirozeně sedí.</p>
-        </div>
-      </div></div></section>
+  <p class="svc-intro-label" style="margin-bottom:40px;">Kdy to dává smysl a s čím vám to může pomoci</p>
+  <div style="margin-top:24px;">
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:16px 28px;border:1px solid rgba(37,89,100,0.1);border-radius:12px;margin-bottom:12px;align-items:center;background:#fff;">
+      <p style="font-family:var(--font-serif);font-size:20px;color:var(--forest);line-height:1.35;margin:0;font-weight:500;">&#8222;Všichni mi radí, v čem jsem dobrý, ale já sám si tím nejsem jistý.&#8220;</p>
+      <div>
+        <p style="font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);margin:0 0 8px;">Silné stránky a sebedůvěra v rozhodování</p>
+        <p style="font-size:15px;color:var(--warm-gray);line-height:1.75;margin:0;">Pojmenujete, co vám jde přirozeně a o co se můžete opřít při volbě školy, oboru nebo prvních pracovních zkušeností.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:16px 28px;border:1px solid rgba(37,89,100,0.1);border-radius:12px;margin-bottom:12px;align-items:center;background:#fff;">
+      <p style="font-family:var(--font-serif);font-size:20px;color:var(--forest);line-height:1.35;margin:0;font-weight:500;">&#8222;Vím, co mě nebaví, ale nedokážu pojmenovat, na co mám talent.&#8220;</p>
+      <div>
+        <p style="font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);margin:0 0 8px;">Silné stránky</p>
+        <p style="font-size:15px;color:var(--warm-gray);line-height:1.75;margin:0;">Z nejasného pocitu „tohle ne" se přesuneme k tomu, „v čem jsem naopak silný" – a jak se tyto talenty dají přetavit do konkrétnějších směrů.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:16px 28px;border:1px solid rgba(37,89,100,0.1);border-radius:12px;margin-bottom:12px;align-items:center;background:#fff;">
+      <p style="font-family:var(--font-serif);font-size:20px;color:var(--forest);line-height:1.35;margin:0;font-weight:500;">&#8222;Snažím se zlepšovat ve všem, ale v ničem pořádně nevynikám.&#8220;</p>
+      <div>
+        <p style="font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);margin:0 0 8px;">Výběr směru a první zkušenosti</p>
+        <p style="font-size:15px;color:var(--warm-gray);line-height:1.75;margin:0;">Podíváme se, jaké prostředí, témata a typ práce nejlépe sedí vašemu přirozenému nastavení, a jak podle toho přemýšlet o brigádách, praxích nebo první práci.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:16px 28px;border:1px solid rgba(37,89,100,0.1);border-radius:12px;align-items:center;background:#fff;">
+      <p style="font-family:var(--font-serif);font-size:20px;color:var(--forest);line-height:1.35;margin:0;font-weight:500;">&#8222;Mám spoustu zájmů, ale nevím, jak je propojit s budoucí kariérou.&#8220;</p>
+      <div>
+        <p style="font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra);margin:0 0 8px;">Výběr školy nebo oboru</p>
+        <p style="font-size:15px;color:var(--warm-gray);line-height:1.75;margin:0;">Z různých zájmů hledáme společné jmenovatele – jaká studia a budoucí role dávají smysl vzhledem k tomu, jak přemýšlíte, co vás dlouhodobě baví a jak chcete fungovat.</p>
+      </div>
+    </div>
+
+  </div>
+</div></section>
 
 <!-- ================================================
      NEJDE O TO VYBRAT SKOLU
      ================================================ -->
 
-<section id="nejde-o-to" style="padding:64px 0;background:#fff;border-top:1px solid rgba(37,89,100,0.07);">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
-      <div>
-        <img src="../images/foto-galluppromlade.png" alt="Nejde o to vybrat školu za vás" style="width:100%;border-radius:16px;display:block;object-fit:cover;max-height:480px;object-position: top center;">
+<section id="nejde-o-to" style="padding:0!important;margin:0!important;background:#fff;border-top:1px solid rgba(37,89,100,0.07);overflow:hidden;">
+  <div style="width:100%;padding:0;margin:0;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;">
+      <div style="min-height:520px;background-image:url('../images/foto-galluppromlade.png');background-size:cover;background-position:top center;border-radius:0;">
       </div>
-      <div>
+      <div style="padding:64px 48px;display:flex;flex-direction:column;justify-content:center;">
         <p class="overline" style="margin-bottom:24px;">NEJDE O TO VYBRAT ŠKOLU ZA VÁS</p>
         <div style="border-left: 2px solid rgba(37,89,100,0.15); padding-left: 24px; display: flex; flex-direction: column; gap: 20px;">
           <p style="font-size: 16px; color: var(--warm-gray); line-height: 1.7; margin: 0;">Gallup neřekne, jaký obor si máte vybrat. Pomůže ale lépe pochopit, co je vám přirozené, co vás motivuje a v jakém prostředí se vám pravděpodobně bude lépe dařit.</p>
@@ -135,6 +144,65 @@
     </div>
   </div>
 </section>
+
+
+
+
+
+<section style="padding:100px 0;background:var(--paper);" id="pribehy-z-praxe">
+  <div class="container">
+    <div style="margin-bottom:48px;">
+      <p class="overline">P&#345;&#237;KLADY Z PRAXE</p>
+      <h2 style="font-family:var(--font-serif);font-size:clamp(32px,4vw,48px);color:var(--charcoal);line-height:1.1;opacity:0;transform:translateY(24px);transition:opacity 0.8s ease,transform 0.8s ease;" class="fade-in-on-scroll">Jak Gallup pomáhá mladým lidem rozhodovat se o dalším směru</h2>
+    </div>
+    <div style="border-radius:16px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.08);">
+
+      <!-- CITÁT cez plnú šírku -->
+      <div style="background:#fff;padding:48px 48px 32px;border-bottom:1px solid rgba(37,89,100,0.08);">
+        <p style="font-family:var(--font-serif);font-size:clamp(20px,2.2vw,28px);color:var(--charcoal);line-height:1.3;margin-bottom:10px;">&#8222;Nev&#237;m, co chci studovat. Bav&#237; m&#283; v&#237;c v&#283;c&#237; a nechci se rozhodnout &#353;patn&#283;.&#8220;</p>
+        <p style="font-size:13px;color:var(--warm-gray);font-weight:500;margin-bottom:20px;">&#8212; student gymn&#225;zia, 17 let</p>
+        <p style="font-size:15px;line-height:1.75;color:var(--warm-gray);margin:0;">Na &#250;vodn&#237;m setk&#225;n&#237; jsme se bavili o tom, jak p&#345;em&#253;&#353;l&#237; o &#353;kole a budouc&#237; pr&#225;ci. V&#283;d&#283;l, co ho nebav&#237;, ale neum&#283;l pojmenovat, v &#269;em je siln&#253; a jak z toho vych&#225;zet p&#345;i v&#253;b&#283;ru oboru. Cht&#283;l m&#237;t jistotu, &#382;e se nerozhodne jen podle okol&#237;.</p>
+      </div>
+
+      <!-- DVOJSTĹPEC: len bullet pointy -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid rgba(37,89,100,0.08);">
+        <div style="background:#fff;padding:40px 48px;border-right:1px solid rgba(37,89,100,0.08);">
+          <p style="font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--terra);margin-bottom:16px;">Co uk&#225;zal Gallup CliftonStrengths</p>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+            <li style="display:flex;gap:10px;font-size:15px;color:var(--warm-gray);line-height:1.6;"><span style="color:var(--terra);font-weight:700;flex-shrink:0;">&#8226;</span>V&#253;razn&#225; analytickost a pot&#345;eba ch&#225;pat souvislosti.</li>
+            <li style="display:flex;gap:10px;font-size:15px;color:var(--warm-gray);line-height:1.6;"><span style="color:var(--terra);font-weight:700;flex-shrink:0;">&#8226;</span>Siln&#225; sout&#283;&#382;ivost a orientace na v&#253;kon.</li>
+            <li style="display:flex;gap:10px;font-size:15px;color:var(--warm-gray);line-height:1.6;"><span style="color:var(--terra);font-weight:700;flex-shrink:0;">&#8226;</span>Kombinace talent&#367;, kter&#225; ho p&#345;itahuje k aplikovan&#233; matematice a praktick&#233;mu vyu&#382;it&#237; znalost&#237;.</li>
+            <li style="display:flex;gap:10px;font-size:15px;color:var(--warm-gray);line-height:1.6;"><span style="color:var(--terra);font-weight:700;flex-shrink:0;">&#8226;</span>P&#345;irozen&#225; pot&#345;eba sb&#237;rat informace do hloubky a b&#253;t mezi lidmi, kter&#233; dob&#345;e zn&#225;.</li>
+          </ul>
+        </div>
+        <div style="background:#F8F9FB;padding:40px 48px;">
+          <p style="font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--terra);margin-bottom:16px;">Kam sm&#283;&#345;uje pr&#225;ce</p>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+            <li style="display:flex;gap:10px;font-size:15px;color:var(--warm-gray);line-height:1.6;"><span style="color:var(--terra);font-weight:700;flex-shrink:0;">&#8226;</span>Vn&#237;mat rozd&#237;l mezi t&#237;m, co ho bav&#237;, a t&#237;m, v &#269;em je opravdu siln&#253;.</li>
+            <li style="display:flex;gap:10px;font-size:15px;color:var(--warm-gray);line-height:1.6;"><span style="color:var(--terra);font-weight:700;flex-shrink:0;">&#8226;</span>Hledat obory, kde m&#367;&#382;e spojit analytick&#233; p&#345;em&#253;&#353;len&#237; s praktick&#253;m dopadem.</li>
+            <li style="display:flex;gap:10px;font-size:15px;color:var(--warm-gray);line-height:1.6;"><span style="color:var(--terra);font-weight:700;flex-shrink:0;">&#8226;</span>Nau&#269;it se pracovat se svou pot&#345;ebou dola&#271;ovat, aby ho nebrzila u test&#367; a term&#237;n&#367;.</li>
+            <li style="display:flex;gap:10px;font-size:15px;color:var(--warm-gray);line-height:1.6;"><span style="color:var(--terra);font-weight:700;flex-shrink:0;">&#8226;</span>Op&#237;rat se p&#345;i rozhodov&#225;n&#237; v&#237;c o sv&#233; talenty a m&#233;n&#283; o tlak okol&#237;.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- TEXT cez plnú šírku -->
+      <div style="background:#fff;padding:40px 48px;border-bottom:1px solid rgba(37,89,100,0.08);">
+        <p style="font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--terra);margin-bottom:16px;">Jak se to projevovalo v praxi</p>
+        <p style="font-size:15px;line-height:1.75;color:var(--warm-gray);margin-bottom:16px;">Analytical se projevoval ve fyzice i ve sportu &#8211; pot&#345;eboval v&#283;d&#283;t, jak v&#283;ci funguj&#237; a pro&#269;. Competition ho vedl k tomu, &#382;e cht&#283;l m&#237;t v&#253;sledky lep&#353;&#237; ne&#382; v&#269;era a porovn&#225;val sv&#367;j v&#253;kon s ostatn&#237;mi. Input byl vid&#283;t v z&#225;pisk&#225;ch o hr&#225;&#269;&#237;ch, kter&#233; tr&#233;nuje, i v tom, &#382;e si odkl&#225;d&#225; materi&#225;ly na pozd&#283;ji. Relator vysv&#283;tloval, pro&#269; se c&#237;t&#237; nejl&#233;pe v u&#382;&#353;&#237;m okruhu lid&#237;, ne v anonymn&#237;m davu.</p>
+        <p style="font-size:15px;line-height:1.75;color:var(--warm-gray);margin:0;">Velk&#233; uvdom&#283;n&#237; p&#345;i&#353;lo u talentu Maximizer &#8211; pochopil, pro&#269; u test&#367; n&#283;kdy tr&#225;v&#237; p&#345;&#237;li&#353; &#269;asu dola&#271;ov&#225;n&#237;m odpov&#283;d&#237; a pak nestihne cel&#253; test. Hledali jsme konkr&#233;tn&#237; strategie, jak s t&#237;m pracovat u u&#269;en&#237; i p&#345;ij&#237;ma&#269;ek.</p>
+      </div>
+
+      <!-- POINTA -->
+      <div style="background:var(--terra);padding:40px 56px;text-align:center;">
+        <p style="font-family:var(--font-serif);font-size:clamp(20px,2.2vw,26px);color:#fff;line-height:1.5;margin:0;max-width:760px;margin-left:auto;margin-right:auto;">V&#253;sledkem nebyl jeden spr&#225;vn&#253; obor, ale v&#283;t&#353;&#237; jistota v tom, jak funguje, jak&#233; typy studia a pr&#225;ce mu d&#225;vaj&#237; smysl a podle &#269;eho se rozhodovat v dal&#353;&#237;ch kroc&#237;ch.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 
 <section class="how-steps"><div class="container"><h2>Jak to probíhá</h2><div class="steps-grid"><div class="step"><div class="step__num">01</div><div class="step__title">Gallup dotazník</div><div class="step__desc">Přirozené talenty — dostupné od 15 let, online, zhruba 45 minut.</div></div><div class="step"><div class="step__num">02</div><div class="step__title">Konzultace</div><div class="step__desc">Výsledky projdeme v kontextu školy, zájmů, zkušeností a aktuálního rozhodování.</div></div><div class="step"><div class="step__num">03</div><div class="step__title">Další směr</div><div class="step__desc">Konkrétnější představa o tom, jaké možnosti stojí za prozkoumání.</div></div></div><div style="text-align:center;margin-top:40px"><a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8" target="_blank" rel="noopener" class="btn btn--white">Chci poznat svoje silné stránky</a></div></div></section>
 <section class="cta-section"><div class="container"><div class="cta-section__inner">
@@ -214,6 +282,21 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(typeWriterMladi, 400); // Oneskorenie pred začatím písania
   }
 });
+</script>
+<script>
+(function(){
+  var els = document.querySelectorAll(".fade-in-on-scroll");
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.style.opacity="1";
+        e.target.style.transform="translateY(0)";
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:0.2});
+  els.forEach(function(el){ io.observe(el); });
+})();
 </script>
 </body>
 
