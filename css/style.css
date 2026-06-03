@@ -230,6 +230,8 @@ section { position: relative; }
   gap: 5px;
   padding: 8px;
   cursor: pointer;
+  position: relative;
+  z-index: 10000;
 }
 .nav__hamburger span {
   display: block;
