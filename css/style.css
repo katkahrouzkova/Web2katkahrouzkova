@@ -1058,7 +1058,7 @@ section { position: relative; }
 
 @media (max-width: 640px) {
   .container { padding: 0 20px; }
-  .hero__content { padding: 100px 0 40px; }
+  .hero__content { padding: 100px 20px 40px; }
   .hero__ctas { flex-direction: column; }
   .hero__ctas .btn { width: 100%; justify-content: center; }
   .hero__meta { gap: 20px; }
