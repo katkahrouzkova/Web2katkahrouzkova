@@ -1035,8 +1035,11 @@ section { position: relative; }
   }
   .hero__image {
     order: 0;
-    height: 80vw;
-    max-height: 600px;
+    height: 90vw;
+    max-height: 640px;
+  }
+  .hero__image img {
+    object-position: center top !important;
   }
   .hero__image-overlay {
     background: linear-gradient(to bottom, transparent 70%, var(--bg-light));
@@ -2296,5 +2299,34 @@ p.svc-intro-label + .svc-who-grid {
 @media (max-width: 480px) {
   .svc-main-grid {
     grid-template-columns: 1fr !important;
+  }
+}
+
+/* =============================================
+   PODSTRÁNKY — hero mobile
+   ============================================= */
+@media (max-width: 768px) {
+  .svc-hero-section {
+    padding: 80px 0 40px !important;
+  }
+  .svc-hero-section > div {
+    padding: 0 20px !important;
+  }
+  .svc-hero-section > div > div {
+    grid-template-columns: 1fr !important;
+    display: block !important;
+  }
+  .svc-hero-section > div > div > div:first-child {
+    padding-right: 0 !important;
+  }
+  .svc-hero-section > div > div > div:last-child {
+    display: none !important;
+  }
+  .svc-hero-section [style*="flex-wrap:nowrap"] {
+    flex-wrap: wrap !important;
+  }
+  .svc-hero-section [style*="white-space:nowrap"] {
+    white-space: normal !important;
+    flex-wrap: wrap !important;
   }
 }
