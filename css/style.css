@@ -1045,7 +1045,7 @@ section { position: relative; }
     background: linear-gradient(to bottom, transparent 70%, var(--bg-light));
   }
   .intro__grid { grid-template-columns: 1fr; gap: 48px; }
-  .intro__image-wrap { aspect-ratio: 16/9; }
+  .intro__image-wrap { aspect-ratio: 3/4; }
   .how__grid { grid-template-columns: 1fr; }
   .services__header { grid-template-columns: 1fr; gap: 20px; }
   .about__grid { grid-template-columns: 1fr; gap: 48px; }
@@ -1726,7 +1726,7 @@ section[id] { scroll-margin-top: 100px; }
 
   /* Intro */
   .intro__grid { grid-template-columns: 1fr; gap: 36px; }
-  .intro__image-wrap { aspect-ratio: 16/9; }
+  .intro__image-wrap { aspect-ratio: 3/4; }
 
   /* Services */
   .services__new-layout { grid-template-columns: 1fr; gap: 36px; }
