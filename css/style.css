@@ -178,7 +178,7 @@ section { position: relative; }
   gap: 32px;
 }
 .nav__links a {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: var(--charcoal);
   opacity: 0.8;
@@ -1033,15 +1033,15 @@ section { position: relative; }
   }
   .hero__image {
     order: 0;
-    height: 60vw;
-    max-height: 480px;
+    height: 80vw;
+    max-height: 600px;
   }
   .hero__image-overlay {
     background: linear-gradient(to bottom, transparent 70%, var(--bg-light));
   }
   .intro__grid { grid-template-columns: 1fr; gap: 48px; }
   .intro__image-wrap { aspect-ratio: 16/9; }
-  .how__grid { grid-template-columns: 1fr 1fr; }
+  .how__grid { grid-template-columns: 1fr; }
   .services__header { grid-template-columns: 1fr; gap: 20px; }
   .about__grid { grid-template-columns: 1fr; gap: 48px; }
   .stats__grid { grid-template-columns: repeat(2, 1fr); }
@@ -1248,7 +1248,7 @@ section { position: relative; }
 
 
 /* nav z-index fix — scroll margin pre sekcie */
-section[id] { scroll-margin-top: 80px; }
+section[id] { scroll-margin-top: 100px; }
 
 /* ── zoom / stacking context fix ── */
 .nav {
@@ -2282,5 +2282,17 @@ p.svc-intro-label + .svc-who-grid {
   [style*="white-space:nowrap"] {
     white-space: normal !important;
     flex-wrap: wrap !important;
+  }
+}
+
+/* Services 4-stĺpcový grid — mobile */
+@media (max-width: 768px) {
+  .svc-main-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media (max-width: 480px) {
+  .svc-main-grid {
+    grid-template-columns: 1fr !important;
   }
 }
