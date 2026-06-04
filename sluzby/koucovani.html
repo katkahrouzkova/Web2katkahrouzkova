@@ -317,7 +317,7 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="../js/main.js"></script>
-<style>.typing-cursor{display:inline-block;animation:blink .7s step-end infinite;}@keyframes blink{50%{opacity:0;}}</style>
+<style>.typing-cursor{display:inline-block;animation:blink .7s step-end infinite;}.typing-cursor.done{display:none!important;}@keyframes blink{50%{opacity:0;}}</style>
 <script>
 (function(){
   var t="Myslíte lépe, když nejste sami.";
@@ -327,7 +327,7 @@
   var cur=el.parentNode.querySelector(".typing-cursor");
   setTimeout(function run(){
     if(i<t.length){el.textContent+=t[i++];setTimeout(run,45);}
-    else if(cur){cur.style.display="none";cur.style.visibility="hidden";cur.style.opacity="0";}
+    else if(cur){cur.classList.add("done");}
   },600);
 })();
 </script><script>
