@@ -289,6 +289,18 @@ section { position: relative; }
   justify-content: center;
   padding: 140px 80px 80px 64px;
 }
+@media (max-width: 768px) {
+  .hero__content {
+    padding: 24px 20px 32px !important;
+  }
+  .hero__image {
+    height: 85vw !important;
+    max-height: 480px !important;
+  }
+  .hero__image img {
+    object-position: center 10% !important;
+  }
+}
 .hero__overline { margin-bottom: 20px; }
 .hero__title {
   font-size: clamp(44px, 5.5vw, 70px);
