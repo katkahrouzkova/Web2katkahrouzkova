@@ -213,5 +213,25 @@
     else if(cursor){cursor.style.display="none";}
   },600);
 })();
-</script></body>
+</script><script>
+(function(){
+  var h = document.querySelector('.nav__hamburger');
+  var m = document.querySelector('.nav__mobile');
+  if(h && m){
+    h.addEventListener('click', function(){
+      h.classList.toggle('open');
+      m.classList.toggle('open');
+      document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+    });
+    m.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        h.classList.remove('open');
+        m.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+})();
+</script>
+</body>
 </html>
