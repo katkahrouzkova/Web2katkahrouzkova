@@ -197,6 +197,13 @@
     <span>&copy; 2026 Katka Hrouzková &middot; Talent Management a koučink</span>
   </div>
 </div></footer>
+<script>
+document.querySelector('.nav__hamburger').addEventListener('click', function(){
+  this.classList.toggle('open');
+  document.querySelector('.nav__mobile').classList.toggle('open');
+  document.body.style.overflow = document.querySelector('.nav__mobile').classList.contains('open') ? 'hidden' : '';
+});
+</script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="../js/main.js"></script>
