@@ -324,7 +324,7 @@
   var el=document.getElementById("typewriter");
   if(!el) return;
   var i=0;
-  var cur=document.querySelector(".typing-cursor");
+  var cur=document.querySelector(".typewriter-cursor");
   setTimeout(function run(){
     if(i<t.length){el.textContent+=t[i++];setTimeout(run,45);}
     else{if(cur){cur.style.display="none";}}
