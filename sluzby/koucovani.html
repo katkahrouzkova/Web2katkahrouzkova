@@ -324,10 +324,10 @@
   var el=document.getElementById("typewriter");
   if(!el) return;
   var i=0;
-  var cur=el.parentNode.querySelector(".typing-cursor");
+  var cur=document.querySelector(".typing-cursor");
   setTimeout(function run(){
     if(i<t.length){el.textContent+=t[i++];setTimeout(run,45);}
-    else if(cur){cur.classList.add("done");}
+    else{if(cur){cur.style.display="none";}}
   },600);
 })();
 </script><script>
