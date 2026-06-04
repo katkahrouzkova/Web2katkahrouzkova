@@ -1042,13 +1042,13 @@ section { position: relative; }
   .container { padding: 0 32px; }
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .hero__content {
-    padding: 32px 0 40px;
+    padding: 24px 20px 32px;
     order: 1;
   }
   .hero__image {
     order: 0;
-    height: 80vw;
-    max-height: 500px;
+    height: 75vw;
+    max-height: 460px;
   }
   .hero__image img {
     object-position: center top !important;
