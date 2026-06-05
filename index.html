@@ -41,6 +41,48 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif'>K</text></svg>">
 
   <style>
+    /* ---- lang switch ---- */
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(37,89,100,0.07);
+      border-radius: 100px;
+      padding: 4px 10px;
+    }
+    .lang-switch__active {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--terra);
+      letter-spacing: 0.05em;
+    }
+    .lang-switch__link {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--warm-gray);
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .lang-switch__link:hover { color: var(--terra); }
+    .lang-switch__active::after {
+      content: '/';
+      margin-left: 4px;
+      color: var(--warm-gray);
+      font-weight: 400;
+    }
+    .lang-switch--mobile {
+      background: none;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(35,38,43,0.08);
+      margin-bottom: 4px;
+      gap: 8px;
+    }
+    .lang-switch--mobile .lang-switch__active,
+    .lang-switch--mobile .lang-switch__link {
+      font-size: 15px;
+    }
+
     /* ---- icon in service card ---- */
     .service-card__icon {
       width: 44px; height: 44px;
@@ -248,6 +290,10 @@
       </div>
 
       <div class="nav__right">
+        <div class="lang-switch">
+          <span class="lang-switch__active">CZ</span>
+          <a href="en/index.html" class="lang-switch__link">EN</a>
+        </div>
         <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" target="_blank" rel="noopener" class="btn btn--primary">
           Domluvit úvodní rozhovor
         </a>
@@ -261,6 +307,10 @@
 </nav>
 
 <div class="nav__mobile" role="dialog" aria-label="Mobilní navigace">
+  <div class="lang-switch lang-switch--mobile">
+    <span class="lang-switch__active">CZ</span>
+    <a href="en/index.html" class="lang-switch__link">EN</a>
+  </div>
   <a href="#sluzby">Služby</a>
   <a href="o-mne.html">O mně</a>
   <a href="reference.html">Reference</a>
