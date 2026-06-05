@@ -254,6 +254,8 @@ section { position: relative; }
   padding: 80px 32px 80px;
   flex-direction: column;
   gap: 8px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .nav__mobile.open { display: flex; }
 .nav__mobile a {
