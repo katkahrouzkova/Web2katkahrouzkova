@@ -54,7 +54,7 @@
 
 <section style="padding:100px 0 80px;background:#F8F9FB;overflow:hidden;" class="svc-hero-section"><div style="max-width:1120px;margin:0 auto;padding:0 48px;"><div style="display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:center;"><div style="padding-right:48px;">
 <a href="../../en/index.html#services" class="back-link"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M9 2L4 7l5 5"/></svg> Back to services</a>
-<h1 style="margin:12px 0 0;font-size:clamp(28px,3.5vw,48px);">For students who want to know where their strengths lie.</h1>
+<h1 style="margin:12px 0 0;font-size:clamp(28px,3.5vw,48px);"><span id="typewriter-mladi-en"></span><span class="typing-cursor" style="color:var(--terra);font-weight:300;animation:blink .7s step-end infinite;">|</span></h1>
 <p style="font-size:17px;color:var(--warm-gray);line-height:1.75;max-width:800px;margin-top:16px;">We often make important decisions about school and careers before we really know ourselves. Gallup CliftonStrengths is available from age 15 — it helps students name their natural talents and use them to think through school choices, fields of study, and first career steps.</p>
 <div style="display:flex;gap:16px;margin-top:40px;flex-wrap:nowrap;">
   <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" target="_blank" rel="noopener" class="btn btn--primary">Book a free call</a>
@@ -269,6 +269,19 @@
     });
   },{threshold:0.2});
   els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+<script>
+(function(){
+  var t="For students who want to know where their strengths lie.";
+  var el=document.getElementById("typewriter-mladi-en");
+  if(!el) return;
+  var cur=el.parentNode.querySelector(".typing-cursor");
+  var i=0;
+  setTimeout(function run(){
+    if(i<t.length){el.textContent+=t[i++];setTimeout(run,55);}
+    else if(cur){cur.style.display="none";}
+  },400);
 })();
 </script>
 </body>
