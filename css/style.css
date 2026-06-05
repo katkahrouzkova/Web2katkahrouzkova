@@ -260,7 +260,7 @@ section { position: relative; }
 .nav__mobile.open { display: flex; }
 .nav__mobile a {
   font-family: var(--font-serif);
-  font-size: 32px;
+  font-size: 26px;
   color: var(--charcoal);
   padding: 12px 0;
   border-bottom: 1px solid var(--greige-light);
