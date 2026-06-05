@@ -506,5 +506,31 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+
+<script>
+// Count-up animation
+const countEls = document.querySelectorAll('.count-up[data-target]');
+if(countEls.length) {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(!e.isIntersecting) return;
+      const el = e.target;
+      const target = parseInt(el.dataset.target);
+      let start = 0;
+      const duration = 1500;
+      const step = timestamp => {
+        if(!start) start = timestamp;
+        const progress = Math.min((timestamp - start) / duration, 1);
+        el.textContent = Math.floor(progress * target);
+        if(progress < 1) requestAnimationFrame(step);
+        else el.textContent = target;
+      };
+      requestAnimationFrame(step);
+      obs.unobserve(el);
+    });
+  }, { threshold: 0.3 });
+  countEls.forEach(el => obs.observe(el));
+}
+</script>
 </body>
 </html>
