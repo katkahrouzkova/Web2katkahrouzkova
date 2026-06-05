@@ -58,7 +58,7 @@
 <p class="overline">Career Change Programme</p>
 <h1 style="margin:12px 0 0;font-size:clamp(28px,3.5vw,48px);line-height:1.15;">
   <span style="display:block;">You are not the same person you were ten years ago.</span>
-  <span style="display:block;color:var(--terra);font-style:italic;">Your career might not know that yet.</span>
+  <span style="display:block;color:var(--terra);font-style:italic;"><span id="typewriter-program-en"></span><span class="typing-cursor" style="color:var(--terra);font-weight:300;animation:blink .7s step-end infinite;">|</span></span>
 </h1>
 <p style="font-size:17px;color:var(--warm-gray);line-height:1.75;max-width:800px;margin-top:16px;">The programme brings together strengths-based work, HR experience, and a coaching approach. It is designed for the moment when your current direction stops making sense — even if everything looks fine from the outside.</p>
 <div style="display:flex;gap:16px;margin-top:40px;flex-wrap:nowrap;">
@@ -217,6 +217,19 @@
       });
     });
   }
+})();
+</script>
+<script>
+(function(){
+  var t="Your career might not know that yet.";
+  var el=document.getElementById("typewriter-program-en");
+  if(!el) return;
+  var cur=el.parentNode.querySelector(".typing-cursor");
+  var i=0;
+  setTimeout(function run(){
+    if(i<t.length){el.textContent+=t[i++];setTimeout(run,55);}
+    else if(cur){cur.style.display="none";}
+  },400);
 })();
 </script>
 </body>
