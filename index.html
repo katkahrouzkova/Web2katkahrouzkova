@@ -776,5 +776,16 @@
   obs.observe(el);
 })();
 </script>
+<script>
+document.querySelector('.nav__logo').addEventListener('click', function(){
+  var h = document.querySelector('.nav__hamburger');
+  var m = document.querySelector('.nav__mobile');
+  if(m && m.classList.contains('open')){
+    h.classList.remove('open');
+    m.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+</script>
 </body>
 </html>
