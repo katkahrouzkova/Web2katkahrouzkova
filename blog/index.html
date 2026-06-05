@@ -8,6 +8,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <style>.nav{background:rgba(255,255,255,0.98)!important;box-shadow:0 1px 0 rgba(35,38,43,0.08)}</style>
+<style>
+    .lang-switch{display:flex;align-items:center;gap:6px;background:rgba(37,89,100,0.07);border-radius:100px;padding:4px 10px}
+    .lang-switch a{font-size:12px;font-weight:500;color:var(--warm-gray);letter-spacing:0.05em;text-decoration:none;transition:color 0.2s}
+    .lang-switch a:hover{color:var(--terra)}
+    .lang-switch a.active{font-weight:700;color:var(--terra)}
+    .lang-switch__sep{font-size:11px;color:var(--warm-gray);opacity:0.5}
+    .lang-switch--mobile{background:none;padding:12px 0;border-bottom:1px solid rgba(35,38,43,0.08);margin-bottom:4px;gap:8px}
+    .lang-switch--mobile a{font-size:15px}
+</style>
 </head>
 <body>
 
@@ -24,6 +33,11 @@
         <a href="index.html" style="color:var(--terra)">Blog</a>
       </div>
       <div class="nav__right">
+        <div class="lang-switch">
+          <a href="index.html" class="active">CZ</a>
+          <span class="lang-switch__sep">/</span>
+          <a href="../../en/blog/index.html">EN</a>
+        </div>
         <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" target="_blank" rel="noopener" class="btn btn--primary">Domluvit úvodní rozhovor</a>
       </div>
       <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -32,6 +46,11 @@
 </nav>
 
 <div class="nav__mobile" role="dialog">
+  <div class="lang-switch lang-switch--mobile">
+    <a href="index.html" class="active">CZ</a>
+    <span class="lang-switch__sep">/</span>
+    <a href="../../en/blog/index.html">EN</a>
+  </div>
   <a href="../index.html#sluzby">Služby</a>
   <a href="../o-mne.html">O mně</a>
   <a href="../reference.html">Reference</a>
