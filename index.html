@@ -50,7 +50,7 @@
       border-radius: 100px;
       padding: 4px 10px;
     }
-    .lang-switch__active {
+    .lang-switch__link--active { font-weight: 600; color: var(--terra) !important; } .lang-switch__link--active::after {
       font-size: 12px;
       font-weight: 600;
       color: var(--terra);
@@ -65,11 +65,12 @@
       transition: color 0.2s;
     }
     .lang-switch__link:hover { color: var(--terra); }
-    .lang-switch__active::after {
+    .lang-switch__sep {
       content: '/';
-      margin-left: 4px;
+      margin: 0 2px;
       color: var(--warm-gray);
       font-weight: 400;
+      display: inline;
     }
     .lang-switch--mobile {
       background: none;
@@ -291,7 +292,7 @@
 
       <div class="nav__right">
         <div class="lang-switch">
-          <span class="lang-switch__active">CZ</span>
+          <a href="index.html" class="lang-switch__link lang-switch__link--active">CZ</a>
           <a href="en/index.html" class="lang-switch__link">EN</a>
         </div>
         <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" target="_blank" rel="noopener" class="btn btn--primary">
@@ -308,7 +309,7 @@
 
 <div class="nav__mobile" role="dialog" aria-label="Mobilní navigace">
   <div class="lang-switch lang-switch--mobile">
-    <span class="lang-switch__active">CZ</span>
+    <a href="index.html" class="lang-switch__link lang-switch__link--active">CZ</a>
     <a href="en/index.html" class="lang-switch__link">EN</a>
   </div>
   <a href="#sluzby">Služby</a>
