@@ -62,6 +62,15 @@
   "availableLanguage": ["cs", "sk", "en"]
 }
 </script>
+<style>
+    .lang-switch{display:flex;align-items:center;gap:6px;background:rgba(37,89,100,0.07);border-radius:100px;padding:4px 10px}
+    .lang-switch a{font-size:12px;font-weight:500;color:var(--warm-gray);letter-spacing:0.05em;text-decoration:none;transition:color 0.2s}
+    .lang-switch a:hover{color:var(--terra)}
+    .lang-switch a.active{font-weight:700;color:var(--terra)}
+    .lang-switch__sep{font-size:11px;color:var(--warm-gray);opacity:0.5}
+    .lang-switch--mobile{background:none;padding:12px 0;border-bottom:1px solid rgba(35,38,43,0.08);margin-bottom:4px;gap:8px}
+    .lang-switch--mobile a{font-size:15px}
+</style>
 </head>
 <body>
 <nav class="nav" role="navigation">
@@ -76,12 +85,22 @@
         <a href="../blog/index.html">Blog</a>
     </div>
     <div class="nav__right">
+      <div class="lang-switch">
+        <a href="hr-partnering.html" class="active">CZ</a>
+        <span class="lang-switch__sep">/</span>
+        <a href="../en/sluzby/hr-partnering.html">EN</a>
+      </div>
       <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" target="_blank" rel="noopener" class="btn btn--primary">Domluvit úvodní rozhovor</a>
     </div>
     <button class="nav__hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div></div>
 </nav>
 <div class="nav__mobile" role="dialog">
+  <div class="lang-switch lang-switch--mobile">
+    <a href="hr-partnering.html" class="active">CZ</a>
+    <span class="lang-switch__sep">/</span>
+    <a href="../en/sluzby/hr-partnering.html">EN</a>
+  </div>
   <a href="../index.html#sluzby">Služby</a>
   <a href="../index.html#o-mne">O mně</a>
   <a href="../index.html#reference">Reference</a>
