@@ -79,7 +79,7 @@
       <div style="padding-right:48px;">
         <a href="../../en/index.html#services" class="back-link"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M9 2L4 7l5 5"/></svg> Back to services</a>
         <p class="overline">Individual coaching</p>
-        <h1 class="prism-hero__title" style="min-height:1.2em;font-size:clamp(28px,3.5vw,48px);">You think better when you're not alone.</h1>
+        <h1 class="prism-hero__title" style="min-height:1.2em;font-size:clamp(28px,3.5vw,48px);"><span id="typewriter-kouc-en"></span><span class="typing-cursor" style="color:var(--terra);font-weight:300;animation:blink .7s step-end infinite;">|</span></h1>
         <p class="lead prism-hero__lead">Coaching is a developmental conversation in which the coach uses focused questions to help you clarify your priorities and find your own solutions.</p>
         <div class="prism-hero__ctas" style="display:flex;flex-wrap:wrap;gap:12px;">
           <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" target="_blank" rel="noopener" class="btn btn--primary">Book a free call</a>
@@ -335,6 +335,19 @@
     });
   },{threshold:0.2});
   els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+<script>
+(function(){
+  var t="You think better when you're not alone.";
+  var el=document.getElementById("typewriter-kouc-en");
+  if(!el) return;
+  var cur=el.parentNode.querySelector(".typing-cursor");
+  var i=0;
+  setTimeout(function run(){
+    if(i<t.length){el.textContent+=t[i++];setTimeout(run,55);}
+    else if(cur){cur.style.display="none";}
+  },400);
 })();
 </script>
 </body>
