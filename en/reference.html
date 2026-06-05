@@ -24,6 +24,11 @@
       <a href="kontakt.html">Contact</a>
     </div>
     <div class="nav__right">
+      <div class="lang-switch">
+        <a href="../reference.html">CZ</a>
+        <span class="lang-switch__sep">/</span>
+        <a href="reference.html" class="active">EN</a>
+      </div>
       <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" target="_blank" rel="noopener" class="btn btn--primary">Book a free call</a>
     </div>
     <button class="nav__hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -35,6 +40,7 @@
   <a href="reference.html">Testimonials</a>
   <a href="faq.html">FAQ</a>
   <a href="kontakt.html">Contact</a>
+  <a href="blog/index.html">Blog</a>
   <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" target="_blank" rel="noopener" style="color:var(--terra)">Book a free call →</a>
 </div>
 
@@ -49,6 +55,15 @@
 <section style="padding:64px 0 100px; background: var(--paper, #F8F9FB);">
   <div class="container">
     <style>
+    .lang-switch{display:flex;align-items:center;gap:6px;background:rgba(37,89,100,0.07);border-radius:100px;padding:4px 10px}
+    .lang-switch a{font-size:12px;font-weight:500;color:var(--warm-gray);letter-spacing:0.05em;text-decoration:none;transition:color 0.2s}
+    .lang-switch a:hover{color:var(--terra)}
+    .lang-switch a.active{font-weight:700;color:var(--terra)}
+    .lang-switch__sep{font-size:11px;color:var(--warm-gray);opacity:0.5}
+    .lang-switch--mobile{background:none;padding:12px 0;border-bottom:1px solid rgba(35,38,43,0.08);margin-bottom:4px;gap:8px}
+    .lang-switch--mobile a{font-size:15px}
+</style>
+<style>
       .masonry-grid { column-count: 2; column-gap: 24px; max-width: 960px; margin: 0 auto; }
       .ref-card { background: #fff; border-radius: 16px; padding: 40px; border: 1px solid rgba(37,89,100,0.1); box-shadow: 0 4px 14px rgba(0,0,0,0.02); transition: box-shadow 0.3s ease, border-color 0.3s ease; isolation: isolate; align-self: start; break-inside: avoid; display: inline-block; width: 100%; }
       .ref-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.06); }
