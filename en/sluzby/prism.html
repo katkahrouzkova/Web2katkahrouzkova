@@ -66,7 +66,7 @@
       <div style="padding-right:24px;max-width:100%;">
         <a href="../../en/index.html#services" class="back-link"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M9 2L4 7l5 5"/></svg> Back to services</a>
         <p class="overline"><em>PRISM</em> Brain Mapping</p>
-        <h1 class="prism-hero__title" style="min-height:1.2em;font-size:clamp(28px,3.5vw,48px);">Why do you operate differently than feels natural?</h1>
+        <h1 class="prism-hero__title" style="min-height:1.2em;font-size:clamp(28px,3.5vw,48px);"><span id="typewriter-prism"></span><span class="typing-cursor" style="color:var(--terra);font-weight:300;animation:blink .7s step-end infinite;">|</span></h1>
         <p class="lead prism-hero__lead">It reveals the gap between who you naturally are and how you show up at work — and why that sometimes costs more energy than it needs to.</p>
         <div class="prism-hero__ctas" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;">
           <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" target="_blank" rel="noopener" class="btn btn--primary">Book a free call</a>
@@ -343,6 +343,19 @@
     });
   },{threshold:0.2});
   els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+<script>
+(function(){
+  var t="Why do you operate differently than feels natural?";
+  var el=document.getElementById("typewriter-prism");
+  if(!el) return;
+  var cur=el.parentNode.querySelector(".typing-cursor");
+  var i=0;
+  setTimeout(function run(){
+    if(i<t.length){el.textContent+=t[i++];setTimeout(run,55);}
+    else if(cur){cur.style.display="none";}
+  },400);
 })();
 </script>
 </body>
