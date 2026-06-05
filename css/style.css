@@ -251,7 +251,7 @@ section { position: relative; }
   inset: 0;
   background: var(--cream);
   z-index: 99;
-  padding: 100px 48px 48px;
+  padding: 80px 32px 32px;
   flex-direction: column;
   gap: 8px;
 }
