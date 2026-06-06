@@ -43,6 +43,7 @@
   <style>
     /* ---- lang switch ---- */
     .lang-switch{display:flex;align-items:center;gap:6px;background:rgba(37,89,100,0.07);border-radius:100px;padding:4px 10px}
+    @media(max-width:1024px){.nav__right .lang-switch{display:none}}
     .lang-switch a{font-size:12px;font-weight:500;color:var(--warm-gray);letter-spacing:0.05em;text-decoration:none;transition:color 0.2s}
     .lang-switch a:hover{color:var(--terra)}
     .lang-switch a.active{font-weight:700;color:var(--terra)}
