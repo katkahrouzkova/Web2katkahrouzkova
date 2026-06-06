@@ -66,6 +66,32 @@
       }
     })();
   </script>
+
+  <!-- AI referrer tracking -->
+  <script>
+  (function(){
+    var DOMAINS=['chatgpt.com','openai.com','perplexity.ai','claude.ai',
+      'gemini.google.com','copilot.microsoft.com','you.com','poe.com',
+      'phind.com','deepseek.com','mistral.ai','grok.com','kagi.com',
+      'character.ai','huggingface.co','x.ai','edgeservices.bing.com'];
+    function detect(){
+      try{ var ss=sessionStorage.getItem('ai_src'); if(ss) return ss; }catch(e){}
+      var ref=(document.referrer||'').toLowerCase();
+      for(var i=0;i<DOMAINS.length;i++){ if(ref.indexOf(DOMAINS[i])>-1) return DOMAINS[i]; }
+      try{ var utm=new URLSearchParams(location.search).get('utm_source');
+        if(utm){ utm=utm.toLowerCase();
+          for(var j=0;j<DOMAINS.length;j++){ if(utm.indexOf(DOMAINS[j])>-1||DOMAINS[j].indexOf(utm)>-1) return DOMAINS[j]; } } }catch(e){}
+      return null;
+    }
+    var src=detect(); if(!src) return;
+    try{ sessionStorage.setItem('ai_src',src); }catch(e){}
+    var n=0;
+    (function fire(){
+      if(typeof gtag==='function'){ gtag('event','ai_referral',{ai_source:src,page_path:location.pathname}); }
+      else if(n++<20){ setTimeout(fire,300); }
+    })();
+  })();
+  </script>
 </head>
 <body>
 
