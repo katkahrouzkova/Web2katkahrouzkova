@@ -280,10 +280,12 @@ section { position: relative; }
    HERO
    ============================================= */
 .hero {
-  min-height: auto;
-  display: block;
-  overflow: visible;
-  padding: 180px 0 120px;
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  overflow: hidden;
+  padding-top: 0;
 }
 .hero__content {
   display: flex;
