@@ -1067,6 +1067,8 @@ section { position: relative; }
   .footer__top { grid-template-columns: 1fr 1fr; gap: 36px; }
   .nav__links { display: none; }
   .nav__right .btn { display: none; }
+  .nav__right { display: flex; }
+  .nav__right .lang-switch { display: flex; }
   .nav__hamburger { display: flex; }
 }
 
