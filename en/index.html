@@ -86,7 +86,7 @@
           <span class="lang-switch__sep">/</span>
           <a href="index.html" class="active">EN</a>
         </div>
-        <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" target="_blank" rel="noopener" class="btn btn--primary">Book a free call</a>
+        <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" onclick="if(window.gtag){gtag('event','click',{'event_category':'conversion','event_label':'calendar_booking'})}" target="_blank" rel="noopener" class="btn btn--primary">Book a free call</a>
       </div>
       <button class="nav__hamburger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -100,7 +100,7 @@
   <a href="faq.html">FAQ</a>
   <a href="kontakt.html">Contact</a>
   <a href="blog/index.html">Blog</a>
-  <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" target="_blank" rel="noopener" style="color:var(--terra);border-color:var(--terra);">Book a free call →</a>
+  <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" onclick="if(window.gtag){gtag('event','click',{'event_category':'conversion','event_label':'calendar_booking'})}" target="_blank" rel="noopener" style="color:var(--terra);border-color:var(--terra);">Book a free call →</a>
 </div>
 </nav>
 
@@ -129,7 +129,7 @@
     </div>
 
     <div class="hero__ctas">
-      <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" target="_blank" rel="noopener" class="btn btn--primary">
+      <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" onclick="if(window.gtag){gtag('event','click',{'event_category':'conversion','event_label':'calendar_booking'})}" target="_blank" rel="noopener" class="btn btn--primary">
         <span>Book a free intro call</span>
       </a>
       <a href="#services" class="btn btn--ghost">
@@ -401,7 +401,7 @@
       <p>Write to me, call me, or book a time directly. The intro consultation is free.</p>
 
       <div class="cta-section__ctas">
-        <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" target="_blank" rel="noopener" class="btn btn--white">
+        <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" onclick="if(window.gtag){gtag('event','click',{'event_category':'conversion','event_label':'calendar_booking'})}" target="_blank" rel="noopener" class="btn btn--white">
           <svg style="width:18px;height:18px;" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="14" height="13" rx="2"/><path d="M7 2v4M13 2v4M3 9h14"/></svg>
           Book a free intro call
         </a>
@@ -466,7 +466,7 @@
       <div>
         <div class="footer__col-title">Contact</div>
         <div class="footer__col-links">
-          <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" target="_blank" rel="noopener">Book a free intro call</a>
+          <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" onclick="if(window.gtag){gtag('event','click',{'event_category':'conversion','event_label':'calendar_booking'})}" target="_blank" rel="noopener">Book a free intro call</a>
           <a href="mailto:hrouzkova.katka@gmail.com">Send an email</a>
           <span style="color:rgba(255,255,255,.35);font-size:13px;">Brno & online</span>
         </div>
@@ -656,5 +656,24 @@ if(countEls.length) {
     rejectBtn.addEventListener('mouseleave', function(){ this.style.borderColor='rgba(255,255,255,0.3)'; this.style.color='rgba(255,255,255,0.75)'; this.style.transform=''; });
   })();
 </script>
+
+  <!-- Scroll depth tracking -->
+  <script>
+    (function() {
+      var marks = [25, 50, 75, 90];
+      var fired = {};
+      window.addEventListener('scroll', function() {
+        var scrollPct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        marks.forEach(function(m) {
+          if (!fired[m] && scrollPct >= m) {
+            fired[m] = true;
+            if (window.gtag) {
+              gtag('event', 'scroll_depth', { event_category: 'engagement', event_label: m + '%', value: m });
+            }
+          }
+        });
+      }, { passive: true });
+    })();
+  </script>
 </body>
 </html>

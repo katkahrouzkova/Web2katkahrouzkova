@@ -55,7 +55,7 @@
         <a href="index.html" style="color:var(--terra)">Blog</a>
       </div>
       <div class="nav__right">
-        <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" target="_blank" rel="noopener" class="btn btn--primary">Book a free call</a>
+        <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" onclick="if(window.gtag){gtag('event','click',{'event_category':'conversion','event_label':'calendar_booking'})}" target="_blank" rel="noopener" class="btn btn--primary">Book a free call</a>
       </div>
       <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
@@ -69,7 +69,7 @@
   <a href="../../en/faq.html">FAQ</a>
   <a href="../../en/kontakt.html">Contact</a>
   <a href="index.html">Blog</a>
-  <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" target="_blank" rel="noopener" style="color:var(--terra)">Book a free call →</a>
+  <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" onclick="if(window.gtag){gtag('event','click',{'event_category':'conversion','event_label':'calendar_booking'})}" target="_blank" rel="noopener" style="color:var(--terra)">Book a free call →</a>
 </div>
 
 <section style="padding:140px 0 48px;background:#F8F9FB">
@@ -155,7 +155,7 @@
 <div class="article-cta">
   <h3>Not sure what you need?</h3>
   <p>We can work it out together in an initial consultation. Free and with no commitment.</p>
-  <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" target="_blank" rel="noopener" class="btn btn--primary">Book a free call</a>
+  <a href="https://calendar.app.google/FGNHG6y1aevj3dfQ8?ctz=Europe/Prague" onclick="if(window.gtag){gtag('event','click',{'event_category':'conversion','event_label':'calendar_booking'})}" target="_blank" rel="noopener" class="btn btn--primary">Book a free call</a>
 </div>
 
 </div>
@@ -274,5 +274,24 @@
     rejectBtn.addEventListener('mouseleave', function(){ this.style.borderColor='rgba(255,255,255,0.3)'; this.style.color='rgba(255,255,255,0.75)'; this.style.transform=''; });
   })();
 </script>
+
+  <!-- Scroll depth tracking -->
+  <script>
+    (function() {
+      var marks = [25, 50, 75, 90];
+      var fired = {};
+      window.addEventListener('scroll', function() {
+        var scrollPct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        marks.forEach(function(m) {
+          if (!fired[m] && scrollPct >= m) {
+            fired[m] = true;
+            if (window.gtag) {
+              gtag('event', 'scroll_depth', { event_category: 'engagement', event_label: m + '%', value: m });
+            }
+          }
+        });
+      }, { passive: true });
+    })();
+  </script>
 </body>
 </html>
