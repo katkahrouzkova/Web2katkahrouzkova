@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburger.classList.toggle('open');
     mobileNav?.classList.toggle('open');
     document.body.style.overflow = mobileNav?.classList.contains('open') ? 'hidden' : '';
+    document.body.classList.toggle('menu-open', mobileNav?.classList.contains('open'));
   });
 
   mobileNav?.querySelectorAll('a').forEach(a => {
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hamburger?.classList.remove('open');
       mobileNav?.classList.remove('open');
       document.body.style.overflow = '';
+      document.body.classList.remove('menu-open');
     });
   });
 

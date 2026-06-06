@@ -1735,6 +1735,8 @@ section[id] { scroll-margin-top: 100px; }
   .nav__links, .nav__right .btn { display: none; }
   .nav__hamburger { display: flex; }
   .nav__right { display: flex; align-items: center; }
+  .nav__mobile.open ~ * .nav__right .lang-switch,
+  body.menu-open .nav__right .lang-switch { display: none; }
 
   /* Logos */
   .logos__items { gap: 16px; }
