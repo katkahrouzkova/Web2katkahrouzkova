@@ -1734,6 +1734,7 @@ section[id] { scroll-margin-top: 100px; }
   /* Nav */
   .nav__links, .nav__right .btn { display: none; }
   .nav__hamburger { display: flex; }
+  .nav__right { display: flex; align-items: center; }
 
   /* Logos */
   .logos__items { gap: 16px; }
