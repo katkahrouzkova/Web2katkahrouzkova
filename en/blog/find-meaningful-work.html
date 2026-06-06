@@ -24,6 +24,23 @@
     .article-body blockquote{background:var(--paper,#F8F9FB);border-left:4px solid var(--terra);padding:24px 32px;border-radius:0 12px 12px 0;margin:32px 0}
     .article-body blockquote p{font-family:var(--font-serif);font-size:22px;font-style:italic;color:var(--charcoal);margin:0;line-height:1.5}
   </style>
+
+  <!-- Cookie Consent + GA4 loader -->
+  <script>
+    (function() {
+      if (localStorage.getItem('cookie_consent') === 'accepted') {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-BZ6RSDNH99';
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-BZ6RSDNH99');
+      }
+    })();
+  </script>
 </head>
 <body>
 
@@ -174,5 +191,109 @@
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="../../js/main.js"></script>
+
+<!-- ================================================
+     COOKIE CONSENT BAR
+     ================================================ -->
+<div id="cookie-bar" role="dialog" aria-label="Súhlas s cookies" style="
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 9999;
+  background: #2F343B;
+  color: rgba(255,255,255,0.85);
+  padding: 18px 24px;
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.18);
+">
+  <div style="
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  ">
+    <p style="
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.75);
+      margin: 0;
+      flex: 1;
+      min-width: 220px;
+    ">
+      Táto stránka používa analytické cookies (Google Analytics) na meranie návštevnosti.
+      Vaše údaje sú anonymizované a nezdieľame ich s tretími stranami.
+    </p>
+    <div style="display: flex; gap: 10px; flex-shrink: 0; flex-wrap: wrap;">
+      <button id="cookie-accept" style="
+        font-family: 'DM Sans', system-ui, sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 10px 22px;
+        border-radius: 100px;
+        border: none;
+        background: #255964;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.15s;
+        white-space: nowrap;
+      ">Súhlasiť</button>
+      <button id="cookie-reject" style="
+        font-family: 'DM Sans', system-ui, sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 10px 22px;
+        border-radius: 100px;
+        border: 1.5px solid rgba(255,255,255,0.3);
+        background: transparent;
+        color: rgba(255,255,255,0.75);
+        cursor: pointer;
+        transition: border-color 0.2s, color 0.2s, transform 0.15s;
+        white-space: nowrap;
+      ">Odmietnuť</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    var bar = document.getElementById('cookie-bar');
+    var consent = localStorage.getItem('cookie_consent');
+
+    if (!consent) {
+      bar.style.display = 'block';
+    }
+
+    document.getElementById('cookie-accept').addEventListener('click', function() {
+      localStorage.setItem('cookie_consent', 'accepted');
+      bar.style.display = 'none';
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-BZ6RSDNH99';
+      document.head.appendChild(s);
+      s.onload = function() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-BZ6RSDNH99');
+      };
+    });
+
+    document.getElementById('cookie-reject').addEventListener('click', function() {
+      localStorage.setItem('cookie_consent', 'rejected');
+      bar.style.display = 'none';
+    });
+
+    var acceptBtn = document.getElementById('cookie-accept');
+    var rejectBtn = document.getElementById('cookie-reject');
+    acceptBtn.addEventListener('mouseenter', function(){ this.style.background='#1A3F47'; this.style.transform='translateY(-1px)'; });
+    acceptBtn.addEventListener('mouseleave', function(){ this.style.background='#255964'; this.style.transform=''; });
+    rejectBtn.addEventListener('mouseenter', function(){ this.style.borderColor='rgba(255,255,255,0.7)'; this.style.color='#fff'; this.style.transform='translateY(-1px)'; });
+    rejectBtn.addEventListener('mouseleave', function(){ this.style.borderColor='rgba(255,255,255,0.3)'; this.style.color='rgba(255,255,255,0.75)'; this.style.transform=''; });
+  })();
+</script>
 </body>
 </html>
