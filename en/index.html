@@ -18,6 +18,8 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif'>K</text></svg>">
 
   <style>
+    .hero__image { min-height: 70vw; }
+    @media(max-width:640px){ .hero__image { min-height: 80vw; max-height: 520px; } }
     .hero__tag { font-size: 16px; font-weight: 500; color: var(--charcoal); background: rgba(37,89,100,0.07); border: 1px solid rgba(37,89,100,0.12); border-radius: var(--radius-pill); padding: 7px 18px; }
     .hero__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
     .svc-main-card { background: #F8F9FB; border-radius: var(--radius-md); padding: 28px 24px; border: 1px solid var(--sand); display: flex; flex-direction: column; gap: 0; text-decoration: none; color: inherit; transition: box-shadow 0.3s, transform 0.3s var(--ease-out); }
