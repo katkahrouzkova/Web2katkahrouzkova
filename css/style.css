@@ -1051,8 +1051,8 @@ section { position: relative; }
   }
   .hero__image {
     order: 0;
-    height: 75vw;
-    max-height: 460px;
+    height: 90vw;
+    max-height: 600px;
   }
   .hero__image img {
     object-position: center top !important;
