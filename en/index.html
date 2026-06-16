@@ -38,6 +38,12 @@
     .intro__statement { background: #255964; color: #fff; border-radius: var(--radius-md); padding: 28px 32px; margin-bottom: 32px; }
     .intro__statement p { font-family: var(--font-serif); font-size: 20px; font-style: italic; line-height: 1.5; color: rgba(255,255,255,0.95); }
     .count-up { font-family: var(--font-serif); font-size: 52px; font-weight: 400; color: var(--terra); line-height: 1; }
+    .stat-block-label { font-size: 16px; color: var(--warm-gray); white-space: nowrap; }
+    @media (max-width: 480px) {
+      .stat-block-row { gap: 16px !important; }
+      .stat-block-label { font-size: 12px !important; }
+      .count-up { font-size: 38px !important; }
+    }
   </style>
 <style>
     .lang-switch{display:flex;align-items:center;gap:6px;background:rgba(37,89,100,0.07);border-radius:100px;padding:4px 10px}
@@ -223,18 +229,18 @@
         <p class="intro__overline overline">How I work</p>
         <h2 class="intro__title">Pragmatic and human.</h2>
 
-        <div style="display:flex;gap:40px;margin-bottom:36px;flex-wrap:wrap;">
+        <div class="stat-block-row" style="display:flex;gap:40px;margin-bottom:36px;flex-wrap:nowrap;">
           <div style="display:flex;flex-direction:column;gap:4px;">
             <span class="count-up" data-target="17" style="font-family:var(--font-serif);font-size:52px;font-weight:400;color:var(--terra);line-height:1;">0</span>
-            <span style="font-size:16px;color:var(--warm-gray);">years in global HR</span>
+            <span class="stat-block-label">years in HR</span>
           </div>
           <div style="display:flex;flex-direction:column;gap:4px;">
             <span class="count-up" data-target="5" style="font-family:var(--font-serif);font-size:52px;font-weight:400;color:var(--terra);line-height:1;">0</span>
-            <span style="font-size:16px;color:var(--warm-gray);">certifications</span>
+            <span class="stat-block-label">certifications</span>
           </div>
           <div style="display:flex;flex-direction:column;gap:4px;">
             <span class="count-up" data-target="3" style="font-family:var(--font-serif);font-size:52px;font-weight:400;color:var(--terra);line-height:1;">0</span>
-            <span style="font-size:16px;color:var(--warm-gray);">languages</span>
+            <span class="stat-block-label">languages</span>
           </div>
         </div>
 
