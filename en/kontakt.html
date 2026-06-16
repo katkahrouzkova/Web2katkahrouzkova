@@ -214,9 +214,6 @@
 <script>
   const nav = document.querySelector(".nav");
   window.addEventListener("scroll", () => { nav.classList.toggle("scrolled", window.scrollY > 40); });
-  const btn = document.querySelector(".nav__hamburger");
-  const mob = document.querySelector(".nav__mobile");
-  if(btn && mob) { btn.addEventListener("click", () => { btn.classList.toggle("open"); mob.classList.toggle("open"); }); }
 </script>
 
 <!-- ================================================
