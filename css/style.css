@@ -1078,7 +1078,10 @@ section { position: relative; }
   .hero__ctas { flex-direction: column; }
   .hero__ctas .btn { width: 100%; justify-content: center; }
   .hero__meta { gap: 20px; }
-  .logos__inner { justify-content: center; }
+  .logos__inner { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .logos__label { margin-right: 0; }
+  .logos__divider { display: none; }
+  .logos__items { width: 100%; overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; }
   .how__grid { grid-template-columns: 1fr; }
   .services__grid { grid-template-columns: 1fr; }
   .testimonials__track { padding: 0 20px 16px; }
